@@ -1,595 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Petal & Pasture Custom Candles — Handcrafted Beeswax Animal Candles</title>
-  <meta name="description" content="Handcrafted 100% organic beeswax animal candles with bamboo wicks. Highland Cow, Pig, Horse, Lamb, and Chicken — each sculpted with intricate roses. Texas-made luxury.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petal &amp; Pasture Custom Candles | Handcrafted Beeswax Animal Candles</title>
+<meta name="description" content="Handcrafted 100% organic beeswax candles shaped as adorable pasture animals. Highland Cow, Pig, Sheep, Horse &amp; Chicken — each in 5 colors. Texas University editions available. Free shipping on orders over $50.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVIGATION
-  ============================================================ -->
-  <nav class="nav" id="mainNav">
-    <div class="nav-inner">
-      <div class="nav-links nav-left">
-        <a href="index.html">Home</a>
-        <a href="products.html">Collection</a>
-        <a href="#university">University</a>
-      </div>
-      <a href="index.html" class="nav-logo">
-        <img src="images/pedal_pasture_badge_v2_dark_2026.png" alt="Petal & Pasture Custom Candles">
-      </a>
-      <div class="nav-links nav-right">
-        <a href="about.html">Our Story</a>
-        <a href="contact.html">Custom Orders</a>
-        <a href="https://www.etsy.com" target="_blank" class="nav-shop-btn">Shop Etsy</a>
-      </div>
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo.png" alt="Petal &amp; Pasture Custom Candles Logo">
+    <div class="nav-logo-text">
+      <span class="brand-name">Petal &amp; Pasture</span>
+      <span class="brand-sub">Custom Candles</span>
     </div>
-    <!-- Liquid glass nav indicator -->
-    <div class="nav-glass-bar"></div>
-  </nav>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Shop</a></li>
+    <li><a href="university.html">University</a></li>
+    <li><a href="about.html">Our Story</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="nav-cta">Shop Etsy</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
 
-  <!-- ============================================================
-       HERO — FULL VIEWPORT
-  ============================================================ -->
-  <section class="hero" id="hero" style="background-image:url('images/hero_cow_pasture.jpg');background-size:cover;background-position:center;">
-    <div class="hero-bg" id="heroBg">
-      <img src="images/hero_cow_pasture.jpg" alt="Highland Cow Candle in Texas Pasture" class="hero-img active" data-index="0">
-      <img src="images/hero_pig_barn.jpg" alt="Pig Candle in Rustic Barn" class="hero-img" data-index="1">
-      <img src="images/hero_collection_pasture.jpg" alt="Petal & Pasture Collection" class="hero-img" data-index="2">
-      <img src="images/hero_cow_linen.jpg" alt="Highland Cow Candle on Linen" class="hero-img" data-index="3">
-    </div>
-    <div class="hero-overlay"></div>
-    
-    <!-- Liquid glass hero card -->
-    <div class="hero-content">
-      <div class="hero-glass-card" id="heroCard">
-        <p class="hero-eyebrow">Handcrafted in Texas</p>
-        <h1 class="hero-title">Where Petal<br><em>Meets Pasture</em></h1>
-        <p class="hero-subtitle">100% Organic Beeswax · Triple Filtered · Bamboo Wicks</p>
-        <div class="hero-actions">
-          <a href="products.html" class="btn-primary">Explore the Collection</a>
-          <a href="https://www.etsy.com" target="_blank" class="btn-ghost">Shop on Etsy</a>
-        </div>
-      </div>
-    </div>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <span class="mobile-menu-close" id="mobile-close">&#x2715;</span>
+  <a href="index.html">Home</a>
+  <a href="products.html">Shop</a>
+  <a href="university.html">University</a>
+  <a href="about.html">Our Story</a>
+  <a href="contact.html">Contact</a>
+  <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank">Shop Etsy</a>
+</div>
 
-    <!-- Hero slide indicators -->
-    <div class="hero-dots">
-      <button class="hero-dot active" data-slide="0"></button>
-      <button class="hero-dot" data-slide="1"></button>
-      <button class="hero-dot" data-slide="2"></button>
-      <button class="hero-dot" data-slide="3"></button>
+<!-- HERO SLIDESHOW -->
+<section class="hero" id="home">
+  <div class="hero-slideshow">
+    <div class="hero-slide">
+      <img src="images/hero_cow_fence.webp" alt="Highland Cow beeswax candle at Texas golden hour">
     </div>
-
-    <!-- Scroll indicator -->
-    <div class="scroll-indicator">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
+    <div class="hero-slide">
+      <img src="images/hero_pig_barn.webp" alt="Pig beeswax candle in rustic barn with rose petals">
     </div>
-  </section>
-
-  <!-- ============================================================
-       MARQUEE STRIP
-  ============================================================ -->
-  <div class="marquee-strip">
-    <div class="marquee-track">
-      <span>Highland Cow</span><span class="marquee-dot">✦</span>
-      <span>Pig</span><span class="marquee-dot">✦</span>
-      <span>Horse</span><span class="marquee-dot">✦</span>
-      <span>Lamb</span><span class="marquee-dot">✦</span>
-      <span>Chicken</span><span class="marquee-dot">✦</span>
-      <span>100% Organic Beeswax</span><span class="marquee-dot">✦</span>
-      <span>Bamboo Wicks</span><span class="marquee-dot">✦</span>
-      <span>Triple Filtered</span><span class="marquee-dot">✦</span>
-      <span>Texas Handcrafted</span><span class="marquee-dot">✦</span>
-      <span>Highland Cow</span><span class="marquee-dot">✦</span>
-      <span>Pig</span><span class="marquee-dot">✦</span>
-      <span>Horse</span><span class="marquee-dot">✦</span>
-      <span>Lamb</span><span class="marquee-dot">✦</span>
-      <span>Chicken</span><span class="marquee-dot">✦</span>
-      <span>100% Organic Beeswax</span><span class="marquee-dot">✦</span>
-      <span>Bamboo Wicks</span><span class="marquee-dot">✦</span>
-      <span>Triple Filtered</span><span class="marquee-dot">✦</span>
-      <span>Texas Handcrafted</span><span class="marquee-dot">✦</span>
+    <div class="hero-slide">
+      <img src="images/hero_sheep_meadow.webp" alt="Sheep beeswax candle in lavender meadow">
+    </div>
+    <div class="hero-slide">
+      <img src="images/hero_chicken_garden.webp" alt="Chicken beeswax candle in cottage garden">
+    </div>
+    <div class="hero-slide">
+      <img src="images/hero_horse_pasture.webp" alt="Horse beeswax candle at Texas dusk with windmill">
     </div>
   </div>
-
-  <!-- ============================================================
-       FEATURED STARS — HIGHLAND COW & PIG
-  ============================================================ -->
-  <section class="stars-section" id="stars">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">Our Best Sellers</p>
-      <h2 class="section-title">The Stars of the Pasture</h2>
-      <p class="section-subtitle">Each candle is hand-poured in small batches from 100% organic beeswax, triple filtered for the purest burn.</p>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">&#x2728; Handcrafted in Texas &bull; 100% Organic Beeswax</span>
+    <h1 class="hero-title">Where the Pasture<br>Meets the Flame</h1>
+    <p class="hero-subtitle">Triple-filtered organic beeswax candles sculpted into adorable pasture animals — each one a work of art for your home or a gift they'll never forget.</p>
+    <div class="hero-actions">
+      <a href="products.html" class="btn-primary">Shop the Collection &#x2192;</a>
+      <a href="#featured" class="btn-glass">Meet the Animals</a>
     </div>
+  </div>
+  <div class="hero-dots">
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
 
-    <div class="stars-grid">
-      <!-- Highland Cow -->
-      <div class="star-card reveal" data-delay="0">
-        <div class="star-card-image">
-          <img src="images/hero_cow_pasture.jpg" alt="Highland Cow Candle" class="star-bg-img">
-          <div class="star-card-overlay"></div>
-          <div class="star-glass-badge">Best Seller</div>
-        </div>
-        <div class="star-card-body">
-          <p class="star-card-eyebrow">The Icon</p>
-          <h3 class="star-card-title">Highland Cow</h3>
-          <p class="star-card-desc">Our most beloved design — a fluffy Highland Cow adorned with intricate roses, captured in five earthy tones. The perfect centerpiece for any home.</p>
-          <div class="star-colors">
-            <span class="color-swatch" style="background:#3d2b1f;" title="Brown"></span>
-            <span class="color-swatch" style="background:#1a1a1a;" title="Black"></span>
-            <span class="color-swatch" style="background:#d4c5a9;" title="Beige"></span>
-            <span class="color-swatch" style="background:#f5f0e8;" title="Soft White"></span>
-            <span class="color-swatch" style="background:#7b5ea7;" title="Purple"></span>
-          </div>
-          <a href="products.html#highland-cow" class="star-card-link">Shop Highland Cow →</a>
-        </div>
-      </div>
-
-      <!-- Pig -->
-      <div class="star-card reveal" data-delay="150">
-        <div class="star-card-image">
-          <img src="images/hero_pig_barn.jpg" alt="Pig Candle" class="star-bg-img">
-          <div class="star-card-overlay"></div>
-          <div class="star-glass-badge">Fan Favorite</div>
-        </div>
-        <div class="star-card-body">
-          <p class="star-card-eyebrow">The Charmer</p>
-          <h3 class="star-card-title">Pasture Pig</h3>
-          <p class="star-card-desc">Irresistibly charming, our rose-covered Pig candle brings warmth and whimsy to any space. A farmhouse staple in five beautiful colors.</p>
-          <div class="star-colors">
-            <span class="color-swatch" style="background:#3d2b1f;" title="Brown"></span>
-            <span class="color-swatch" style="background:#1a1a1a;" title="Black"></span>
-            <span class="color-swatch" style="background:#d4c5a9;" title="Beige"></span>
-            <span class="color-swatch" style="background:#f5f0e8;" title="Soft White"></span>
-            <span class="color-swatch" style="background:#7b5ea7;" title="Purple"></span>
-          </div>
-          <a href="products.html#pig" class="star-card-link">Shop Pasture Pig →</a>
-        </div>
-      </div>
+<!-- SCENT TICKER BANNER -->
+<div class="scent-banner">
+  <div class="scent-ticker-wrap">
+    <div class="scent-ticker">
+      <span class="scent-item"><span class="scent-dot"></span>Highland Cow</span>
+      <span class="scent-item"><span class="scent-dot"></span>Farmhouse Pig</span>
+      <span class="scent-item"><span class="scent-dot"></span>Meadow Lamb</span>
+      <span class="scent-item"><span class="scent-dot"></span>Cottage Chicken</span>
+      <span class="scent-item"><span class="scent-dot"></span>Pasture Horse</span>
+      <span class="scent-item"><span class="scent-dot"></span>100% Organic Beeswax</span>
+      <span class="scent-item"><span class="scent-dot"></span>Bamboo Wicks</span>
+      <span class="scent-item"><span class="scent-dot"></span>Triple Filtered</span>
+      <span class="scent-item"><span class="scent-dot"></span>Texas Made</span>
+      <span class="scent-item"><span class="scent-dot"></span>5 Colors Available</span>
+      <span class="scent-item"><span class="scent-dot"></span>University Editions</span>
+      <span class="scent-item"><span class="scent-dot"></span>Gift Ready</span>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- ============================================================
-       COASTER FEATURE — LIQUID GLASS SPLIT
-  ============================================================ -->
-  <section class="coaster-section" id="coaster">
-    <div class="coaster-split">
-      <div class="coaster-image reveal-left">
-        <img src="images/hero_coaster_closeup.jpg" alt="Grass & Fence Coaster with Highland Cow Candle">
-        <!-- Liquid glass info pill -->
-        <div class="coaster-glass-pill">
-          <span class="pill-icon">🌿</span>
-          <div>
-            <strong>Included with every candle</strong>
-            <span>Grass & Fence Coaster</span>
-          </div>
+<!-- FEATURED STAR PRODUCTS -->
+<section class="section star-products" id="featured">
+  <div class="section-header reveal">
+    <span class="eyebrow">Our Best Sellers</span>
+    <h2>Meet the Pasture Family</h2>
+    <div class="divider"></div>
+    <p>Each candle is hand-poured from 100% organic triple-filtered beeswax with a natural bamboo wick — sculpted into the most adorable pasture animals you've ever seen.</p>
+  </div>
+  <div class="star-grid">
+    <a href="products.html?animal=highland-cow" class="star-card reveal">
+      <img src="images/hero_cow_fence.webp" alt="Highland Cow Candle — Best Seller" loading="lazy">
+      <div class="star-card-overlay">
+        <span class="star-card-badge">&#x2B50; Best Seller</span>
+        <h3>Highland Cow</h3>
+        <p>The fan favorite. Fluffy, fierce, and absolutely iconic — this little longhorn is the star of the show.</p>
+        <span class="star-card-link">Shop Now &#x2192;</span>
+      </div>
+    </a>
+    <a href="products.html?animal=pig" class="star-card reveal reveal-delay-1">
+      <img src="images/hero_pig_barn.webp" alt="Pig Candle — Top Performer" loading="lazy">
+      <div class="star-card-overlay">
+        <span class="star-card-badge">&#x1F525; Top Performer</span>
+        <h3>Farmhouse Pig</h3>
+        <p>Snout to tail in rose-sculpted beeswax. Irresistibly cute and impossible to put down.</p>
+        <span class="star-card-link">Shop Now &#x2192;</span>
+      </div>
+    </a>
+    <a href="products.html?animal=sheep" class="star-card reveal reveal-delay-2">
+      <img src="images/hero_sheep_meadow.webp" alt="Sheep Candle in Lavender Meadow" loading="lazy">
+      <div class="star-card-overlay">
+        <span class="star-card-badge">&#x1F33F; Fan Favorite</span>
+        <h3>Meadow Lamb</h3>
+        <p>Soft, sweet, and wrapped in swirling roses. Perfect for the farmhouse aesthetic lover.</p>
+        <span class="star-card-link">Shop Now &#x2192;</span>
+      </div>
+    </a>
+  </div>
+  <div class="star-grid" style="margin-top:2rem;">
+    <a href="products.html?animal=chicken" class="star-card reveal">
+      <img src="images/hero_chicken_garden.webp" alt="Chicken Candle in Cottage Garden" loading="lazy">
+      <div class="star-card-overlay">
+        <span class="star-card-badge">&#x1F33B; Garden Fresh</span>
+        <h3>Cottage Chicken</h3>
+        <p>Fluffy wings, bright eyes, and a heart full of roses. The most cheerful candle in the coop.</p>
+        <span class="star-card-link">Shop Now &#x2192;</span>
+      </div>
+    </a>
+    <a href="products.html?animal=horse" class="star-card reveal reveal-delay-1">
+      <img src="images/hero_horse_pasture.webp" alt="Horse Candle at Texas Dusk" loading="lazy">
+      <div class="star-card-overlay">
+        <span class="star-card-badge">&#x1F304; Dramatic Beauty</span>
+        <h3>Pasture Horse</h3>
+        <p>Bold, dramatic, and breathtaking. The black rose horse candle is pure Texas elegance.</p>
+        <span class="star-card-link">Shop Now &#x2192;</span>
+      </div>
+    </a>
+    <a href="university.html" class="star-card reveal reveal-delay-2">
+      <img src="images/uni_ut.webp" alt="University Highland Cow Candles" loading="lazy">
+      <div class="star-card-overlay">
+        <span class="star-card-badge">&#x1F3C8; Texas Universities</span>
+        <h3>University Editions</h3>
+        <p>Show your school spirit with our Highland Cow in UT, A&amp;M, Texas Tech, and TCU colors.</p>
+        <span class="star-card-link">Explore &#x2192;</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- COASTER FEATURE -->
+<section class="section coaster-section reveal">
+  <div class="coaster-inner">
+    <div class="coaster-text">
+      <span class="eyebrow">Signature Accessory</span>
+      <h2>The Pasture Coaster</h2>
+      <p>Every candle deserves a home. Our signature round grass-and-fence coaster is the perfect display platform — a tiny pasture for your tiny animal. Crafted to complement every color in our collection.</p>
+      <div class="coaster-features">
+        <div class="coaster-feature">
+          <div class="coaster-feature-icon">&#x1F33F;</div>
+          <span>Real preserved moss base — brings the pasture indoors</span>
+        </div>
+        <div class="coaster-feature">
+          <div class="coaster-feature-icon">&#x1F91D;</div>
+          <span>White wooden fence surround — rustic farmhouse charm</span>
+        </div>
+        <div class="coaster-feature">
+          <div class="coaster-feature-icon">&#x2728;</div>
+          <span>Protects surfaces while elevating your display</span>
+        </div>
+        <div class="coaster-feature">
+          <div class="coaster-feature-icon">&#x1F381;</div>
+          <span>Available as an add-on with any candle order</span>
         </div>
       </div>
-      <div class="coaster-content reveal-right">
-        <p class="section-eyebrow">The Details</p>
-        <h2 class="section-title">Every Candle Comes<br><em>Home to the Pasture</em></h2>
-        <p class="body-text">Each Petal & Pasture candle arrives nestled on its own handcrafted grass and fence coaster — a miniature pasture scene that protects your surfaces while adding to the charm of the display.</p>
-        <p class="body-text">The coaster is crafted from natural materials with a rustic wooden fence border, evoking the rolling Texas pastures that inspire every design.</p>
-        <div class="feature-list">
-          <div class="feature-item">
-            <div class="feature-icon">🌾</div>
-            <div>
-              <strong>Natural Grass Surface</strong>
-              <span>Real dried grass for authentic pasture feel</span>
-            </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">🪵</div>
-            <div>
-              <strong>Rustic Fence Border</strong>
-              <span>Hand-assembled wooden fence surround</span>
-            </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">🕯️</div>
-            <div>
-              <strong>Heat-Protective Base</strong>
-              <span>Keeps surfaces safe while burning</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="btn-primary">Add to Your Order &#x2192;</a>
     </div>
-  </section>
-
-  <!-- ============================================================
-       FULL COLLECTION — 5 ANIMALS
-  ============================================================ -->
-  <section class="collection-section" id="collection">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">The Full Collection</p>
-      <h2 class="section-title">Five Pasture Animals,<br><em>Five Earthy Colors</em></h2>
+    <div class="coaster-image">
+      <img src="images/coaster_scene.webp" alt="Highland Cow candle on the Petal and Pasture grass fence coaster" loading="lazy">
     </div>
+  </div>
+</section>
 
-    <div class="collection-grid">
-      <div class="collection-card reveal" data-delay="0">
-        <div class="collection-card-img-wrap">
-          <img src="images/product_cow_brown_clean.jpg" alt="Highland Cow Candle" loading="lazy">
-          <div class="collection-card-hover">
-            <a href="products.html#highland-cow" class="collection-hover-btn">View Collection</a>
-          </div>
-        </div>
-        <div class="collection-card-info">
-          <h4>Highland Cow</h4>
-          <p>5 Colors Available</p>
-        </div>
-      </div>
-
-      <div class="collection-card reveal" data-delay="100">
-        <div class="collection-card-img-wrap">
-          <img src="images/product_pig_beige_clean.jpg" alt="Pig Candle" loading="lazy">
-          <div class="collection-card-hover">
-            <a href="products.html#pig" class="collection-hover-btn">View Collection</a>
-          </div>
-        </div>
-        <div class="collection-card-info">
-          <h4>Pasture Pig</h4>
-          <p>5 Colors Available</p>
-        </div>
-      </div>
-
-      <div class="collection-card reveal" data-delay="200">
-        <div class="collection-card-img-wrap">
-          <img src="images/product_horse_black_clean.jpg" alt="Horse Candle" loading="lazy">
-          <div class="collection-card-hover">
-            <a href="products.html#horse" class="collection-hover-btn">View Collection</a>
-          </div>
-        </div>
-        <div class="collection-card-info">
-          <h4>Pasture Horse</h4>
-          <p>5 Colors Available</p>
-        </div>
-      </div>
-
-      <div class="collection-card reveal" data-delay="300">
-        <div class="collection-card-img-wrap">
-          <img src="images/product_lamb_purple_clean.jpg" alt="Lamb Candle" loading="lazy">
-          <div class="collection-card-hover">
-            <a href="products.html#lamb" class="collection-hover-btn">View Collection</a>
-          </div>
-        </div>
-        <div class="collection-card-info">
-          <h4>Pasture Lamb</h4>
-          <p>5 Colors Available</p>
-        </div>
-      </div>
-
-      <div class="collection-card reveal" data-delay="400">
-        <div class="collection-card-img-wrap">
-          <img src="images/product_chicken_beige_clean.jpg" alt="Chicken Candle" loading="lazy">
-          <div class="collection-card-hover">
-            <a href="products.html#chicken" class="collection-hover-btn">View Collection</a>
-          </div>
-        </div>
-        <div class="collection-card-info">
-          <h4>Pasture Chicken</h4>
-          <p>5 Colors Available</p>
-        </div>
-      </div>
+<!-- BARN BOX GIFT -->
+<section class="section barn-box-section" id="gift">
+  <div class="barn-box-inner">
+    <div class="barn-box-image reveal">
+      <img src="images/barn_box_scene.webp" alt="Petal and Pasture barn box gift set with Highland Cow candle" loading="lazy">
+      <span class="barn-box-badge">Premium Gift</span>
     </div>
-
-    <div class="collection-cta reveal">
-      <a href="products.html" class="btn-primary">Shop All Animals</a>
+    <div class="barn-box-text reveal reveal-delay-1">
+      <span class="eyebrow">The Ultimate Gift</span>
+      <h2>The Barn Box</h2>
+      <p>Give the gift that stops people in their tracks. Our signature red barn-shaped gift box opens like a real barn door to reveal your chosen candle nestled in dried wildflowers and rose petals.</p>
+      <p>Perfect for birthdays, housewarmings, holidays, and anyone who loves the farmhouse life. University editions include school colors on the barn roof panels.</p>
+      <div class="barn-box-perks">
+        <div class="barn-box-perk">
+          <div class="barn-box-perk-icon">&#x1F3E0;</div>
+          <span>Red barn-shaped keepsake box</span>
+        </div>
+        <div class="barn-box-perk">
+          <div class="barn-box-perk-icon">&#x1F338;</div>
+          <span>Dried wildflowers &amp; rose petals</span>
+        </div>
+        <div class="barn-box-perk">
+          <div class="barn-box-perk-icon">&#x1F3F7;&#xFE0F;</div>
+          <span>Handwritten gift tag included</span>
+        </div>
+        <div class="barn-box-perk">
+          <div class="barn-box-perk-icon">&#x1F393;</div>
+          <span>University logo editions available</span>
+        </div>
+      </div>
+      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="btn-primary">Order a Barn Box &#x2192;</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============================================================
-       ARTISAN STORY — FULL WIDTH EDITORIAL
-  ============================================================ -->
-  <section class="artisan-section" id="artisan">
-    <div class="artisan-bg">
-      <img src="images/hero_artisan_story.jpg" alt="Artisan candle making workspace">
-      <div class="artisan-overlay"></div>
+<!-- UNIVERSITY SECTION -->
+<section class="section university-section" id="university">
+  <div class="university-inner">
+    <div class="section-header reveal" style="text-align:left; margin:0 0 0 0;">
+      <span class="eyebrow" style="color:var(--gold-light)">Texas Proud</span>
+      <h2 style="color:var(--white)">University Editions</h2>
+      <div class="divider" style="margin:1.5rem 0;"></div>
+      <p style="color:rgba(255,255,255,0.75)">Show your Longhorn pride, Aggie spirit, Red Raider passion, or Horned Frog loyalty. Our Highland Cow candles come in all four Texas university colors — perfect for game day, graduation gifts, or dorm decor.</p>
     </div>
-    <div class="artisan-content reveal">
-      <p class="section-eyebrow light">The Craft</p>
-      <h2 class="artisan-title">Poured with Purpose,<br><em>Crafted with Heart</em></h2>
-      <p class="artisan-text">Every Petal & Pasture candle begins with 100% organic beeswax, triple filtered for the purest, cleanest burn. Paired with natural bamboo wicks, each candle burns slowly and evenly — filling your home with warmth and the subtle, honey-sweet scent of pure beeswax.</p>
+    <div class="university-grid">
+      <a href="university-ut.html" class="uni-card reveal">
+        <img src="images/uni_ut.webp" alt="UT Longhorns Burnt Orange Highland Cow Candle" loading="lazy">
+        <div class="uni-card-overlay">
+          <div class="uni-card-color" style="background:#BF5700;"></div>
+          <h3>UT Longhorns</h3>
+          <p>Burnt Orange &bull; Hook 'Em</p>
+        </div>
+      </a>
+      <a href="university-am.html" class="uni-card reveal reveal-delay-1">
+        <img src="images/uni_am.webp" alt="Texas A&M Aggies Maroon Highland Cow Candle" loading="lazy">
+        <div class="uni-card-overlay">
+          <div class="uni-card-color" style="background:#500000;"></div>
+          <h3>Texas A&amp;M</h3>
+          <p>Maroon &bull; Gig 'Em</p>
+        </div>
+      </a>
+      <a href="university-tt.html" class="uni-card reveal reveal-delay-2">
+        <img src="images/uni_tt.webp" alt="Texas Tech Red Raiders Scarlet Highland Cow Candle" loading="lazy">
+        <div class="uni-card-overlay">
+          <div class="uni-card-color" style="background:#CC0000;"></div>
+          <h3>Texas Tech</h3>
+          <p>Scarlet &bull; Wreck 'Em</p>
+        </div>
+      </a>
+      <a href="university-tcu.html" class="uni-card reveal reveal-delay-3">
+        <img src="images/uni_tcu.webp" alt="TCU Horned Frogs Purple Highland Cow Candle" loading="lazy">
+        <div class="uni-card-overlay">
+          <div class="uni-card-color" style="background:#4D1979;"></div>
+          <h3>TCU Horned Frogs</h3>
+          <p>Purple &bull; Go Frogs</p>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:3rem;">
+      <a href="university.html" class="btn-glass">View All University Editions &#x2192;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ARTISAN STORY -->
+<section class="section artisan-section" id="story">
+  <div class="artisan-inner">
+    <div class="artisan-image reveal">
+      <img src="images/artisan_story.webp" alt="Triple-filtered beeswax blocks and bamboo wicks in farmhouse kitchen" loading="lazy">
+    </div>
+    <div class="artisan-text reveal reveal-delay-1">
+      <span class="eyebrow">Our Craft</span>
+      <h2>From the Hive to Your Home</h2>
+      <p>Every Petal &amp; Pasture candle begins with 100% organic triple-filtered beeswax — the purest, cleanest wax available. No paraffin. No synthetic fragrances. No shortcuts.</p>
+      <p>We pair our beeswax with natural bamboo wicks for a clean, slow, even burn that fills your home with the warm, honey-sweet scent of pure beeswax. Each animal is hand-poured and hand-finished in small batches right here in Texas.</p>
       <div class="artisan-stats">
         <div class="artisan-stat">
           <span class="stat-number">100%</span>
           <span class="stat-label">Organic Beeswax</span>
         </div>
         <div class="artisan-stat">
-          <span class="stat-number">3×</span>
+          <span class="stat-number">3x</span>
           <span class="stat-label">Triple Filtered</span>
         </div>
         <div class="artisan-stat">
           <span class="stat-number">5</span>
-          <span class="stat-label">Pasture Animals</span>
-        </div>
-        <div class="artisan-stat">
-          <span class="stat-number">5</span>
-          <span class="stat-label">Earthy Colors</span>
+          <span class="stat-label">Animals &amp; Colors</span>
         </div>
       </div>
-      <a href="about.html" class="btn-ghost-light">Our Story →</a>
+      <a href="about.html" class="btn-primary">Our Full Story &#x2192;</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============================================================
-       BARN BOX — PREMIUM GIFT PACKAGING
-  ============================================================ -->
-  <section class="barn-section" id="barn">
-    <div class="barn-split">
-      <div class="barn-content reveal-left">
-        <p class="section-eyebrow">Premium Gifting</p>
-        <h2 class="section-title">The Barn Box<br><em>Experience</em></h2>
-        <p class="body-text">For those who want to give something truly unforgettable, our signature Barn Box packaging transforms every candle into a premium gift experience. The hand-assembled miniature barn opens to reveal your candle nestled inside — a gift as beautiful as what's within.</p>
-        <p class="body-text">Available for all five animals and perfect for holidays, weddings, housewarming gifts, and corporate gifting.</p>
-        <div class="barn-features">
-          <div class="barn-feature-item">
-            <span>✦</span> Miniature barn with hinged roof
-          </div>
-          <div class="barn-feature-item">
-            <span>✦</span> Custom color options available
-          </div>
-          <div class="barn-feature-item">
-            <span>✦</span> University Edition barn boxes
-          </div>
-          <div class="barn-feature-item">
-            <span>✦</span> Perfect for corporate gifting
-          </div>
-        </div>
-        <div class="barn-actions">
-          <a href="contact.html" class="btn-primary">Order Barn Box</a>
-          <a href="#university" class="btn-outline">University Editions</a>
-        </div>
-      </div>
-      <div class="barn-image reveal-right">
-        <img src="images/barn_box_real.jpg" alt="Petal & Pasture Barn Box Premium Gift Packaging">
-        <div class="barn-glass-tag">
-          <strong>Premium Gift Set</strong>
-          <span>Barn Box Included</span>
+<!-- TESTIMONIALS -->
+<section class="section testimonials-section">
+  <div class="section-header reveal">
+    <span class="eyebrow">Happy Customers</span>
+    <h2>What the Pasture is Saying</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+      <p class="testimonial-text">"I bought the Highland Cow for my daughter's birthday and she absolutely lost her mind over it. The detail is incredible — it looks like a tiny sculpture. The beeswax scent is so warm and natural."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">S</div>
+        <div>
+          <div class="testimonial-name">Sarah M.</div>
+          <div class="testimonial-location">Austin, TX</div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ============================================================
-       UNIVERSITY EDITIONS TEASER
-  ============================================================ -->
-  <section class="university-section" id="university">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">Texas University Editions</p>
-      <h2 class="section-title">Show Your <em>Texas Pride</em></h2>
-      <p class="section-subtitle">The Highland Cow — Texas's most iconic animal — reimagined in your school's colors, with the university logo on every side of the barn box roof.</p>
-    </div>
-
-    <div class="university-grid">
-      <a href="university-ut.html" class="uni-card reveal" data-delay="0">
-        <div class="uni-card-img">
-          <img src="images/hero_ut_cow.jpg" alt="University of Texas Highland Cow Candle">
-          <div class="uni-card-overlay" style="background: linear-gradient(to top, rgba(191,87,0,0.85) 0%, transparent 60%)"></div>
-        </div>
-        <div class="uni-card-body">
-          <div class="uni-badge" style="background:#BF5700; color:#fff;">UT</div>
-          <h3>University of Texas</h3>
-          <p>Longhorns Edition</p>
-          <span class="uni-card-link">Shop Now →</span>
-        </div>
-      </a>
-
-      <a href="university-am.html" class="uni-card reveal" data-delay="100">
-        <div class="uni-card-img">
-          <img src="images/hero_am_cow.jpg" alt="Texas A&M Highland Cow Candle">
-          <div class="uni-card-overlay" style="background: linear-gradient(to top, rgba(80,0,0,0.85) 0%, transparent 60%)"></div>
-        </div>
-        <div class="uni-card-body">
-          <div class="uni-badge" style="background:#500000; color:#fff;">A&M</div>
-          <h3>Texas A&M</h3>
-          <p>Aggies Edition</p>
-          <span class="uni-card-link">Shop Now →</span>
-        </div>
-      </a>
-
-      <a href="university-tt.html" class="uni-card reveal" data-delay="200">
-        <div class="uni-card-img">
-          <img src="images/hero_tt_cow.jpg" alt="Texas Tech Highland Cow Candle">
-          <div class="uni-card-overlay" style="background: linear-gradient(to top, rgba(204,0,0,0.85) 0%, transparent 60%)"></div>
-        </div>
-        <div class="uni-card-body">
-          <div class="uni-badge" style="background:#CC0000; color:#fff;">TT</div>
-          <h3>Texas Tech</h3>
-          <p>Red Raiders Edition</p>
-          <span class="uni-card-link">Shop Now →</span>
-        </div>
-      </a>
-
-      <a href="university-tcu.html" class="uni-card reveal" data-delay="300">
-        <div class="uni-card-img">
-          <img src="images/hero_tcu_cow.jpg" alt="TCU Highland Cow Candle">
-          <div class="uni-card-overlay" style="background: linear-gradient(to top, rgba(77,25,121,0.85) 0%, transparent 60%)"></div>
-        </div>
-        <div class="uni-card-body">
-          <div class="uni-badge" style="background:#4D1979; color:#fff;">TCU</div>
-          <h3>TCU</h3>
-          <p>Horned Frogs Edition</p>
-          <span class="uni-card-link">Shop Now →</span>
-        </div>
-      </a>
-    </div>
-
-    <div class="university-note reveal">
-      <div class="glass-note-card">
-        <p>Each University Edition includes the Highland Cow candle in your school's colors, the grass & fence coaster, and the signature Barn Box with the university logo on each side of the roof.</p>
-        <a href="contact.html" class="btn-outline">Inquire About Custom University Orders</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       BEESWAX QUALITY SECTION
-  ============================================================ -->
-  <section class="quality-section" id="quality">
-    <div class="quality-inner">
-      <div class="quality-image reveal-left">
-        <img src="images/hero_wildflower_meadow.jpg" alt="Texas Wildflower Meadow">
-      </div>
-      <div class="quality-content reveal-right">
-        <p class="section-eyebrow">The Ingredients</p>
-        <h2 class="section-title">Pure. Natural.<br><em>Texas Proud.</em></h2>
-        <div class="quality-items">
-          <div class="quality-item">
-            <div class="quality-number">01</div>
-            <div class="quality-text">
-              <h4>100% Organic Beeswax</h4>
-              <p>Sourced from organic apiaries, our beeswax is the purest foundation for a clean, long-lasting burn with a natural honey warmth.</p>
-            </div>
-          </div>
-          <div class="quality-item">
-            <div class="quality-number">02</div>
-            <div class="quality-text">
-              <h4>Triple Filtered</h4>
-              <p>Our beeswax is filtered three times to remove all impurities, resulting in a crystal-clear wax that burns cleanly without soot or toxins.</p>
-            </div>
-          </div>
-          <div class="quality-item">
-            <div class="quality-number">03</div>
-            <div class="quality-text">
-              <h4>Bamboo Wicks</h4>
-              <p>Natural bamboo wicks provide a steady, even flame and a satisfying crackle — the sound of a true artisan candle.</p>
-            </div>
-          </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <div class="testimonial-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+      <p class="testimonial-text">"Got the burnt orange UT cow for my husband before the Texas-OU game. He literally said 'this is the best gift I've ever received.' Ordering the maroon A&amp;M one for my brother next."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">J</div>
+        <div>
+          <div class="testimonial-name">Jessica R.</div>
+          <div class="testimonial-location">Houston, TX</div>
         </div>
       </div>
     </div>
-  </section>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <div class="testimonial-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+      <p class="testimonial-text">"The barn box gift set is EVERYTHING. I ordered it for my mom's housewarming and she cried happy tears. The packaging alone is worth the price. Will be ordering every holiday from now on."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">K</div>
+        <div>
+          <div class="testimonial-name">Katie L.</div>
+          <div class="testimonial-location">Dallas, TX</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- ============================================================
-       TESTIMONIALS
-  ============================================================ -->
-  <section class="testimonials-section" id="testimonials">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">What People Are Saying</p>
-      <h2 class="section-title">Loved Across <em>Texas & Beyond</em></h2>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card reveal glass-card" data-delay="0">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"The Highland Cow candle is absolutely stunning. The detail on the roses is incredible — I almost didn't want to burn it. It's become the centerpiece of my living room."</p>
-        <div class="testimonial-author">
-          <strong>Sarah M.</strong>
-          <span>Austin, TX</span>
-        </div>
-      </div>
-      <div class="testimonial-card reveal glass-card" data-delay="150">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"Bought the UT Longhorns barn box as a gift and my friend absolutely lost it. The packaging is premium, the candle is gorgeous, and it smells amazing. Will be ordering again."</p>
-        <div class="testimonial-author">
-          <strong>Jake T.</strong>
-          <span>Houston, TX</span>
-        </div>
-      </div>
-      <div class="testimonial-card reveal glass-card" data-delay="300">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"I ordered the full set of five animals for my farmhouse kitchen. They look like they belong in a magazine. The beeswax scent is so clean and natural — nothing artificial."</p>
-        <div class="testimonial-author">
-          <strong>Melissa R.</strong>
-          <span>Dallas, TX</span>
-        </div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Petal and Pasture Custom Candles">
+      <p>Handcrafted 100% organic beeswax candles from the heart of Texas. Each animal is a work of art, hand-poured in small batches with love and care.</p>
+      <div class="footer-social">
+        <a href="https://www.tiktok.com/@petalpasturecandleco" target="_blank" class="footer-social-link" aria-label="TikTok">&#x1F3A5;</a>
+        <a href="https://www.instagram.com/petalpasturecandleco" target="_blank" class="footer-social-link" aria-label="Instagram">&#x1F4F7;</a>
+        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="footer-social-link" aria-label="Etsy">&#x1F6CD;&#xFE0F;</a>
       </div>
     </div>
-  </section>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul class="footer-links">
+        <li><a href="products.html">All Candles</a></li>
+        <li><a href="products.html?animal=highland-cow">Highland Cow</a></li>
+        <li><a href="products.html?animal=pig">Farmhouse Pig</a></li>
+        <li><a href="products.html?animal=sheep">Meadow Lamb</a></li>
+        <li><a href="products.html?animal=chicken">Cottage Chicken</a></li>
+        <li><a href="products.html?animal=horse">Pasture Horse</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>University</h4>
+      <ul class="footer-links">
+        <li><a href="university-ut.html">UT Longhorns</a></li>
+        <li><a href="university-am.html">Texas A&amp;M</a></li>
+        <li><a href="university-tt.html">Texas Tech</a></li>
+        <li><a href="university-tcu.html">TCU Horned Frogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Info</h4>
+      <ul class="footer-links">
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank">Etsy Shop</a></li>
+        <li><a href="contact.html#custom">Custom Orders</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Petal &amp; Pasture Custom Candles. All rights reserved.</span>
+    <span>Handcrafted with &#x2665; in Texas</span>
+  </div>
+</footer>
 
-  <!-- ============================================================
-       INSTAGRAM / SOCIAL STRIP
-  ============================================================ -->
-  <section class="social-section" id="social">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">Follow the Pasture</p>
-      <h2 class="section-title">@PetalAndPasture</h2>
-    </div>
-    <div class="social-grid">
-      <div class="social-item reveal" data-delay="0">
-        <img src="images/hero_coaster_closeup.jpg" alt="Petal & Pasture Instagram">
-        <div class="social-hover"><span>♥ Follow Us</span></div>
-      </div>
-      <div class="social-item reveal" data-delay="75">
-        <img src="images/product_cow_brown_clean.jpg" alt="Highland Cow Candle">
-        <div class="social-hover"><span>♥ Follow Us</span></div>
-      </div>
-      <div class="social-item reveal" data-delay="150">
-        <img src="images/hero_artisan_story.jpg" alt="Candle Making Process">
-        <div class="social-hover"><span>♥ Follow Us</span></div>
-      </div>
-      <div class="social-item reveal" data-delay="225">
-        <img src="images/product_lamb_purple_clean.jpg" alt="Purple Lamb Candle">
-        <div class="social-hover"><span>♥ Follow Us</span></div>
-      </div>
-      <div class="social-item reveal" data-delay="300">
-        <img src="images/hero_pig_barn.jpg" alt="Pig Candle in Barn">
-        <div class="social-hover"><span>♥ Follow Us</span></div>
-      </div>
-      <div class="social-item reveal" data-delay="375">
-        <img src="images/product_chicken_beige_clean.jpg" alt="Chicken Candle">
-        <div class="social-hover"><span>♥ Follow Us</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="images/pedal_pasture_badge_v2_dark_2026.png" alt="Petal & Pasture" class="footer-logo">
-        <p>Handcrafted beeswax candles inspired by the Texas pasture. Made with love, poured with purpose.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="TikTok">TikTok</a>
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="https://www.etsy.com" target="_blank" aria-label="Etsy">Etsy</a>
-        </div>
-      </div>
-      <div class="footer-nav">
-        <div class="footer-col">
-          <h5>Collection</h5>
-          <a href="products.html#highland-cow">Highland Cow</a>
-          <a href="products.html#pig">Pasture Pig</a>
-          <a href="products.html#horse">Pasture Horse</a>
-          <a href="products.html#lamb">Pasture Lamb</a>
-          <a href="products.html#chicken">Pasture Chicken</a>
-        </div>
-        <div class="footer-col">
-          <h5>University Editions</h5>
-          <a href="university-ut.html">University of Texas</a>
-          <a href="university-am.html">Texas A&M</a>
-          <a href="university-tt.html">Texas Tech</a>
-          <a href="university-tcu.html">TCU</a>
-        </div>
-        <div class="footer-col">
-          <h5>Company</h5>
-          <a href="about.html">Our Story</a>
-          <a href="contact.html">Custom Orders</a>
-          <a href="contact.html">Contact Us</a>
-          <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Petal & Pasture Custom Candles. All rights reserved. Handcrafted in Texas.</p>
-    </div>
-  </footer>
-
-  <!-- Liquid glass cursor -->
-  <div class="custom-cursor" id="cursor"></div>
-  <div class="custom-cursor-follower" id="cursorFollower"></div>
-
-  <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

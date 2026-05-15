@@ -1,394 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>University of Texas Highland Cow Candle — Petal & Pasture University Edition</title>
-  <meta name="description" content="The Petal & Pasture Highland Cow candle in Burnt Orange — the official University of Texas University Edition. 100% organic beeswax with bamboo wick. Includes signature Barn Box with university logo.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    :root {
-      --uni-primary: #BF5700;
-      --uni-secondary: #333F48;
-    }
-    .uni-hero {
-      position: relative;
-      height: 100vh;
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-    }
-    .uni-hero-bg {
-      position: absolute;
-      inset: 0;
-    }
-    .uni-hero-bg img { object-position: center 30%; }
-    .uni-hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(105deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%);
-    }
-    .uni-hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 0 80px;
-      margin-top: 80px;
-      max-width: 700px;
-    }
-    .uni-school-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: #BF5700;
-      color: #fff;
-      font-family: var(--font-sans);
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      padding: 8px 18px;
-      border-radius: 2px;
-      margin-bottom: 24px;
-    }
-    .uni-hero-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2.8rem, 5vw, 5rem);
-      font-weight: 400;
-      color: var(--warm-white);
-      line-height: 1.05;
-      margin-bottom: 20px;
-    }
-    .uni-hero-title em { font-style: italic; color: #BF5700; filter: brightness(1.4); }
-    .uni-hero-subtitle {
-      font-family: var(--font-sans);
-      font-size: 0.82rem;
-      font-weight: 300;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(255,253,249,0.7);
-      margin-bottom: 40px;
-    }
-    .uni-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-    .btn-uni {
-      display: inline-flex;
-      align-items: center;
-      background: #BF5700;
-      color: #fff;
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      padding: 14px 32px;
-      border-radius: 2px;
-      border: 1px solid #BF5700;
-      transition: all 0.3s ease;
-    }
-    .btn-uni:hover { background: transparent; color: var(--warm-white); transform: translateY(-2px); }
-
-    .uni-product-section {
-      padding: 120px 80px;
-      background: var(--cream);
-    }
-    .uni-product-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-    .uni-product-image {
-      border-radius: 4px;
-      overflow: hidden;
-      aspect-ratio: 3/4;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-    }
-    .uni-product-content { padding: 20px 0; }
-    .uni-accent-line {
-      width: 60px;
-      height: 3px;
-      background: #BF5700;
-      margin-bottom: 32px;
-    }
-    .uni-detail-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin: 32px 0;
-    }
-    .uni-detail-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      font-family: var(--font-sans);
-      font-size: 0.88rem;
-      font-weight: 300;
-      color: var(--brown);
-    }
-    .uni-detail-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: #BF5700;
-      flex-shrink: 0;
-    }
-
-    .uni-barn-section {
-      padding: 120px 80px;
-      background: var(--ivory);
-    }
-    .uni-barn-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-    .uni-barn-image {
-      border-radius: 4px;
-      overflow: hidden;
-      aspect-ratio: 4/3;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-    }
-
-    .uni-other-schools {
-      padding: 80px;
-      background: var(--brown);
-      text-align: center;
-    }
-    .uni-other-schools .section-eyebrow { color: var(--gold-light); }
-    .uni-other-schools h2 {
-      font-family: var(--font-serif);
-      font-size: 2rem;
-      font-weight: 400;
-      color: var(--warm-white);
-      margin-bottom: 48px;
-    }
-    .other-schools-grid {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .other-school-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255,253,249,0.08);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255,253,249,0.2);
-      color: var(--warm-white);
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      font-weight: 400;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      padding: 14px 28px;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-    .other-school-btn:hover { background: rgba(255,253,249,0.15); transform: translateY(-2px); }
-
-    .uni-nav-strip {
-      background: var(--ivory);
-      border-top: 1px solid rgba(61,43,31,0.1);
-      padding: 24px 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .uni-nav-link {
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--tan);
-      transition: color 0.3s ease;
-    }
-    .uni-nav-link:hover { color: var(--brown); }
-
-    @media (max-width: 900px) {
-      .uni-hero-content { padding: 0 40px; }
-      .uni-product-section, .uni-barn-section { padding: 80px 40px; }
-      .uni-product-grid, .uni-barn-grid { grid-template-columns: 1fr; }
-      .uni-other-schools { padding: 60px 40px; }
-      .uni-nav-strip { padding: 20px 40px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UT Longhorns Highland Cow Candle | Petal &amp; Pasture</title>
+<meta name="description" content="Show your Longhorn pride with our burnt orange Highland Cow beeswax candle. Hook 'Em! Perfect for UT fans, game day gifts, and dorm decor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="images/logo.png">
+<style>
+.uni-accent { color: #BF5700; }
+.uni-btn { background: #BF5700; color: #fff; padding: 1rem 2.2rem; border-radius: 50px; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.4s ease; box-shadow: 0 6px 25px rgba(0,0,0,0.3); }
+.uni-btn:hover { opacity: 0.9; transform: translateY(-3px); box-shadow: 0 12px 35px rgba(0,0,0,0.4); }
+.uni-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+.uni-nav a { color: rgba(255,255,255,0.6); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.3s ease; }
+.uni-nav a:hover { color: #fff; }
+</style>
 </head>
 <body>
-
-  <nav class="nav scrolled" id="mainNav">
-    <div class="nav-inner">
-      <div class="nav-links nav-left">
-        <a href="index.html">Home</a>
-        <a href="products.html">Collection</a>
-        <a href="index.html#university" style="color:var(--gold)">University</a>
-      </div>
-      <a href="index.html" class="nav-logo">
-        <img src="images/pedal_pasture_badge_v2_dark_2026.png" alt="Petal & Pasture">
-      </a>
-      <div class="nav-links nav-right">
-        <a href="about.html">Our Story</a>
-        <a href="contact.html">Custom Orders</a>
-        <a href="https://www.etsy.com" target="_blank" class="nav-shop-btn">Shop Etsy</a>
-      </div>
+<nav class="nav scrolled" id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo.png" alt="Petal &amp; Pasture">
+    <div class="nav-logo-text">
+      <span class="brand-name">Petal &amp; Pasture</span>
+      <span class="brand-sub">Custom Candles</span>
     </div>
-    <div class="nav-glass-bar"></div>
-  </nav>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Shop</a></li>
+    <li><a href="university.html">University</a></li>
+    <li><a href="about.html">Our Story</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="nav-cta">Shop Etsy</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <span class="mobile-menu-close" id="mobile-close">&#x2715;</span>
+  <a href="index.html">Home</a>
+  <a href="products.html">Shop</a>
+  <a href="university.html">University</a>
+  <a href="about.html">Our Story</a>
+  <a href="contact.html">Contact</a>
+  <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank">Shop Etsy</a>
+</div>
 
-  <!-- UNIVERSITY HERO -->
-  <section class="uni-hero">
-    <div class="uni-hero-bg">
-      <img src="images/hero_ut_cow.jpg" alt="University of Texas Highland Cow Candle">
+<div class="uni-hero" style="margin-top:var(--nav-h)">
+  <img src="images/uni_ut.webp" alt="UT Longhorns Highland Cow Candle">
+  <div class="uni-hero-overlay"></div>
+  <div class="uni-hero-content">
+    <span class="eyebrow" style="color:#BF5700">UT Longhorns</span>
+    <h1 style="color:#fff; font-size:clamp(2.5rem,5vw,4rem); margin-bottom:1rem;">The Burnt Orange Highland Cow</h1>
+    <p style="color:rgba(255,255,255,0.85); font-size:1.1rem; margin-bottom:2rem;">Hook 'Em Horns — Sculpted in 100% organic beeswax</p>
+    <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="uni-btn">Order Yours on Etsy &#x2192;</a>
+    <div class="uni-nav">
+      <a href="university-tcu.html">&#x2190; TCU</a>
+      <a href="university.html">All Universities</a>
+      <a href="university-am.html">A&amp;M &#x2192;</a>
     </div>
-    <div class="uni-hero-overlay"></div>
-    <div class="uni-hero-content">
-      <div class="uni-school-badge">Hook 'Em · University Edition</div>
-      <h1 class="uni-hero-title">University of Texas<br><em>Highland Cow</em></h1>
-      <p class="uni-hero-subtitle">Burnt Orange & Beeswax · Bamboo Wick · 100% Organic</p>
-      <div class="uni-hero-actions">
-        <a href="https://www.etsy.com" target="_blank" class="btn-uni">Shop on Etsy</a>
-        <a href="contact.html" class="btn-ghost">Custom Order</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCT DETAIL -->
-  <section class="uni-product-section">
-    <div class="uni-product-grid">
-      <div class="uni-product-image reveal-left">
-        <img src="images/hero_ut_cow.jpg" alt="University of Texas Highland Cow Candle">
-      </div>
-      <div class="uni-product-content reveal-right">
-        <div class="uni-accent-line"></div>
-        <p class="section-eyebrow">UT · University Edition</p>
-        <h2 class="section-title">University of Texas<br><em>Highland Cow</em></h2>
-        <p class="body-text">The Highland Cow reimagined in iconic Burnt Orange — a tribute to the greatest university in Texas. Each candle comes in the signature Barn Box with the Longhorn logo on every side of the roof.</p>
-        <div class="uni-detail-list">
-          <div class="uni-detail-item">
-            <div class="uni-detail-dot"></div>
-            <span>100% organic beeswax, triple filtered</span>
-          </div>
-          <div class="uni-detail-item">
-            <div class="uni-detail-dot"></div>
-            <span>Natural bamboo wick for a clean, even burn</span>
-          </div>
-          <div class="uni-detail-item">
-            <div class="uni-detail-dot"></div>
-            <span>Includes grass & fence coaster</span>
-          </div>
-          <div class="uni-detail-item">
-            <div class="uni-detail-dot"></div>
-            <span>Available with signature Barn Box packaging</span>
-          </div>
-          <div class="uni-detail-item">
-            <div class="uni-detail-dot"></div>
-            <span>University logo on each side of barn roof</span>
-          </div>
-        </div>
-        <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:32px;">
-          <a href="https://www.etsy.com" target="_blank" class="btn-primary">Shop on Etsy</a>
-          <a href="contact.html" class="btn-outline">Custom Order</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BARN BOX SECTION -->
-  <section class="uni-barn-section">
-    <div class="uni-barn-grid">
-      <div class="uni-barn-content reveal-left">
-        <p class="section-eyebrow">Premium Packaging</p>
-        <h2 class="section-title">The University of Texas<br><em>Barn Box</em></h2>
-        <p class="body-text">The University Edition Barn Box is the ultimate game-day gift. The hand-assembled miniature barn features the University of Texas logo on each side of the roof, opening to reveal the Highland Cow candle in your school's signature color.</p>
-        <p class="body-text">Perfect for alumni gifts, tailgate season, graduation presents, and any occasion worth celebrating in Burnt Orange.</p>
-        <div style="margin-top:32px;">
-          <a href="contact.html" class="btn-primary">Order Barn Box</a>
-        </div>
-      </div>
-      <div class="uni-barn-image reveal-right">
-        <img src="images/barn_box_real.jpg" alt="University of Texas Barn Box Packaging">
-      </div>
-    </div>
-  </section>
-
-  <!-- OTHER SCHOOLS -->
-  <section class="uni-other-schools">
-    <p class="section-eyebrow">All Texas Universities</p>
-    <h2>Explore All <em style="font-style:italic; color:var(--gold-light);">University Editions</em></h2>
-    <div class="other-schools-grid">
-      <a href="university-ut.html" class="other-school-btn" style="border-color: rgba(191,87,0,0.4);">
-        <span style="color:#BF5700; font-size:0.6rem;">●</span> University of Texas
-      </a>
-      <a href="university-am.html" class="other-school-btn" style="border-color: rgba(80,0,0,0.4);">
-        <span style="color:#500000; font-size:0.6rem;">●</span> Texas A&M
-      </a>
-      <a href="university-tt.html" class="other-school-btn" style="border-color: rgba(204,0,0,0.4);">
-        <span style="color:#CC0000; font-size:0.6rem;">●</span> Texas Tech
-      </a>
-      <a href="university-tcu.html" class="other-school-btn" style="border-color: rgba(77,25,121,0.4);">
-        <span style="color:#4D1979; font-size:0.6rem;">●</span> TCU
-      </a>
-    </div>
-  </section>
-
-  <!-- PREV / NEXT NAV -->
-  <div class="uni-nav-strip">
-    <a href="" class="uni-nav-link"></a>
-    <a href="index.html#university" class="uni-nav-link">All University Editions</a>
-    <a href="university-am.html" class="uni-nav-link">Texas A&M →</a>
   </div>
+</div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="images/pedal_pasture_badge_v2_dark_2026.png" alt="Petal & Pasture" class="footer-logo">
-        <p>Handcrafted beeswax candles inspired by the Texas pasture. Made with love, poured with purpose.</p>
-        <div class="footer-social">
-          <a href="#">TikTok</a>
-          <a href="#">Instagram</a>
-          <a href="https://www.etsy.com" target="_blank">Etsy</a>
+<section class="section artisan-section">
+  <div class="artisan-inner">
+    <div class="artisan-image reveal">
+      <img src="images/uni_ut.webp" alt="UT Longhorns Highland Cow Candle detail" loading="lazy">
+    </div>
+    <div class="artisan-text reveal reveal-delay-1">
+      <span class="eyebrow uni-accent">UT Longhorns</span>
+      <h2>Burnt Orange &amp; Proud</h2>
+      <p>Everything is bigger in Texas, and our UT Longhorns Highland Cow is no exception. Sculpted in the iconic burnt orange of the University of Texas at Austin, this beeswax beauty is the ultimate fan gift. Whether it's game day, graduation, or just because — this little longhorn will make any Longhorn fan's heart sing.</p>
+      <p>Like all Petal &amp; Pasture candles, this university edition is hand-poured from 100% organic triple-filtered beeswax with a natural bamboo wick. The color is blended directly into the wax — no paint, no dye on the surface. Just pure, beautiful beeswax in your team's colors.</p>
+      <div class="artisan-stats">
+        <div class="artisan-stat">
+          <span class="stat-number" style="color:#BF5700">100%</span>
+          <span class="stat-label">Organic Beeswax</span>
+        </div>
+        <div class="artisan-stat">
+          <span class="stat-number" style="color:#BF5700">3x</span>
+          <span class="stat-label">Triple Filtered</span>
+        </div>
+        <div class="artisan-stat">
+          <span class="stat-number" style="color:#BF5700">&#x1F3E0;</span>
+          <span class="stat-label">Barn Box Available</span>
         </div>
       </div>
-      <div class="footer-nav">
-        <div class="footer-col">
-          <h5>Collection</h5>
-          <a href="products.html#highland-cow">Highland Cow</a>
-          <a href="products.html#pig">Pasture Pig</a>
-          <a href="products.html#horse">Pasture Horse</a>
-          <a href="products.html#lamb">Pasture Lamb</a>
-          <a href="products.html#chicken">Pasture Chicken</a>
-        </div>
-        <div class="footer-col">
-          <h5>University Editions</h5>
-          <a href="university-ut.html">University of Texas</a>
-          <a href="university-am.html">Texas A&M</a>
-          <a href="university-tt.html">Texas Tech</a>
-          <a href="university-tcu.html">TCU</a>
-        </div>
-        <div class="footer-col">
-          <h5>Company</h5>
-          <a href="about.html">Our Story</a>
-          <a href="contact.html">Custom Orders</a>
-          <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
-        </div>
+      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="uni-btn">Shop on Etsy &#x2192;</a>
+    </div>
+  </div>
+</section>
+
+<section class="section university-section" style="padding:4rem 5vw;">
+  <div class="university-inner">
+    <div class="section-header reveal" style="text-align:center; margin:0 auto 3rem;">
+      <span class="eyebrow" style="color:var(--gold-light)">All Four Schools</span>
+      <h2 style="color:var(--white)">Explore Every University Edition</h2>
+    </div>
+    <div class="university-grid">
+      <a href="university-ut.html" class="uni-card reveal">
+        <img src="images/uni_ut.webp" alt="UT Longhorns" loading="lazy">
+        <div class="uni-card-overlay"><div class="uni-card-color" style="background:#BF5700;"></div><h3>UT Longhorns</h3><p>Burnt Orange</p></div>
+      </a>
+      <a href="university-am.html" class="uni-card reveal reveal-delay-1">
+        <img src="images/uni_am.webp" alt="Texas A&M" loading="lazy">
+        <div class="uni-card-overlay"><div class="uni-card-color" style="background:#500000;"></div><h3>Texas A&amp;M</h3><p>Maroon</p></div>
+      </a>
+      <a href="university-tt.html" class="uni-card reveal reveal-delay-2">
+        <img src="images/uni_tt.webp" alt="Texas Tech" loading="lazy">
+        <div class="uni-card-overlay"><div class="uni-card-color" style="background:#CC0000;"></div><h3>Texas Tech</h3><p>Scarlet Red</p></div>
+      </a>
+      <a href="university-tcu.html" class="uni-card reveal reveal-delay-3">
+        <img src="images/uni_tcu.webp" alt="TCU" loading="lazy">
+        <div class="uni-card-overlay"><div class="uni-card-color" style="background:#4D1979;"></div><h3>TCU Horned Frogs</h3><p>Deep Purple</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Petal and Pasture Custom Candles">
+      <p>Handcrafted 100% organic beeswax candles from the heart of Texas.</p>
+      <div class="footer-social">
+        <a href="https://www.tiktok.com/@petalpasturecandleco" target="_blank" class="footer-social-link">&#x1F3A5;</a>
+        <a href="https://www.instagram.com/petalpasturecandleco" target="_blank" class="footer-social-link">&#x1F4F7;</a>
+        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="footer-social-link">&#x1F6CD;&#xFE0F;</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 Petal & Pasture Custom Candles. All rights reserved. Handcrafted in Texas.</p>
-    </div>
-  </footer>
-
-  <div class="custom-cursor" id="cursor"></div>
-  <div class="custom-cursor-follower" id="cursorFollower"></div>
-  <script src="main.js"></script>
+    <div class="footer-col"><h4>University</h4><ul class="footer-links"><li><a href="university-ut.html">UT Longhorns</a></li><li><a href="university-am.html">Texas A&amp;M</a></li><li><a href="university-tt.html">Texas Tech</a></li><li><a href="university-tcu.html">TCU Horned Frogs</a></li></ul></div>
+    <div class="footer-col"><h4>Shop</h4><ul class="footer-links"><li><a href="products.html">All Candles</a></li><li><a href="index.html#gift">Barn Box</a></li></ul></div>
+    <div class="footer-col"><h4>Info</h4><ul class="footer-links"><li><a href="about.html">Our Story</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Petal &amp; Pasture Custom Candles</span>
+    <span>Handcrafted with &#x2665; in Texas</span>
+  </div>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>

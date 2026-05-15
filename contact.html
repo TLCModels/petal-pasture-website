@@ -1,417 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Orders & Contact — Petal & Pasture Custom Candles</title>
-  <meta name="description" content="Request a custom order, inquire about bulk pricing, or get in touch with Petal & Pasture. Handcrafted beeswax candles made to order in Texas.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 100vh;
-    }
-    .contact-left {
-      position: relative;
-      overflow: hidden;
-    }
-    .contact-left-img {
-      position: absolute;
-      inset: 0;
-    }
-    .contact-left-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, rgba(26,16,10,0.5) 0%, rgba(26,16,10,0.1) 100%);
-    }
-    .contact-left-content {
-      position: relative;
-      z-index: 2;
-      padding: 160px 60px 80px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    .contact-left-content h1 {
-      font-family: var(--font-serif);
-      font-size: clamp(2.5rem, 4vw, 4rem);
-      font-weight: 400;
-      color: var(--warm-white);
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-    .contact-left-content h1 em { font-style: italic; color: var(--gold-light); }
-    .contact-left-content p {
-      font-family: var(--font-sans);
-      font-size: 0.88rem;
-      font-weight: 300;
-      color: rgba(255,253,249,0.75);
-      line-height: 1.8;
-      max-width: 380px;
-    }
-    .contact-info-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 40px;
-    }
-    .contact-info-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .contact-info-icon {
-      width: 36px; height: 36px;
-      background: rgba(255,253,249,0.12);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,253,249,0.2);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      flex-shrink: 0;
-    }
-    .contact-info-text {
-      font-family: var(--font-sans);
-      font-size: 0.82rem;
-      font-weight: 300;
-      color: rgba(255,253,249,0.8);
-    }
-
-    .contact-right {
-      background: var(--cream);
-      padding: 160px 80px 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .contact-form-header {
-      margin-bottom: 48px;
-    }
-
-    .form-group {
-      margin-bottom: 28px;
-    }
-    .form-label {
-      display: block;
-      font-family: var(--font-sans);
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--tan);
-      margin-bottom: 10px;
-    }
-    .form-input, .form-select, .form-textarea {
-      width: 100%;
-      background: var(--warm-white);
-      border: 1px solid rgba(61,43,31,0.12);
-      border-radius: 2px;
-      padding: 14px 18px;
-      font-family: var(--font-sans);
-      font-size: 0.9rem;
-      font-weight: 300;
-      color: var(--brown);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-      outline: none;
-      -webkit-appearance: none;
-    }
-    .form-input:focus, .form-select:focus, .form-textarea:focus {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(193,154,107,0.12);
-    }
-    .form-input::placeholder, .form-textarea::placeholder { color: var(--tan); opacity: 0.6; }
-    .form-textarea { resize: vertical; min-height: 120px; }
-    .form-select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a08060' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 16px center;
-      padding-right: 40px;
-      cursor: pointer;
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    .form-submit {
-      margin-top: 8px;
-    }
-    .form-note {
-      font-family: var(--font-sans);
-      font-size: 0.75rem;
-      font-weight: 300;
-      color: var(--tan);
-      margin-top: 16px;
-      line-height: 1.6;
-    }
-
-    .custom-options-section {
-      padding: 100px 80px;
-      background: var(--ivory);
-    }
-    .custom-options-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      max-width: 1300px;
-      margin: 60px auto 0;
-    }
-    .custom-option-card {
-      background: var(--warm-white);
-      border-radius: 4px;
-      padding: 40px 32px;
-      box-shadow: 0 4px 30px rgba(61,43,31,0.06);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-    .custom-option-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 50px rgba(61,43,31,0.12);
-    }
-    .custom-option-num {
-      font-family: var(--font-serif);
-      font-size: 3rem;
-      font-weight: 400;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-    .custom-option-title {
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: var(--brown);
-      margin-bottom: 12px;
-    }
-    .custom-option-desc {
-      font-family: var(--font-sans);
-      font-size: 0.83rem;
-      font-weight: 300;
-      color: var(--tan);
-      line-height: 1.8;
-    }
-
-    @media (max-width: 1000px) {
-      .contact-layout { grid-template-columns: 1fr; }
-      .contact-left { min-height: 50vh; }
-      .contact-left-content { padding: 120px 40px 60px; justify-content: flex-end; }
-      .contact-right { padding: 80px 40px; }
-      .form-row { grid-template-columns: 1fr; }
-      .custom-options-section { padding: 80px 40px; }
-      .custom-options-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Petal &amp; Pasture Custom Candles</title>
+<meta name="description" content="Get in touch with Petal &amp; Pasture for custom orders, wholesale inquiries, or any questions about our handcrafted beeswax candles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
+<nav class="nav scrolled" id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo.png" alt="Petal &amp; Pasture">
+    <div class="nav-logo-text">
+      <span class="brand-name">Petal &amp; Pasture</span>
+      <span class="brand-sub">Custom Candles</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Shop</a></li>
+    <li><a href="university.html">University</a></li>
+    <li><a href="about.html">Our Story</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="nav-cta">Shop Etsy</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <span class="mobile-menu-close" id="mobile-close">&#x2715;</span>
+  <a href="index.html">Home</a>
+  <a href="products.html">Shop</a>
+  <a href="university.html">University</a>
+  <a href="about.html">Our Story</a>
+  <a href="contact.html">Contact</a>
+  <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank">Shop Etsy</a>
+</div>
 
-  <nav class="nav scrolled" id="mainNav">
-    <div class="nav-inner">
-      <div class="nav-links nav-left">
-        <a href="index.html">Home</a>
-        <a href="products.html">Collection</a>
-        <a href="index.html#university">University</a>
-      </div>
-      <a href="index.html" class="nav-logo">
-        <img src="images/pedal_pasture_badge_v2_dark_2026.png" alt="Petal & Pasture">
-      </a>
-      <div class="nav-links nav-right">
-        <a href="about.html">Our Story</a>
-        <a href="contact.html" style="color:var(--gold)">Custom Orders</a>
-        <a href="https://www.etsy.com" target="_blank" class="nav-shop-btn">Shop Etsy</a>
+<div class="page-hero" style="margin-top:var(--nav-h)">
+  <img src="images/hero_cow_fence.webp" alt="Highland Cow at golden hour">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <span class="eyebrow" style="color:var(--gold-light)">Say Hello</span>
+    <h1>Contact Us</h1>
+    <p>Custom orders, wholesale, or just want to say hi — we'd love to hear from you.</p>
+  </div>
+</div>
+
+<section class="section" style="background:var(--cream)">
+  <div style="max-width:900px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start;">
+    <div class="reveal">
+      <span class="eyebrow">Get in Touch</span>
+      <h2 style="font-size:2rem; color:var(--brown-dark); margin-bottom:1.5rem;">We're Here to Help</h2>
+      <p style="color:var(--text-mid); line-height:1.8; margin-bottom:2rem;">Whether you're looking for a custom order, have a question about our candles, or want to discuss wholesale opportunities — we'd love to hear from you. We typically respond within 24 hours.</p>
+      <div style="display:flex; flex-direction:column; gap:1.5rem;">
+        <div style="display:flex; align-items:center; gap:1rem;">
+          <div style="width:44px; height:44px; border-radius:50%; background:rgba(200,134,10,0.1); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">&#x1F4E7;</div>
+          <div>
+            <div style="font-weight:700; font-size:0.85rem; color:var(--brown-dark); letter-spacing:0.05em;">Email</div>
+            <a href="mailto:hello@petalpasturecandleco.com" style="color:var(--amber); font-size:0.95rem;">hello@petalpasturecandleco.com</a>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:1rem;">
+          <div style="width:44px; height:44px; border-radius:50%; background:rgba(200,134,10,0.1); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">&#x1F6CD;&#xFE0F;</div>
+          <div>
+            <div style="font-weight:700; font-size:0.85rem; color:var(--brown-dark); letter-spacing:0.05em;">Etsy Shop</div>
+            <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" style="color:var(--amber); font-size:0.95rem;">etsy.com/shop/PetalAndPastureCandles</a>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:1rem;">
+          <div style="width:44px; height:44px; border-radius:50%; background:rgba(200,134,10,0.1); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">&#x1F4CD;</div>
+          <div>
+            <div style="font-weight:700; font-size:0.85rem; color:var(--brown-dark); letter-spacing:0.05em;">Location</div>
+            <span style="color:var(--text-mid); font-size:0.95rem;">Texas, USA</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="nav-glass-bar"></div>
-  </nav>
-
-  <!-- CONTACT LAYOUT -->
-  <div class="contact-layout">
-    <!-- LEFT: Image + Info -->
-    <div class="contact-left">
-      <div class="contact-left-img">
-        <img src="images/hero_cow_pasture.jpg" alt="Petal & Pasture Custom Orders">
-      </div>
-      <div class="contact-left-overlay"></div>
-      <div class="contact-left-content">
-        <p class="section-eyebrow" style="color:var(--gold-light);">Let's Create Together</p>
-        <h1>Custom<br><em>Orders &</em><br>Inquiries</h1>
-        <p>Whether you're ordering a single candle or a full set for a special occasion, we'd love to hear from you. Every order is made with care in our Texas workshop.</p>
-        <div class="contact-info-list">
-          <div class="contact-info-item">
-            <div class="contact-info-icon">✉</div>
-            <span class="contact-info-text">hello@petalpasture.com</span>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon">📍</div>
-            <span class="contact-info-text">Handcrafted in Texas, USA</span>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon">⏱</div>
-            <span class="contact-info-text">Response within 24–48 hours</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT: Form -->
-    <div class="contact-right">
-      <div class="contact-form-header">
-        <p class="section-eyebrow">Get in Touch</p>
-        <h2 class="section-title">Send Us a<br><em>Message</em></h2>
-      </div>
-      <form action="https://formspree.io/f/placeholder" method="POST">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="firstName">First Name</label>
-            <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Jane" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="lastName">Last Name</label>
-            <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Smith" required>
-          </div>
+    <div class="reveal reveal-delay-1">
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Smith" required>
         </div>
         <div class="form-group">
-          <label class="form-label" for="email">Email Address</label>
-          <input class="form-input" type="email" id="email" name="email" placeholder="jane@example.com" required>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required>
         </div>
         <div class="form-group">
-          <label class="form-label" for="inquiryType">Inquiry Type</label>
-          <select class="form-select" id="inquiryType" name="inquiryType">
-            <option value="">Select an option</option>
-            <option value="custom-order">Custom Order</option>
-            <option value="barn-box">Barn Box Packaging</option>
-            <option value="university-edition">University Edition</option>
-            <option value="bulk-order">Bulk / Wholesale Order</option>
-            <option value="gift-set">Gift Set Inquiry</option>
-            <option value="general">General Question</option>
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="general">General Inquiry</option>
+            <option value="custom">Custom Order</option>
+            <option value="wholesale">Wholesale</option>
+            <option value="university">University Edition</option>
+            <option value="gift">Gift Order</option>
           </select>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="animal">Animal</label>
-            <select class="form-select" id="animal" name="animal">
-              <option value="">Select animal</option>
-              <option value="highland-cow">Highland Cow</option>
-              <option value="pig">Pasture Pig</option>
-              <option value="horse">Pasture Horse</option>
-              <option value="lamb">Pasture Lamb</option>
-              <option value="chicken">Pasture Chicken</option>
-              <option value="full-set">Full Set (All 5)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="color">Color</label>
-            <select class="form-select" id="color" name="color">
-              <option value="">Select color</option>
-              <option value="brown">Brown</option>
-              <option value="black">Black</option>
-              <option value="beige">Beige</option>
-              <option value="soft-white">Soft White</option>
-              <option value="purple">Purple</option>
-              <option value="university-edition">University Edition</option>
-            </select>
-          </div>
-        </div>
         <div class="form-group">
-          <label class="form-label" for="message">Message</label>
-          <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your order, occasion, or any special requests..."></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what you're looking for..." required></textarea>
         </div>
-        <div class="form-submit">
-          <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Send Message</button>
-        </div>
-        <p class="form-note">By submitting this form, you agree to be contacted regarding your inquiry. We respect your privacy and will never share your information.</p>
+        <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Send Message &#x2192;</button>
       </form>
     </div>
   </div>
+</section>
 
-  <!-- CUSTOM OPTIONS -->
-  <section class="custom-options-section">
-    <div style="text-align:center; max-width:600px; margin:0 auto;">
-      <p class="section-eyebrow">What We Offer</p>
-      <h2 class="section-title">Custom Order<br><em>Options</em></h2>
-    </div>
-    <div class="custom-options-grid">
-      <div class="custom-option-card reveal" data-delay="0">
-        <div class="custom-option-num">01</div>
-        <h3 class="custom-option-title">Single Candle Orders</h3>
-        <p class="custom-option-desc">Choose your animal, your color, and your scent. Each candle comes with the signature grass & fence coaster and is ready to gift or display.</p>
-      </div>
-      <div class="custom-option-card reveal" data-delay="120">
-        <div class="custom-option-num">02</div>
-        <h3 class="custom-option-title">Barn Box Packaging</h3>
-        <p class="custom-option-desc">Upgrade any candle to the premium Barn Box experience. Hand-assembled with care, the miniature barn opens to reveal your candle inside — the ultimate gift.</p>
-      </div>
-      <div class="custom-option-card reveal" data-delay="240">
-        <div class="custom-option-num">03</div>
-        <h3 class="custom-option-title">University Edition Sets</h3>
-        <p class="custom-option-desc">Order the Highland Cow in your school's color with the university logo on the Barn Box. Available for UT, A&M, Texas Tech, and TCU. Perfect for game day and graduation.</p>
-      </div>
-      <div class="custom-option-card reveal" data-delay="360">
-        <div class="custom-option-num">04</div>
-        <h3 class="custom-option-title">Full Collection Sets</h3>
-        <p class="custom-option-desc">Order all five animals in a matching color for a stunning display set. Available with individual coasters or as a coordinated Barn Box gift collection.</p>
-      </div>
-      <div class="custom-option-card reveal" data-delay="480">
-        <div class="custom-option-num">05</div>
-        <h3 class="custom-option-title">Bulk & Wholesale</h3>
-        <p class="custom-option-desc">Boutiques, gift shops, and event planners — we offer wholesale pricing for bulk orders. Reach out to discuss quantities, pricing, and lead times.</p>
-      </div>
-      <div class="custom-option-card reveal" data-delay="600">
-        <div class="custom-option-num">06</div>
-        <h3 class="custom-option-title">Event & Wedding Favors</h3>
-        <p class="custom-option-desc">Make your event unforgettable with custom Petal & Pasture candles as favors. We work with you on colors, quantities, and packaging to match your occasion perfectly.</p>
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Petal and Pasture Custom Candles">
+      <p>Handcrafted 100% organic beeswax candles from the heart of Texas.</p>
+      <div class="footer-social">
+        <a href="https://www.tiktok.com/@petalpasturecandleco" target="_blank" class="footer-social-link">&#x1F3A5;</a>
+        <a href="https://www.instagram.com/petalpasturecandleco" target="_blank" class="footer-social-link">&#x1F4F7;</a>
+        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="footer-social-link">&#x1F6CD;&#xFE0F;</a>
       </div>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="images/pedal_pasture_badge_v2_dark_2026.png" alt="Petal & Pasture" class="footer-logo">
-        <p>Handcrafted beeswax candles inspired by the Texas pasture. Made with love, poured with purpose.</p>
-        <div class="footer-social">
-          <a href="#">TikTok</a>
-          <a href="#">Instagram</a>
-          <a href="https://www.etsy.com" target="_blank">Etsy</a>
-        </div>
-      </div>
-      <div class="footer-nav">
-        <div class="footer-col">
-          <h5>Collection</h5>
-          <a href="products.html#highland-cow">Highland Cow</a>
-          <a href="products.html#pig">Pasture Pig</a>
-          <a href="products.html#horse">Pasture Horse</a>
-          <a href="products.html#lamb">Pasture Lamb</a>
-          <a href="products.html#chicken">Pasture Chicken</a>
-        </div>
-        <div class="footer-col">
-          <h5>University Editions</h5>
-          <a href="university-ut.html">University of Texas</a>
-          <a href="university-am.html">Texas A&M</a>
-          <a href="university-tt.html">Texas Tech</a>
-          <a href="university-tcu.html">TCU</a>
-        </div>
-        <div class="footer-col">
-          <h5>Company</h5>
-          <a href="about.html">Our Story</a>
-          <a href="contact.html">Custom Orders</a>
-          <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Petal & Pasture Custom Candles. All rights reserved. Handcrafted in Texas.</p>
-    </div>
-  </footer>
-
-  <div class="custom-cursor" id="cursor"></div>
-  <div class="custom-cursor-follower" id="cursorFollower"></div>
-  <script src="main.js"></script>
+    <div class="footer-col"><h4>Shop</h4><ul class="footer-links"><li><a href="products.html">All Candles</a></li><li><a href="university.html">University Editions</a></li></ul></div>
+    <div class="footer-col"><h4>Info</h4><ul class="footer-links"><li><a href="about.html">Our Story</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>University</h4><ul class="footer-links"><li><a href="university-ut.html">UT Longhorns</a></li><li><a href="university-am.html">Texas A&amp;M</a></li><li><a href="university-tt.html">Texas Tech</a></li><li><a href="university-tcu.html">TCU</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Petal &amp; Pasture Custom Candles</span>
+    <span>Handcrafted with &#x2665; in Texas</span>
+  </div>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>

@@ -188,6 +188,17 @@ body:hover .custom-cursor-follower { opacity: 1; }
 .hero-img.active {
   opacity: 1;
 }
+/* CSS fallback: show first image before JS fires */
+.hero-img:first-child {
+  opacity: 1;
+}
+.hero-img:first-child.active {
+  opacity: 1;
+}
+/* Once JS has run and set active on any image, hide the first-child fallback */
+.hero-img.js-ready:first-child:not(.active) {
+  opacity: 0;
+}
 @keyframes heroKenBurns {
   from { transform: scale(1.0); }
   to   { transform: scale(1.06); }

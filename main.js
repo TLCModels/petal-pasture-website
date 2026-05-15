@@ -85,6 +85,7 @@ function nextSlide() {
   goToSlide((currentSlide + 1) % heroImgs.length);
 }
 
+goToSlide(0);
 heroInterval = setInterval(nextSlide, 5000);
 
 heroDots.forEach(dot => {

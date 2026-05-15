@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Texas Tech Highland Cow Candle — Petal & Pasture University Edition</title>
+  <meta name="description" content="The Petal & Pasture Highland Cow candle in Scarlet Red — the official Texas Tech University Edition. 100% organic beeswax with bamboo wick. Includes signature Barn Box with university logo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --uni-primary: #CC0000;
+      --uni-secondary: #000000;
+    }
+    .uni-hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .uni-hero-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .uni-hero-bg img { object-position: center 30%; }
+    .uni-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%);
+    }
+    .uni-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 80px;
+      margin-top: 80px;
+      max-width: 700px;
+    }
+    .uni-school-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #CC0000;
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+    .uni-hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-weight: 400;
+      color: var(--warm-white);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+    .uni-hero-title em { font-style: italic; color: #CC0000; filter: brightness(1.4); }
+    .uni-hero-subtitle {
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,253,249,0.7);
+      margin-bottom: 40px;
+    }
+    .uni-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-uni {
+      display: inline-flex;
+      align-items: center;
+      background: #CC0000;
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: 2px;
+      border: 1px solid #CC0000;
+      transition: all 0.3s ease;
+    }
+    .btn-uni:hover { background: transparent; color: var(--warm-white); transform: translateY(-2px); }
+
+    .uni-product-section {
+      padding: 120px 80px;
+      background: var(--cream);
+    }
+    .uni-product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .uni-product-image {
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+    .uni-product-content { padding: 20px 0; }
+    .uni-accent-line {
+      width: 60px;
+      height: 3px;
+      background: #CC0000;
+      margin-bottom: 32px;
+    }
+    .uni-detail-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .uni-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--brown);
+    }
+    .uni-detail-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #CC0000;
+      flex-shrink: 0;
+    }
+
+    .uni-barn-section {
+      padding: 120px 80px;
+      background: var(--ivory);
+    }
+    .uni-barn-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .uni-barn-image {
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+
+    .uni-other-schools {
+      padding: 80px;
+      background: var(--brown);
+      text-align: center;
+    }
+    .uni-other-schools .section-eyebrow { color: var(--gold-light); }
+    .uni-other-schools h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--warm-white);
+      margin-bottom: 48px;
+    }
+    .other-schools-grid {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .other-school-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,253,249,0.08);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,253,249,0.2);
+      color: var(--warm-white);
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .other-school-btn:hover { background: rgba(255,253,249,0.15); transform: translateY(-2px); }
+
+    .uni-nav-strip {
+      background: var(--ivory);
+      border-top: 1px solid rgba(61,43,31,0.1);
+      padding: 24px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .uni-nav-link {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--tan);
+      transition: color 0.3s ease;
+    }
+    .uni-nav-link:hover { color: var(--brown); }
+
+    @media (max-width: 900px) {
+      .uni-hero-content { padding: 0 40px; }
+      .uni-product-section, .uni-barn-section { padding: 80px 40px; }
+      .uni-product-grid, .uni-barn-grid { grid-template-columns: 1fr; }
+      .uni-other-schools { padding: 60px 40px; }
+      .uni-nav-strip { padding: 20px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled" id="mainNav">
+    <div class="nav-inner">
+      <div class="nav-links nav-left">
+        <a href="index.html">Home</a>
+        <a href="products.html">Collection</a>
+        <a href="index.html#university" style="color:var(--gold)">University</a>
+      </div>
+      <a href="index.html" class="nav-logo">
+        <img src="images/pedal_pasture_badge_v2_dark_2026.png" alt="Petal & Pasture">
+      </a>
+      <div class="nav-links nav-right">
+        <a href="about.html">Our Story</a>
+        <a href="contact.html">Custom Orders</a>
+        <a href="https://www.etsy.com" target="_blank" class="nav-shop-btn">Shop Etsy</a>
+      </div>
+    </div>
+    <div class="nav-glass-bar"></div>
+  </nav>
+
+  <!-- UNIVERSITY HERO -->
+  <section class="uni-hero">
+    <div class="uni-hero-bg">
+      <img src="images/hero_tt_cow.jpg" alt="Texas Tech Highland Cow Candle">
+    </div>
+    <div class="uni-hero-overlay"></div>
+    <div class="uni-hero-content">
+      <div class="uni-school-badge">Wreck 'Em · University Edition</div>
+      <h1 class="uni-hero-title">Texas Tech<br><em>Highland Cow</em></h1>
+      <p class="uni-hero-subtitle">Scarlet Red & Beeswax · Bamboo Wick · 100% Organic</p>
+      <div class="uni-hero-actions">
+        <a href="https://www.etsy.com" target="_blank" class="btn-uni">Shop on Etsy</a>
+        <a href="contact.html" class="btn-ghost">Custom Order</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT DETAIL -->
+  <section class="uni-product-section">
+    <div class="uni-product-grid">
+      <div class="uni-product-image reveal-left">
+        <img src="images/hero_tt_cow.jpg" alt="Texas Tech Highland Cow Candle">
+      </div>
+      <div class="uni-product-content reveal-right">
+        <div class="uni-accent-line"></div>
+        <p class="section-eyebrow">TT · University Edition</p>
+        <h2 class="section-title">Texas Tech<br><em>Highland Cow</em></h2>
+        <p class="body-text">The Highland Cow in bold Scarlet Red — a fierce tribute to Texas Tech University. Each candle comes in the signature Barn Box with the Red Raiders logo on every side of the roof.</p>
+        <div class="uni-detail-list">
+          <div class="uni-detail-item">
+            <div class="uni-detail-dot"></div>
+            <span>100% organic beeswax, triple filtered</span>
+          </div>
+          <div class="uni-detail-item">
+            <div class="uni-detail-dot"></div>
+            <span>Natural bamboo wick for a clean, even burn</span>
+          </div>
+          <div class="uni-detail-item">
+            <div class="uni-detail-dot"></div>
+            <span>Includes grass & fence coaster</span>
+          </div>
+          <div class="uni-detail-item">
+            <div class="uni-detail-dot"></div>
+            <span>Available with signature Barn Box packaging</span>
+          </div>
+          <div class="uni-detail-item">
+            <div class="uni-detail-dot"></div>
+            <span>University logo on each side of barn roof</span>
+          </div>
+        </div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:32px;">
+          <a href="https://www.etsy.com" target="_blank" class="btn-primary">Shop on Etsy</a>
+          <a href="contact.html" class="btn-outline">Custom Order</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARN BOX SECTION -->
+  <section class="uni-barn-section">
+    <div class="uni-barn-grid">
+      <div class="uni-barn-content reveal-left">
+        <p class="section-eyebrow">Premium Packaging</p>
+        <h2 class="section-title">The Texas Tech<br><em>Barn Box</em></h2>
+        <p class="body-text">The University Edition Barn Box is the ultimate game-day gift. The hand-assembled miniature barn features the Texas Tech logo on each side of the roof, opening to reveal the Highland Cow candle in your school's signature color.</p>
+        <p class="body-text">Perfect for alumni gifts, tailgate season, graduation presents, and any occasion worth celebrating in Scarlet Red.</p>
+        <div style="margin-top:32px;">
+          <a href="contact.html" class="btn-primary">Order Barn Box</a>
+        </div>
+      </div>
+      <div class="uni-barn-image reveal-right">
+        <img src="images/barn_box_real.jpg" alt="Texas Tech Barn Box Packaging">
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER SCHOOLS -->
+  <section class="uni-other-schools">
+    <p class="section-eyebrow">All Texas Universities</p>
+    <h2>Explore All <em style="font-style:italic; color:var(--gold-light);">University Editions</em></h2>
+    <div class="other-schools-grid">
+      <a href="university-ut.html" class="other-school-btn" style="border-color: rgba(191,87,0,0.4);">
+        <span style="color:#BF5700; font-size:0.6rem;">●</span> University of Texas
+      </a>
+      <a href="university-am.html" class="other-school-btn" style="border-color: rgba(80,0,0,0.4);">
+        <span style="color:#500000; font-size:0.6rem;">●</span> Texas A&M
+      </a>
+      <a href="university-tt.html" class="other-school-btn" style="border-color: rgba(204,0,0,0.4);">
+        <span style="color:#CC0000; font-size:0.6rem;">●</span> Texas Tech
+      </a>
+      <a href="university-tcu.html" class="other-school-btn" style="border-color: rgba(77,25,121,0.4);">
+        <span style="color:#4D1979; font-size:0.6rem;">●</span> TCU
+      </a>
+    </div>
+  </section>
+
+  <!-- PREV / NEXT NAV -->
+  <div class="uni-nav-strip">
+    <a href="university-am.html" class="uni-nav-link">← Texas A&M</a>
+    <a href="index.html#university" class="uni-nav-link">All University Editions</a>
+    <a href="university-tcu.html" class="uni-nav-link">TCU →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/pedal_pasture_badge_v2_dark_2026.png" alt="Petal & Pasture" class="footer-logo">
+        <p>Handcrafted beeswax candles inspired by the Texas pasture. Made with love, poured with purpose.</p>
+        <div class="footer-social">
+          <a href="#">TikTok</a>
+          <a href="#">Instagram</a>
+          <a href="https://www.etsy.com" target="_blank">Etsy</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h5>Collection</h5>
+          <a href="products.html#highland-cow">Highland Cow</a>
+          <a href="products.html#pig">Pasture Pig</a>
+          <a href="products.html#horse">Pasture Horse</a>
+          <a href="products.html#lamb">Pasture Lamb</a>
+          <a href="products.html#chicken">Pasture Chicken</a>
+        </div>
+        <div class="footer-col">
+          <h5>University Editions</h5>
+          <a href="university-ut.html">University of Texas</a>
+          <a href="university-am.html">Texas A&M</a>
+          <a href="university-tt.html">Texas Tech</a>
+          <a href="university-tcu.html">TCU</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="about.html">Our Story</a>
+          <a href="contact.html">Custom Orders</a>
+          <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Petal & Pasture Custom Candles. All rights reserved. Handcrafted in Texas.</p>
+    </div>
+  </footer>
+
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-follower" id="cursorFollower"></div>
+  <script src="main.js"></script>
+</body>
+</html>

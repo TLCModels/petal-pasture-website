@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Collection — Petal & Pasture Custom Candles</title>
+  <meta name="description" content="Shop all five pasture animal candles — Highland Cow, Pig, Horse, Lamb, and Chicken — each available in 5 earthy colors. 100% organic beeswax, bamboo wicks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Products page specific styles */
+    .products-hero {
+      position: relative;
+      height: 55vh;
+      min-height: 400px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 80px;
+      overflow: hidden;
+    }
+    .products-hero-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .products-hero-bg img { object-position: center 30%; }
+    .products-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,16,10,0.7) 0%, rgba(26,16,10,0.2) 60%, transparent 100%);
+    }
+    .products-hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 80px;
+      color: var(--warm-white);
+    }
+    .products-hero-content .section-eyebrow { color: var(--gold-light); }
+    .products-hero-content h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 400;
+      color: var(--warm-white);
+      line-height: 1.1;
+    }
+    .products-hero-content h1 em { font-style: italic; color: var(--gold-light); }
+
+    .products-filter-bar {
+      background: var(--warm-white);
+      border-bottom: 1px solid rgba(61,43,31,0.08);
+      padding: 0 80px;
+      position: sticky;
+      top: var(--nav-h);
+      z-index: 100;
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 0;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .filter-tab {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--tan);
+      padding: 20px 28px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+    .filter-tab:hover { color: var(--brown); }
+    .filter-tab.active {
+      color: var(--brown);
+      border-bottom-color: var(--gold);
+    }
+
+    .animal-section {
+      padding: 100px 80px;
+    }
+    .animal-section:nth-child(even) { background: var(--ivory); }
+
+    .animal-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin: 0 auto 60px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(61,43,31,0.1);
+    }
+    .animal-header-left {}
+    .animal-header-left .section-eyebrow { margin-bottom: 8px; }
+    .animal-header-left h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3vw, 3rem);
+      font-weight: 400;
+      color: var(--brown);
+    }
+    .animal-header-left h2 em { font-style: italic; color: var(--gold); }
+    .animal-header-right {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--tan);
+      max-width: 360px;
+      text-align: right;
+      line-height: 1.7;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 28px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .color-card {
+      background: var(--warm-white);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 20px rgba(61,43,31,0.06);
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s ease;
+    }
+    .color-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(61,43,31,0.14);
+    }
+    .color-card-img {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+    .color-card-img img {
+      transition: transform 0.7s ease;
+    }
+    .color-card:hover .color-card-img img { transform: scale(1.06); }
+    .color-card-hover-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(26,16,10,0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .color-card:hover .color-card-hover-overlay { opacity: 1; }
+    .color-card-hover-overlay a {
+      background: rgba(255,253,249,0.15);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,253,249,0.4);
+      color: var(--warm-white);
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: 2px;
+      transition: background 0.3s ease;
+    }
+    .color-card-hover-overlay a:hover { background: rgba(255,253,249,0.25); }
+    .color-card-body {
+      padding: 20px 20px 24px;
+      text-align: center;
+    }
+    .color-name {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--brown);
+      margin-bottom: 6px;
+    }
+    .color-dot-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .color-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      border: 1.5px solid var(--ivory);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .color-dot.active {
+      width: 16px; height: 16px;
+      border-color: var(--gold);
+    }
+    .color-price {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--tan);
+      letter-spacing: 0.05em;
+    }
+
+    .barn-box-upsell {
+      background: var(--brown);
+      padding: 80px;
+      text-align: center;
+    }
+    .barn-box-upsell .section-eyebrow { color: var(--gold-light); }
+    .barn-box-upsell .section-title { color: var(--warm-white); }
+    .barn-box-upsell .section-title em { color: var(--gold-light); }
+    .barn-box-upsell p {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: rgba(255,253,249,0.7);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 1100px) { .color-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 700px) {
+      .color-grid { grid-template-columns: repeat(2, 1fr); }
+      .products-hero-content, .products-filter-bar, .animal-section { padding-left: 24px; padding-right: 24px; }
+      .animal-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .animal-header-right { text-align: left; }
+      .barn-box-upsell { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="mainNav">
+    <div class="nav-inner">
+      <div class="nav-links nav-left">
+        <a href="index.html">Home</a>
+        <a href="products.html" style="color:var(--gold)">Collection</a>
+        <a href="index.html#university">University</a>
+      </div>
+      <a href="index.html" class="nav-logo">
+        <img src="images/pedal_pasture_badge_v2_dark_2026.png" alt="Petal & Pasture">
+      </a>
+      <div class="nav-links nav-right">
+        <a href="about.html">Our Story</a>
+        <a href="contact.html">Custom Orders</a>
+        <a href="https://www.etsy.com" target="_blank" class="nav-shop-btn">Shop Etsy</a>
+      </div>
+    </div>
+    <div class="nav-glass-bar"></div>
+  </nav>
+
+  <!-- PRODUCTS HERO -->
+  <div class="products-hero">
+    <div class="products-hero-bg">
+      <img src="images/hero_collection_pasture.jpg" alt="Petal & Pasture Collection">
+    </div>
+    <div class="products-hero-overlay"></div>
+    <div class="products-hero-content">
+      <p class="section-eyebrow">Handcrafted in Texas</p>
+      <h1>The Full<br><em>Collection</em></h1>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="products-filter-bar">
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="scrollToAnimal('highland-cow', this)">Highland Cow</button>
+      <button class="filter-tab" onclick="scrollToAnimal('pig', this)">Pig</button>
+      <button class="filter-tab" onclick="scrollToAnimal('horse', this)">Horse</button>
+      <button class="filter-tab" onclick="scrollToAnimal('lamb', this)">Lamb</button>
+      <button class="filter-tab" onclick="scrollToAnimal('chicken', this)">Chicken</button>
+    </div>
+  </div>
+
+  <!-- HIGHLAND COW -->
+  <section class="animal-section" id="highland-cow">
+    <div class="animal-header reveal">
+      <div class="animal-header-left">
+        <p class="section-eyebrow">01 — Best Seller</p>
+        <h2>Highland <em>Cow</em></h2>
+      </div>
+      <div class="animal-header-right">
+        Our most iconic design — a fluffy Highland Cow adorned with intricate hand-sculpted roses. Available in five earthy tones, each poured in 100% organic beeswax.
+      </div>
+    </div>
+    <div class="color-grid">
+      <div class="color-card reveal" data-delay="0">
+        <div class="color-card-img">
+          <img src="images/product_cow_brown_clean.jpg" alt="Highland Cow — Brown">
+          <div class="color-card-hover-overlay">
+            <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+          </div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Brown</p>
+          <div class="color-dot-row">
+            <span class="color-dot active" style="background:#3d2b1f;"></span>
+          </div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="80">
+        <div class="color-card-img">
+          <img src="images/product_cow_brown_clean.jpg" alt="Highland Cow — Black">
+          <div class="color-card-hover-overlay">
+            <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+          </div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Black</p>
+          <div class="color-dot-row">
+            <span class="color-dot active" style="background:#1a1a1a;"></span>
+          </div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="160">
+        <div class="color-card-img">
+          <img src="images/product_cow_brown_clean.jpg" alt="Highland Cow — Beige">
+          <div class="color-card-hover-overlay">
+            <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+          </div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Beige</p>
+          <div class="color-dot-row">
+            <span class="color-dot active" style="background:#d4c5a9;"></span>
+          </div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="240">
+        <div class="color-card-img">
+          <img src="images/product_cow_brown_clean.jpg" alt="Highland Cow — Soft White">
+          <div class="color-card-hover-overlay">
+            <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+          </div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Soft White</p>
+          <div class="color-dot-row">
+            <span class="color-dot active" style="background:#f5f0e8; border-color:#d4c5a9;"></span>
+          </div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="320">
+        <div class="color-card-img">
+          <img src="images/product_cow_brown_clean.jpg" alt="Highland Cow — Purple">
+          <div class="color-card-hover-overlay">
+            <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+          </div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Purple</p>
+          <div class="color-dot-row">
+            <span class="color-dot active" style="background:#7b5ea7;"></span>
+          </div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIG -->
+  <section class="animal-section" id="pig">
+    <div class="animal-header reveal">
+      <div class="animal-header-left">
+        <p class="section-eyebrow">02 — Fan Favorite</p>
+        <h2>Pasture <em>Pig</em></h2>
+      </div>
+      <div class="animal-header-right">
+        Irresistibly charming, our rose-covered Pig candle brings warmth and whimsy to any farmhouse setting. A fan favorite in all five earthy tones.
+      </div>
+    </div>
+    <div class="color-grid">
+      <div class="color-card reveal" data-delay="0">
+        <div class="color-card-img">
+          <img src="images/product_pig_beige_clean.jpg" alt="Pig — Brown">
+          <div class="color-card-hover-overlay">
+            <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+          </div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Brown</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#3d2b1f;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="80">
+        <div class="color-card-img">
+          <img src="images/product_pig_beige_clean.jpg" alt="Pig — Black">
+          <div class="color-card-hover-overlay">
+            <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+          </div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Black</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#1a1a1a;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="160">
+        <div class="color-card-img">
+          <img src="images/product_pig_beige_clean.jpg" alt="Pig — Beige">
+          <div class="color-card-hover-overlay">
+            <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+          </div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Beige</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#d4c5a9;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="240">
+        <div class="color-card-img">
+          <img src="images/product_pig_beige_clean.jpg" alt="Pig — Soft White">
+          <div class="color-card-hover-overlay">
+            <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+          </div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Soft White</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#f5f0e8; border-color:#d4c5a9;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="320">
+        <div class="color-card-img">
+          <img src="images/product_pig_beige_clean.jpg" alt="Pig — Purple">
+          <div class="color-card-hover-overlay">
+            <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+          </div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Purple</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#7b5ea7;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORSE -->
+  <section class="animal-section" id="horse">
+    <div class="animal-header reveal">
+      <div class="animal-header-left">
+        <p class="section-eyebrow">03 — The Elegant One</p>
+        <h2>Pasture <em>Horse</em></h2>
+      </div>
+      <div class="animal-header-right">
+        Graceful and majestic, the Pasture Horse candle captures the spirit of the Texas range. Each rose-adorned sculpture is a work of art in five earthy tones.
+      </div>
+    </div>
+    <div class="color-grid">
+      <div class="color-card reveal" data-delay="0">
+        <div class="color-card-img">
+          <img src="images/product_horse_black_clean.jpg" alt="Horse — Brown">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Brown</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#3d2b1f;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="80">
+        <div class="color-card-img">
+          <img src="images/product_horse_black_clean.jpg" alt="Horse — Black">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Black</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#1a1a1a;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="160">
+        <div class="color-card-img">
+          <img src="images/product_horse_black_clean.jpg" alt="Horse — Beige">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Beige</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#d4c5a9;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="240">
+        <div class="color-card-img">
+          <img src="images/product_horse_black_clean.jpg" alt="Horse — Soft White">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Soft White</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#f5f0e8; border-color:#d4c5a9;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="320">
+        <div class="color-card-img">
+          <img src="images/product_horse_black_clean.jpg" alt="Horse — Purple">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Purple</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#7b5ea7;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAMB -->
+  <section class="animal-section" id="lamb">
+    <div class="animal-header reveal">
+      <div class="animal-header-left">
+        <p class="section-eyebrow">04 — The Sweet One</p>
+        <h2>Pasture <em>Lamb</em></h2>
+      </div>
+      <div class="animal-header-right">
+        Soft, sweet, and utterly charming — the Pasture Lamb candle is a gift-giver's dream. Covered in delicate roses, available in five beautiful earthy tones.
+      </div>
+    </div>
+    <div class="color-grid">
+      <div class="color-card reveal" data-delay="0">
+        <div class="color-card-img">
+          <img src="images/product_lamb_purple_clean.jpg" alt="Lamb — Brown">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Brown</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#3d2b1f;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="80">
+        <div class="color-card-img">
+          <img src="images/product_lamb_purple_clean.jpg" alt="Lamb — Black">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Black</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#1a1a1a;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="160">
+        <div class="color-card-img">
+          <img src="images/product_lamb_purple_clean.jpg" alt="Lamb — Beige">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Beige</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#d4c5a9;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="240">
+        <div class="color-card-img">
+          <img src="images/product_lamb_purple_clean.jpg" alt="Lamb — Soft White">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Soft White</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#f5f0e8; border-color:#d4c5a9;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="320">
+        <div class="color-card-img">
+          <img src="images/product_lamb_purple_clean.jpg" alt="Lamb — Purple">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Purple</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#7b5ea7;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHICKEN -->
+  <section class="animal-section" id="chicken">
+    <div class="animal-header reveal">
+      <div class="animal-header-left">
+        <p class="section-eyebrow">05 — The Farmhouse Classic</p>
+        <h2>Pasture <em>Chicken</em></h2>
+      </div>
+      <div class="animal-header-right">
+        A farmhouse staple with a luxury twist — the Pasture Chicken candle brings rustic charm and artisan craftsmanship to any home in five earthy tones.
+      </div>
+    </div>
+    <div class="color-grid">
+      <div class="color-card reveal" data-delay="0">
+        <div class="color-card-img">
+          <img src="images/product_chicken_beige_clean.jpg" alt="Chicken — Brown">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Brown</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#3d2b1f;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="80">
+        <div class="color-card-img">
+          <img src="images/product_chicken_beige_clean.jpg" alt="Chicken — Black">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Black</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#1a1a1a;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="160">
+        <div class="color-card-img">
+          <img src="images/product_chicken_beige_clean.jpg" alt="Chicken — Beige">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Beige</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#d4c5a9;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="240">
+        <div class="color-card-img">
+          <img src="images/product_chicken_beige_clean.jpg" alt="Chicken — Soft White">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Soft White</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#f5f0e8; border-color:#d4c5a9;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+      <div class="color-card reveal" data-delay="320">
+        <div class="color-card-img">
+          <img src="images/product_chicken_beige_clean.jpg" alt="Chicken — Purple">
+          <div class="color-card-hover-overlay"><a href="https://www.etsy.com" target="_blank">Shop on Etsy</a></div>
+        </div>
+        <div class="color-card-body">
+          <p class="color-name">Purple</p>
+          <div class="color-dot-row"><span class="color-dot active" style="background:#7b5ea7;"></span></div>
+          <p class="color-price">From $38</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARN BOX UPSELL -->
+  <section class="barn-box-upsell">
+    <p class="section-eyebrow">Premium Gifting</p>
+    <h2 class="section-title">Upgrade to the <em>Barn Box</em></h2>
+    <p>Transform any candle into a premium gift experience with our signature hand-assembled Barn Box packaging. Available for all five animals and all five colors.</p>
+    <a href="contact.html" class="btn-primary">Inquire About Barn Box</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/pedal_pasture_badge_v2_dark_2026.png" alt="Petal & Pasture" class="footer-logo">
+        <p>Handcrafted beeswax candles inspired by the Texas pasture. Made with love, poured with purpose.</p>
+        <div class="footer-social">
+          <a href="#">TikTok</a>
+          <a href="#">Instagram</a>
+          <a href="https://www.etsy.com" target="_blank">Etsy</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h5>Collection</h5>
+          <a href="#highland-cow">Highland Cow</a>
+          <a href="#pig">Pasture Pig</a>
+          <a href="#horse">Pasture Horse</a>
+          <a href="#lamb">Pasture Lamb</a>
+          <a href="#chicken">Pasture Chicken</a>
+        </div>
+        <div class="footer-col">
+          <h5>University Editions</h5>
+          <a href="university-ut.html">University of Texas</a>
+          <a href="university-am.html">Texas A&M</a>
+          <a href="university-tt.html">Texas Tech</a>
+          <a href="university-tcu.html">TCU</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="about.html">Our Story</a>
+          <a href="contact.html">Custom Orders</a>
+          <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Petal & Pasture Custom Candles. All rights reserved. Handcrafted in Texas.</p>
+    </div>
+  </footer>
+
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-follower" id="cursorFollower"></div>
+
+  <script src="main.js"></script>
+  <script>
+    function scrollToAnimal(id, btn) {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      const el = document.getElementById(id);
+      if (el) {
+        const offset = el.getBoundingClientRect().top + window.scrollY - 140;
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+      }
+    }
+
+    // Update active filter tab on scroll
+    const sections = ['highland-cow','pig','horse','lamb','chicken'];
+    window.addEventListener('scroll', () => {
+      let current = sections[0];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top < 200) current = id;
+      });
+      document.querySelectorAll('.filter-tab').forEach((tab, i) => {
+        tab.classList.toggle('active', sections[i] === current);
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>

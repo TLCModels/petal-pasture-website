@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story — Petal & Pasture Custom Candles</title>
+  <meta name="description" content="The story behind Petal & Pasture — handcrafted beeswax candles inspired by the Texas pasture, made with 100% organic beeswax and bamboo wicks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .about-hero {
+      position: relative;
+      height: 70vh;
+      min-height: 500px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 100px;
+      overflow: hidden;
+    }
+    .about-hero-bg { position: absolute; inset: 0; }
+    .about-hero-bg img { object-position: center 40%; }
+    .about-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,16,10,0.75) 0%, rgba(26,16,10,0.2) 60%, transparent 100%);
+    }
+    .about-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 80px;
+      max-width: 800px;
+    }
+    .about-hero-content h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 400;
+      color: var(--warm-white);
+      line-height: 1.05;
+    }
+    .about-hero-content h1 em { font-style: italic; color: var(--gold-light); }
+
+    .about-story-section {
+      padding: 120px 80px;
+      background: var(--cream);
+    }
+    .about-story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .about-story-image {
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+    .about-story-content {}
+    .about-pull-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--brown);
+      line-height: 1.4;
+      margin: 32px 0;
+      padding-left: 24px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .about-values-section {
+      padding: 120px 80px;
+      background: var(--ivory);
+    }
+    .about-values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      max-width: 1300px;
+      margin: 60px auto 0;
+    }
+    .value-card {
+      text-align: center;
+      padding: 48px 32px;
+      background: var(--warm-white);
+      border-radius: 4px;
+      box-shadow: 0 4px 30px rgba(61,43,31,0.06);
+    }
+    .value-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .value-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+    .value-desc {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--tan);
+      line-height: 1.8;
+    }
+
+    .about-craft-section {
+      padding: 120px 80px;
+      background: var(--brown);
+    }
+    .about-craft-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .about-craft-content .section-eyebrow { color: var(--gold-light); }
+    .about-craft-content .section-title { color: var(--warm-white); }
+    .about-craft-content .section-title em { color: var(--gold-light); }
+    .about-craft-content .body-text { color: rgba(255,253,249,0.75); }
+    .craft-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .craft-step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .craft-step-num {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--gold);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 40px;
+    }
+    .craft-step-text {}
+    .craft-step-title {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--warm-white);
+      margin-bottom: 6px;
+    }
+    .craft-step-desc {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: rgba(255,253,249,0.65);
+      line-height: 1.7;
+    }
+    .about-craft-image {
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 900px) {
+      .about-hero-content { padding: 0 40px; }
+      .about-story-section, .about-values-section, .about-craft-section { padding: 80px 40px; }
+      .about-story-grid, .about-craft-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled" id="mainNav">
+    <div class="nav-inner">
+      <div class="nav-links nav-left">
+        <a href="index.html">Home</a>
+        <a href="products.html">Collection</a>
+        <a href="index.html#university">University</a>
+      </div>
+      <a href="index.html" class="nav-logo">
+        <img src="images/pedal_pasture_badge_v2_dark_2026.png" alt="Petal & Pasture">
+      </a>
+      <div class="nav-links nav-right">
+        <a href="about.html" style="color:var(--gold)">Our Story</a>
+        <a href="contact.html">Custom Orders</a>
+        <a href="https://www.etsy.com" target="_blank" class="nav-shop-btn">Shop Etsy</a>
+      </div>
+    </div>
+    <div class="nav-glass-bar"></div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="about-hero">
+    <div class="about-hero-bg">
+      <img src="images/hero_artisan_story.jpg" alt="Petal & Pasture Artisan Story">
+    </div>
+    <div class="about-hero-overlay"></div>
+    <div class="about-hero-content">
+      <p class="section-eyebrow" style="color:var(--gold-light);">Handcrafted in Texas</p>
+      <h1>Where <em>Petal</em><br>Meets <em>Pasture</em></h1>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="about-story-section">
+    <div class="about-story-grid">
+      <div class="about-story-image reveal-left">
+        <img src="images/hero_coaster_closeup.jpg" alt="Petal & Pasture Candle on Coaster">
+      </div>
+      <div class="about-story-content reveal-right">
+        <p class="section-eyebrow">The Story</p>
+        <h2 class="section-title">Born from the<br><em>Texas Pasture</em></h2>
+        <p class="body-text">Petal & Pasture was born from a deep love of the Texas countryside — the golden morning light over rolling pastures, the scent of wildflowers carried on a warm breeze, and the quiet charm of farmhouse living.</p>
+        <blockquote class="about-pull-quote">"Every candle is a little piece of the pasture, brought into your home."</blockquote>
+        <p class="body-text">Each sculpture is hand-poured using 100% organic beeswax that is triple filtered for exceptional clarity and a clean, even burn. We use only natural bamboo wicks — no zinc, no lead, no compromise. The result is a candle that burns beautifully and fills your space with warmth.</p>
+        <p class="body-text">Our five pasture animals — the Highland Cow, Pig, Horse, Lamb, and Chicken — are each adorned with intricate hand-sculpted roses, making them as stunning to display as they are to burn.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="about-values-section">
+    <div style="text-align:center; max-width:600px; margin:0 auto;">
+      <p class="section-eyebrow">What We Stand For</p>
+      <h2 class="section-title">Crafted with<br><em>Intention</em></h2>
+    </div>
+    <div class="about-values-grid">
+      <div class="value-card reveal" data-delay="0">
+        <span class="value-icon">🌿</span>
+        <h3 class="value-title">100% Organic</h3>
+        <p class="value-desc">We use only triple-filtered organic beeswax — no paraffin, no synthetics, no shortcuts. Pure, clean, and naturally beautiful.</p>
+      </div>
+      <div class="value-card reveal" data-delay="120">
+        <span class="value-icon">🎋</span>
+        <h3 class="value-title">Bamboo Wicks</h3>
+        <p class="value-desc">Natural bamboo wicks provide a clean, crackling burn that fills your space with warmth — without the soot of cotton or zinc wicks.</p>
+      </div>
+      <div class="value-card reveal" data-delay="240">
+        <span class="value-icon">🌸</span>
+        <h3 class="value-title">Handcrafted Detail</h3>
+        <p class="value-desc">Every rose, every curve, every detail is intentional. Our candles are sculptures first, candles second — designed to be displayed with pride.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRAFT PROCESS -->
+  <section class="about-craft-section">
+    <div class="about-craft-grid">
+      <div class="about-craft-content reveal-left">
+        <p class="section-eyebrow">The Process</p>
+        <h2 class="section-title">How Every<br><em>Candle is Made</em></h2>
+        <p class="body-text">From raw beeswax to finished sculpture, every Petal & Pasture candle goes through a careful, artisan process designed to ensure the highest quality.</p>
+        <div class="craft-steps">
+          <div class="craft-step">
+            <span class="craft-step-num">01</span>
+            <div class="craft-step-text">
+              <p class="craft-step-title">Triple-Filter the Beeswax</p>
+              <p class="craft-step-desc">Raw organic beeswax is melted and filtered three times to remove all impurities, resulting in a crystal-clear pour.</p>
+            </div>
+          </div>
+          <div class="craft-step">
+            <span class="craft-step-num">02</span>
+            <div class="craft-step-text">
+              <p class="craft-step-title">Color & Scent</p>
+              <p class="craft-step-desc">Natural pigments are blended in to achieve each of the five earthy tones. Fragrance oils are added at the precise temperature for optimal scent throw.</p>
+            </div>
+          </div>
+          <div class="craft-step">
+            <span class="craft-step-num">03</span>
+            <div class="craft-step-text">
+              <p class="craft-step-title">Hand Pour & Set</p>
+              <p class="craft-step-desc">Each candle is poured by hand into the animal sculpture mold with a bamboo wick centered precisely for an even burn.</p>
+            </div>
+          </div>
+          <div class="craft-step">
+            <span class="craft-step-num">04</span>
+            <div class="craft-step-text">
+              <p class="craft-step-title">Quality Check & Package</p>
+              <p class="craft-step-desc">Every candle is inspected before being placed on its grass & fence coaster and packaged — or assembled into the signature Barn Box.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-craft-image reveal-right">
+        <img src="images/hero_barn_box.jpg" alt="Petal & Pasture Barn Box Packaging">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:120px 80px; background:var(--cream); text-align:center;">
+    <p class="section-eyebrow">Ready to Bring the Pasture Home?</p>
+    <h2 class="section-title">Shop the <em>Collection</em></h2>
+    <p class="body-text" style="max-width:500px; margin:0 auto 40px;">Every candle is made to order and ships directly from our Texas workshop. Find your perfect pasture companion today.</p>
+    <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+      <a href="products.html" class="btn-primary">View Full Collection</a>
+      <a href="https://www.etsy.com" target="_blank" class="btn-outline">Shop on Etsy</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/pedal_pasture_badge_v2_dark_2026.png" alt="Petal & Pasture" class="footer-logo">
+        <p>Handcrafted beeswax candles inspired by the Texas pasture. Made with love, poured with purpose.</p>
+        <div class="footer-social">
+          <a href="#">TikTok</a>
+          <a href="#">Instagram</a>
+          <a href="https://www.etsy.com" target="_blank">Etsy</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h5>Collection</h5>
+          <a href="products.html#highland-cow">Highland Cow</a>
+          <a href="products.html#pig">Pasture Pig</a>
+          <a href="products.html#horse">Pasture Horse</a>
+          <a href="products.html#lamb">Pasture Lamb</a>
+          <a href="products.html#chicken">Pasture Chicken</a>
+        </div>
+        <div class="footer-col">
+          <h5>University Editions</h5>
+          <a href="university-ut.html">University of Texas</a>
+          <a href="university-am.html">Texas A&M</a>
+          <a href="university-tt.html">Texas Tech</a>
+          <a href="university-tcu.html">TCU</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="about.html">Our Story</a>
+          <a href="contact.html">Custom Orders</a>
+          <a href="https://www.etsy.com" target="_blank">Shop on Etsy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Petal & Pasture Custom Candles. All rights reserved. Handcrafted in Texas.</p>
+    </div>
+  </footer>
+
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-follower" id="cursorFollower"></div>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -187,8 +187,8 @@ h1,h2,h3,h4 { font-family: 'Playfair Display',Georgia,'Times New Roman',serif; l
 
 /* SCENT BANNER */
 .scent-banner { background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-mid) 100%); padding: 1.5rem 5vw; overflow: hidden; }
-.scent-ticker-wrap { overflow: hidden; }
-.scent-ticker { display: flex; gap: 3rem; animation: ticker 30s linear infinite; white-space: nowrap; width: max-content; }
+.scent-ticker-wrap { overflow: hidden; white-space: nowrap; }
+.scent-ticker { display: inline-flex; flex-wrap: nowrap; gap: 3rem; animation: ticker 30s linear infinite; white-space: nowrap; width: max-content; min-width: 100%; }
 .scent-item { display: flex; align-items: center; gap: 0.75rem; color: rgba(255,255,255,0.7); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; flex-shrink: 0; }
 .scent-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--amber); }
 

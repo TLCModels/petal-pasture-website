@@ -429,6 +429,24 @@
     }
     .btn-outline-white:hover { border-color: #D4A853; color: #D4A853; transform: translateY(-2px); }
 
+    /* ===== WEDDING PAGE NAV ===== */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; transition: background 0.3s, box-shadow 0.3s; }
+    .nav.scrolled { background: rgba(250,248,244,0.95); backdrop-filter: blur(20px); box-shadow: 0 1px 0 rgba(26,16,10,0.08), 0 4px 20px rgba(26,16,10,0.06); }
+    .nav-inner { display: flex; align-items: center; gap: 0.6rem; }
+    .nav-logo-link { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .nav-logo { height: 39px; width: auto; display: block; filter: drop-shadow(0 2px 8px rgba(26,16,10,0.15)); }
+    .nav-brand { display: flex; flex-direction: column; line-height: 1.1; }
+    .nav-brand-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #fff; letter-spacing: 0.02em; }
+    .nav-brand-sub { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #D4A853; }
+    .nav.scrolled .nav-brand-name { color: #2c1a0e; }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.9); text-decoration: none; transition: color 0.3s; }
+    .nav.scrolled .nav-links a { color: #2c1a0e; }
+    .nav-links a:hover, .nav-links a.active { color: #D4A853; }
+    .nav-etsy-btn { background: #D4A853 !important; color: #1a0f05 !important; padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.75rem !important; font-weight: 700 !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer; background: none; border: none; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.3s; }
+    .nav.scrolled .nav-toggle span { background: #2c1a0e; }
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .wedding-animal-row {
@@ -437,6 +455,8 @@
       .wedding-animal-row.reverse { direction: ltr; }
       .wedding-animal-text { padding: 32px 24px; }
       .wedding-animal-img { aspect-ratio: 4/3; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
     }
   </style>
 </head>
@@ -538,7 +558,7 @@
     <!-- PIG -->
     <div class="wedding-animal-row reverse reveal">
       <div class="wedding-animal-img">
-        <img src="images/wedding_pig_table.webp" alt="White Farmhouse Pig beeswax candle on moss coaster at a barn wedding table" loading="lazy">
+        <img src="images/wedding_pig_table_v3.webp" alt="White Farmhouse Pig beeswax candle on moss coaster at a barn wedding table" loading="lazy">
       </div>
       <div class="wedding-animal-text">
         <span class="animal-badge">🌸 Fan Favorite</span>
@@ -560,7 +580,7 @@
     <!-- LAMB -->
     <div class="wedding-animal-row reveal">
       <div class="wedding-animal-img">
-        <img src="images/wedding_lamb_table.webp" alt="Black Meadow Lamb beeswax candle on moss coaster at a barn wedding table" loading="lazy">
+        <img src="images/wedding_lamb_table_v2.webp" alt="Black Meadow Lamb beeswax candle on moss coaster at a barn wedding table" loading="lazy">
       </div>
       <div class="wedding-animal-text">
         <span class="animal-badge">🖤 Dramatic Elegance</span>

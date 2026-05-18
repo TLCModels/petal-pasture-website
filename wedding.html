@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Candles | Petal & Pasture Custom Candles</title>
+  <meta name="description" content="Make every seat unforgettable. Petal & Pasture handcrafted beeswax animal candles are the perfect southern barn wedding favor and table accent.">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ===== WEDDING PAGE SPECIFIC STYLES ===== */
+    .wedding-hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wedding-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/wedding_barn_exterior.webp');
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.05);
+      transition: transform 8s ease;
+    }
+    .wedding-hero-bg.loaded { transform: scale(1); }
+    .wedding-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(20,12,5,0.35) 0%, rgba(20,12,5,0.55) 60%, rgba(20,12,5,0.8) 100%);
+    }
+    .wedding-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #fff;
+      padding: 0 24px;
+      max-width: 800px;
+    }
+    .wedding-hero-eyebrow {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #D4A853;
+      margin-bottom: 16px;
+    }
+    .wedding-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .wedding-hero-title em {
+      font-style: italic;
+      color: #D4A853;
+    }
+    .wedding-hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .wedding-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #D4A853;
+      color: #1a0f05;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 36px;
+      border-radius: 50px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .wedding-hero-cta:hover { background: #c49540; transform: translateY(-2px); }
+
+    /* ===== INTRO SECTION ===== */
+    .wedding-intro {
+      background: #faf7f2;
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .wedding-intro-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .section-eyebrow {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #D4A853;
+      margin-bottom: 12px;
+    }
+    .section-title-serif {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      font-weight: 400;
+      color: #2c1a0e;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .section-title-serif em { font-style: italic; color: #8B5E3C; }
+    .section-body {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #5a3e2b;
+      line-height: 1.85;
+    }
+    .divider-floral {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      justify-content: center;
+      margin: 32px auto;
+    }
+    .divider-floral::before,
+    .divider-floral::after {
+      content: '';
+      width: 80px;
+      height: 1px;
+      background: #D4A853;
+    }
+    .divider-floral-icon { color: #D4A853; font-size: 1.2rem; }
+
+    /* ===== WIDE SCENE SECTION ===== */
+    .wedding-wide-scene {
+      position: relative;
+      height: clamp(320px, 55vw, 620px);
+      overflow: hidden;
+    }
+    .wedding-wide-scene img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+    .wedding-wide-scene-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(20,12,5,0.75));
+      padding: 40px 32px 28px;
+      color: #fff;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* ===== ANIMAL SHOWCASE ===== */
+    .wedding-animals {
+      background: #fff;
+      padding: 80px 24px;
+    }
+    .wedding-animals-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .wedding-animals-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .wedding-animal-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+    .wedding-animal-row.reverse { direction: rtl; }
+    .wedding-animal-row.reverse > * { direction: ltr; }
+    .wedding-animal-img {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .wedding-animal-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .wedding-animal-img:hover img { transform: scale(1.04); }
+    .wedding-animal-text {
+      padding: 48px 52px;
+      background: #faf7f2;
+    }
+    .animal-badge {
+      display: inline-block;
+      background: #D4A853;
+      color: #1a0f05;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .animal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 400;
+      color: #2c1a0e;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .animal-title em { font-style: italic; color: #8B5E3C; }
+    .animal-desc {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: #5a3e2b;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .animal-detail-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+    }
+    .animal-detail-list li {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.85rem;
+      color: #5a3e2b;
+      padding: 6px 0;
+      border-bottom: 1px solid #e8ddd0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .animal-detail-list li::before { content: '✦'; color: #D4A853; font-size: 0.6rem; }
+    .animal-shop-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #2c1a0e;
+      color: #D4A853;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .animal-shop-btn:hover { background: #D4A853; color: #1a0f05; transform: translateY(-2px); }
+
+    /* ===== COLORS SECTION ===== */
+    .wedding-colors {
+      background: #2c1a0e;
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .wedding-colors-inner { max-width: 900px; margin: 0 auto; }
+    .wedding-colors h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      color: #faf7f2;
+      margin-bottom: 12px;
+    }
+    .wedding-colors h2 em { font-style: italic; color: #D4A853; }
+    .wedding-colors p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: rgba(250,247,242,0.75);
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+    .color-swatches {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .color-swatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .swatch-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 2px solid rgba(212,168,83,0.3);
+    }
+    .swatch-label {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(250,247,242,0.7);
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .wedding-testimonials {
+      background: #faf7f2;
+      padding: 80px 24px;
+    }
+    .wedding-testimonials-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .wedding-testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .wedding-testimonial-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 36px 28px;
+      box-shadow: 0 4px 24px rgba(44,26,14,0.06);
+      text-align: left;
+    }
+    .testimonial-stars { color: #D4A853; font-size: 1rem; margin-bottom: 14px; }
+    .testimonial-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: #5a3e2b;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .testimonial-author {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8B5E3C;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .wedding-cta-section {
+      position: relative;
+      padding: 100px 24px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .wedding-cta-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/wedding_hero_wide.webp');
+      background-size: cover;
+      background-position: center 30%;
+      filter: brightness(0.35);
+    }
+    .wedding-cta-content {
+      position: relative;
+      z-index: 2;
+      max-width: 640px;
+      margin: 0 auto;
+      color: #fff;
+    }
+    .wedding-cta-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 400;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .wedding-cta-content h2 em { font-style: italic; color: #D4A853; }
+    .wedding-cta-content p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .wedding-cta-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-gold {
+      background: #D4A853;
+      color: #1a0f05;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 36px;
+      border-radius: 50px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-gold:hover { background: #c49540; transform: translateY(-2px); }
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.6);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 34px;
+      border-radius: 50px;
+      transition: border-color 0.3s, background 0.3s, transform 0.2s;
+    }
+    .btn-outline-white:hover { border-color: #D4A853; color: #D4A853; transform: translateY(-2px); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .wedding-animal-row {
+        grid-template-columns: 1fr;
+      }
+      .wedding-animal-row.reverse { direction: ltr; }
+      .wedding-animal-text { padding: 32px 24px; }
+      .wedding-animal-img { aspect-ratio: 4/3; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo-link">
+      <img src="images/logo_transparent.png" alt="Petal & Pasture Custom Candles" class="nav-logo">
+      <div class="nav-brand">
+        <span class="nav-brand-name">Petal &amp; Pasture</span>
+        <span class="nav-brand-sub">CUSTOM CANDLES</span>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="university.html">University</a></li>
+      <li><a href="wedding.html" class="active">Weddings</a></li>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="nav-etsy-btn">Shop Etsy →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="wedding-hero">
+  <div class="wedding-hero-bg" id="weddingHeroBg"></div>
+  <div class="wedding-hero-overlay"></div>
+  <div class="wedding-hero-content reveal">
+    <p class="wedding-hero-eyebrow">✦ Custom Wedding Candles ✦</p>
+    <h1 class="wedding-hero-title">
+      Every Seat Tells<br><em>Your Love Story</em>
+    </h1>
+    <p class="wedding-hero-sub">
+      Handcrafted beeswax animal candles — the most charming wedding favor<br>your guests will never forget.
+    </p>
+    <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="wedding-hero-cta">
+      Order Wedding Candles →
+    </a>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="wedding-intro">
+  <div class="wedding-intro-inner reveal">
+    <p class="section-eyebrow">✦ The Petal & Pasture Difference ✦</p>
+    <h2 class="section-title-serif">A Southern Barn Wedding<br><em>Deserves Something Extraordinary</em></h2>
+    <div class="divider-floral"><span class="divider-floral-icon">✿</span></div>
+    <p class="section-body">
+      Imagine your guests arriving to find a handcrafted beeswax candle — sculpted into an adorable rose-covered animal — waiting at every place setting, nestled on its own handmade green moss and picket fence coaster. Pure beeswax, 100% organic, and available in five beautiful colors to match your palette. These are not just favors. They are keepsakes.
+    </p>
+  </div>
+</section>
+
+<!-- WIDE BARN SCENE -->
+<div class="wedding-wide-scene reveal">
+  <img src="images/wedding_hero_wide.webp" alt="Southern barn wedding reception with Petal and Pasture Highland Cow candles at every place setting" loading="lazy">
+  <div class="wedding-wide-scene-caption">
+    "Each guest's seat featured a Petal & Pasture Highland Cow candle on the handmade coaster — it was the most talked-about detail of the entire reception."
+  </div>
+</div>
+
+<!-- ANIMAL SHOWCASE -->
+<section class="wedding-animals">
+  <div class="wedding-animals-inner">
+    <div class="wedding-animals-header reveal">
+      <p class="section-eyebrow">✦ Choose Your Wedding Animal ✦</p>
+      <h2 class="section-title-serif">Three Beloved Characters,<br><em>One Unforgettable Day</em></h2>
+    </div>
+
+    <!-- COW -->
+    <div class="wedding-animal-row reveal">
+      <div class="wedding-animal-img">
+        <img src="images/wedding_cow_closeup.webp" alt="Beige Highland Cow beeswax candle on moss coaster at a barn wedding place setting" loading="lazy">
+      </div>
+      <div class="wedding-animal-text">
+        <span class="animal-badge">⭐ Most Popular</span>
+        <h3 class="animal-title">The Highland Cow<br><em>The Star of the Pasture</em></h3>
+        <p class="animal-desc">
+          Our iconic Highland Cow — fluffy, fierce, and absolutely adorable — sculpted in pure beeswax and covered head to hoof in hand-carved roses. Sitting proudly on its handmade green moss and picket fence coaster, it transforms every place setting into a moment of pure southern charm.
+        </p>
+        <ul class="animal-detail-list">
+          <li>100% organic pure beeswax</li>
+          <li>Handmade green moss & picket fence coaster included</li>
+          <li>Available in Beige, Brown, Black, White &amp; Purple</li>
+          <li>Bamboo wick — clean, long burn</li>
+          <li>Bulk wedding orders welcome</li>
+        </ul>
+        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="animal-shop-btn">Order for Your Wedding →</a>
+      </div>
+    </div>
+
+    <!-- PIG -->
+    <div class="wedding-animal-row reverse reveal">
+      <div class="wedding-animal-img">
+        <img src="images/wedding_pig_table.webp" alt="White Farmhouse Pig beeswax candle on moss coaster at a barn wedding table" loading="lazy">
+      </div>
+      <div class="wedding-animal-text">
+        <span class="animal-badge">🌸 Fan Favorite</span>
+        <h3 class="animal-title">The Farmhouse Pig<br><em>Snout-to-Tail in Roses</em></h3>
+        <p class="animal-desc">
+          Irresistibly cute and impossible to put down. The Farmhouse Pig candle is sculpted from pure beeswax with a full coat of swirling rose carvings. In soft white, it pairs beautifully with classic barn wedding palettes — white roses, eucalyptus, and warm Edison light.
+        </p>
+        <ul class="animal-detail-list">
+          <li>100% organic pure beeswax</li>
+          <li>Handmade green moss & picket fence coaster included</li>
+          <li>Available in Beige, Brown, Black, White &amp; Purple</li>
+          <li>Bamboo wick — clean, long burn</li>
+          <li>Bulk wedding orders welcome</li>
+        </ul>
+        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="animal-shop-btn">Order for Your Wedding →</a>
+      </div>
+    </div>
+
+    <!-- LAMB -->
+    <div class="wedding-animal-row reveal">
+      <div class="wedding-animal-img">
+        <img src="images/wedding_lamb_table.webp" alt="Black Meadow Lamb beeswax candle on moss coaster at a barn wedding table" loading="lazy">
+      </div>
+      <div class="wedding-animal-text">
+        <span class="animal-badge">🖤 Dramatic Elegance</span>
+        <h3 class="animal-title">The Meadow Lamb<br><em>Soft, Sweet &amp; Wrapped in Roses</em></h3>
+        <p class="animal-desc">
+          The Meadow Lamb brings a striking contrast to any tablescape. In matte black beeswax with swirling rose carvings, it creates a bold, editorial look that photographs beautifully against white linens and candlelight — the perfect choice for a modern rustic wedding with an edge.
+        </p>
+        <ul class="animal-detail-list">
+          <li>100% organic pure beeswax</li>
+          <li>Handmade green moss & picket fence coaster included</li>
+          <li>Available in Beige, Brown, Black, White &amp; Purple</li>
+          <li>Bamboo wick — clean, long burn</li>
+          <li>Bulk wedding orders welcome</li>
+        </ul>
+        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="animal-shop-btn">Order for Your Wedding →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COLORS SECTION -->
+<section class="wedding-colors">
+  <div class="wedding-colors-inner reveal">
+    <p class="section-eyebrow" style="color:#D4A853;">✦ Match Your Palette ✦</p>
+    <h2>Five Colors to <em>Complement Any Wedding</em></h2>
+    <p>Every candle is available in all five of our signature beeswax colors. Mix and match across tables, or choose one color for a cohesive, elegant look.</p>
+    <div class="color-swatches">
+      <div class="color-swatch">
+        <div class="swatch-circle" style="background:#F5F0E8;"></div>
+        <span class="swatch-label">Beige</span>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-circle" style="background:#7B4F2E;"></div>
+        <span class="swatch-label">Brown</span>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-circle" style="background:#1C1C1C;"></div>
+        <span class="swatch-label">Black</span>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-circle" style="background:#F8F6F0; border: 2px solid rgba(212,168,83,0.6);"></div>
+        <span class="swatch-label">White</span>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-circle" style="background:#6B4E8A;"></div>
+        <span class="swatch-label">Purple</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="wedding-testimonials">
+  <div class="wedding-testimonials-inner">
+    <div class="reveal">
+      <p class="section-eyebrow">✦ Real Weddings ✦</p>
+      <h2 class="section-title-serif">What Brides Are <em>Saying</em></h2>
+    </div>
+    <div class="wedding-testimonials-grid">
+      <div class="wedding-testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">"We ordered 120 Highland Cow candles in beige for our barn wedding in Fredericksburg. Every single guest took theirs home. We still get texts about them months later."</p>
+        <p class="testimonial-author">— Sarah M., Bride · Fredericksburg, TX</p>
+      </div>
+      <div class="wedding-testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">"The black lamb candles on white linen tables with Edison lights — the photos were absolutely stunning. Our photographer said it was the most unique detail she'd ever seen."</p>
+        <p class="testimonial-author">— Jessica K., Bride · Austin, TX</p>
+      </div>
+      <div class="wedding-testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">"We mixed the cow, pig, and lamb across different tables — each table had a different animal. It was a conversation starter all night. Absolutely magical."</p>
+        <p class="testimonial-author">— Taylor R., Bride · Waco, TX</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="wedding-cta-section">
+  <div class="wedding-cta-bg"></div>
+  <div class="wedding-cta-content reveal">
+    <p class="wedding-hero-eyebrow">✦ Ready to Order? ✦</p>
+    <h2>Let's Make Your<br><em>Wedding Unforgettable</em></h2>
+    <p>Bulk wedding orders available. Reach out early — our candles are handcrafted to order and we want to make sure yours are perfect.</p>
+    <div class="wedding-cta-btns">
+      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="btn-gold">Shop on Etsy →</a>
+      <a href="contact.html" class="btn-outline-white">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="images/logo_transparent.png" alt="Petal & Pasture" class="footer-logo">
+      <p class="footer-tagline">Handcrafted beeswax candles sculpted with love, rooted in the pasture.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="products.html">All Candles</a></li>
+        <li><a href="university.html">University Editions</a></li>
+        <li><a href="wedding.html">Wedding Candles</a></li>
+        <li><a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank">Etsy Shop</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Follow Along</h4>
+      <ul>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Petal & Pasture Custom Candles. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  // Parallax hero bg
+  const heroBg = document.getElementById('weddingHeroBg');
+  if (heroBg) {
+    setTimeout(() => heroBg.classList.add('loaded'), 100);
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY * 0.3;
+      heroBg.style.transform = `scale(1) translateY(${y}px)`;
+    });
+  }
+</script>
+</body>
+</html>

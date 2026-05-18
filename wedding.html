@@ -89,6 +89,21 @@
     }
     .wedding-hero-cta:hover { background: #c49540; transform: translateY(-2px); }
 
+    .wedding-hero-logo {
+      position: absolute;
+      left: 4%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: clamp(200px, 22vw, 340px);
+      opacity: 0.92;
+      filter: drop-shadow(0 4px 24px rgba(0,0,0,0.45));
+      z-index: 3;
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .wedding-hero-logo { display: none; }
+    }
+
     /* ===== INTRO SECTION ===== */
     .wedding-intro {
       background: #faf7f2;
@@ -491,6 +506,7 @@
 <section class="wedding-hero">
   <div class="wedding-hero-bg" id="weddingHeroBg"></div>
   <div class="wedding-hero-overlay"></div>
+  <img src="images/logo_transparent.png" alt="Petal and Pasture Custom Candles" class="wedding-hero-logo">
   <div class="wedding-hero-content reveal">
     <p class="wedding-hero-eyebrow">✦ Custom Wedding Candles ✦</p>
     <h1 class="wedding-hero-title">

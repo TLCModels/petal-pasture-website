@@ -16,7 +16,7 @@
       position: relative;
       height: 100vh;
       min-height: 600px;
-      overflow: hidden;
+      overflow: visible;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -91,16 +91,20 @@
 
     .wedding-hero-logo {
       position: absolute;
-      left: 4%;
+      left: 3%;
       top: 50%;
       transform: translateY(-50%);
-      width: clamp(200px, 22vw, 340px);
-      opacity: 0.92;
-      filter: drop-shadow(0 4px 24px rgba(0,0,0,0.45));
-      z-index: 3;
+      width: clamp(220px, 25vw, 380px);
+      opacity: 0.90;
+      filter: drop-shadow(0 6px 32px rgba(0,0,0,0.55)) brightness(1.1);
+      z-index: 10;
       pointer-events: none;
+      display: block;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .wedding-hero-logo { width: 180px; left: 2%; }
+    }
+    @media (max-width: 600px) {
       .wedding-hero-logo { display: none; }
     }
 
@@ -497,7 +501,7 @@
       <li><a href="wedding.html" class="active">Weddings</a></li>
       <li><a href="about.html">Our Story</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="nav-etsy-btn">Shop Etsy →</a></li>
+      <li><a href="contact.html" target="_blank" class="nav-etsy-btn">Shop Etsy →</a></li>
     </ul>
   </div>
 </nav>
@@ -515,7 +519,7 @@
     <p class="wedding-hero-sub">
       Handcrafted beeswax animal candles — the most charming wedding favor<br>your guests will never forget.
     </p>
-    <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="wedding-hero-cta">
+    <a href="contact.html" target="_blank" class="wedding-hero-cta">
       Order Wedding Candles →
     </a>
   </div>
@@ -567,7 +571,7 @@
           <li>Bamboo wick — clean, long burn</li>
           <li>Bulk wedding orders welcome</li>
         </ul>
-        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="animal-shop-btn">Order for Your Wedding →</a>
+        <a href="contact.html" target="_blank" class="animal-shop-btn">Order for Your Wedding →</a>
       </div>
     </div>
 
@@ -589,7 +593,7 @@
           <li>Bamboo wick — clean, long burn</li>
           <li>Bulk wedding orders welcome</li>
         </ul>
-        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="animal-shop-btn">Order for Your Wedding →</a>
+        <a href="contact.html" target="_blank" class="animal-shop-btn">Order for Your Wedding →</a>
       </div>
     </div>
 
@@ -611,7 +615,7 @@
           <li>Bamboo wick — clean, long burn</li>
           <li>Bulk wedding orders welcome</li>
         </ul>
-        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="animal-shop-btn">Order for Your Wedding →</a>
+        <a href="contact.html" target="_blank" class="animal-shop-btn">Order for Your Wedding →</a>
       </div>
     </div>
 
@@ -684,7 +688,7 @@
     <h2>Let's Make Your<br><em>Wedding Unforgettable</em></h2>
     <p>Bulk wedding orders available. Reach out early — our candles are handcrafted to order and we want to make sure yours are perfect.</p>
     <div class="wedding-cta-btns">
-      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="btn-gold">Shop on Etsy →</a>
+      <a href="contact.html" target="_blank" class="btn-gold">Shop on Etsy →</a>
       <a href="contact.html" class="btn-outline-white">Contact Us</a>
     </div>
   </div>
@@ -703,7 +707,7 @@
         <li><a href="products.html">All Candles</a></li>
         <li><a href="university.html">University Editions</a></li>
         <li><a href="wedding.html">Wedding Candles</a></li>
-        <li><a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank">Etsy Shop</a></li>
+        <li><a href="contact.html" target="_blank">Etsy Shop</a></li>
       </ul>
     </div>
     <div class="footer-links">

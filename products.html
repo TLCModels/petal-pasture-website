@@ -4,13 +4,177 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shop All Candles | Petal &amp; Pasture Custom Candles</title>
-<meta name="description" content="Shop all 5 pasture animal beeswax candles — Highland Cow, Pig, Sheep, Horse, and Chicken — each available in 5 colors. 100% organic beeswax with bamboo wicks.">
+<meta name="description" content="Shop all 5 pasture animal beeswax candles — Highland Cow, Farmhouse Pig, Meadow Lamb, Cottage Chicken, and Pasture Horse — each available in 5 colors. 100% organic beeswax with bamboo wicks.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="images/logo_transparent.png">
+<style>
+  /* ── Shop page specific styles ── */
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .shop-card {
+    background: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(26,16,10,0.07);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 24px 56px rgba(26,16,10,0.14);
+  }
+
+  .shop-card-img {
+    aspect-ratio: 1;
+    background: var(--ivory);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .shop-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+  }
+  .shop-card:hover .shop-card-img img {
+    transform: scale(1.07) translateY(-4px);
+  }
+
+  .shop-card-body {
+    padding: 1.5rem 1.5rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+  }
+
+  .shop-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--brown-dark);
+    margin: 0;
+  }
+
+  .shop-card-desc {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .shop-card-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--amber);
+    margin: 0;
+  }
+
+  /* Color swatches */
+  .swatch-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .swatch-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    min-width: 70px;
+  }
+  .swatch-selected-name {
+    font-size: 0.8rem;
+    color: var(--brown-dark);
+    font-weight: 600;
+    margin-left: 0.25rem;
+  }
+
+  .swatches {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+  .swatch {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2.5px solid rgba(255,255,255,0.85);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.18);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+  }
+  .swatch:hover {
+    transform: scale(1.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  }
+  .swatch.active {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 3px var(--amber), 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .swatch[data-color="beige"]      { background: #d4b896; }
+  .swatch[data-color="brown"]      { background: #6b3a1f; }
+  .swatch[data-color="black"]      { background: #1a1a1a; }
+  .swatch[data-color="soft_white"] { background: #f0ece4; border-color: #c8bfb0; }
+  .swatch[data-color="purple"]     { background: #7c5c8a; }
+
+  .shop-card-cta {
+    margin-top: auto;
+    padding-top: 0.5rem;
+  }
+  .shop-card-cta a {
+    display: block;
+    text-align: center;
+    background: var(--amber);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.25s ease, transform 0.2s ease;
+  }
+  .shop-card-cta a:hover {
+    background: var(--brown-dark);
+    transform: translateY(-2px);
+  }
+
+  /* Fade swap animation */
+  .img-fade {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  @media (max-width: 600px) {
+    .shop-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .shop-card-body { padding: 1rem; }
+    .shop-card-title { font-size: 1rem; }
+  }
+  @media (max-width: 380px) {
+    .shop-grid { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
+
 <nav class="nav scrolled" id="nav">
   <a href="index.html" class="nav-logo">
     <img src="images/logo_transparent.png" alt="Petal &amp; Pasture">
@@ -21,24 +185,28 @@
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">Shop</a></li>
+    <li><a href="products.html" class="active">Shop</a></li>
     <li><a href="university.html">University</a></li>
+    <li><a href="wedding.html">Weddings</a></li>
     <li><a href="about.html">Our Story</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="nav-cta">Shop Etsy</a></li>
+    <li><a href="contact.html" target="_blank" class="nav-cta">Order Now</a></li>
   </ul>
   <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
+
 <div class="mobile-menu" id="mobile-menu">
   <span class="mobile-menu-close" id="mobile-close">&#x2715;</span>
   <a href="index.html">Home</a>
   <a href="products.html">Shop</a>
   <a href="university.html">University</a>
+  <a href="wedding.html">Weddings</a>
   <a href="about.html">Our Story</a>
   <a href="contact.html">Contact</a>
-  <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank">Shop Etsy</a>
+  <a href="contact.html" target="_blank">Order Now</a>
 </div>
 
+<!-- Page Hero -->
 <div class="page-hero" style="margin-top:var(--nav-h)">
   <img src="images/hero_collection_final.webp" alt="Petal and Pasture candle collection">
   <div class="page-hero-overlay"></div>
@@ -49,255 +217,205 @@
   </div>
 </div>
 
+<!-- Shop Section -->
 <section class="section collection-section">
-  <div class="filter-tabs">
-    <button class="filter-tab active" data-filter="all">All Animals</button>
-    <button class="filter-tab" data-filter="highland-cow">Highland Cow</button>
-    <button class="filter-tab" data-filter="pig">Pig</button>
-    <button class="filter-tab" data-filter="sheep">Lamb</button>
-    <button class="filter-tab" data-filter="chicken">Chicken</button>
-    <button class="filter-tab" data-filter="horse">Horse</button>
+
+  <div style="text-align:center; max-width:680px; margin:0 auto 3.5rem;">
+    <span class="eyebrow">Handcrafted &amp; Made to Order</span>
+    <h2 style="margin-bottom:1rem;">Choose Your Animal &amp; Color</h2>
+    <p style="color:var(--text-light); font-size:1rem; line-height:1.7;">Each candle is hand-poured from 100% organic beeswax with a natural bamboo wick. Select any of the five brand colors using the swatches below, then place your order through our contact form.</p>
   </div>
 
-  <div class="collection-grid">
-    <!-- HIGHLAND COW -->
-    <div class="product-card reveal" data-animal="highland-cow">
-      <div class="product-card-img"><img src="images/highland_cow_candle_brown.png" alt="Highland Cow Candle — Brown" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Highland Cow</h4>
-        <span class="color-label">Brown</span>
-        <div class="color-dots">
-          <span class="color-dot black" title="Black"></span>
-          <span class="color-dot purple" title="Purple"></span>
-          <span class="color-dot beige" title="Beige"></span>
-          <span class="color-dot white" title="Soft White"></span>
-          <span class="color-dot brown" title="Brown"></span>
+  <div class="shop-grid">
+
+    <!-- ── 1. HIGHLAND COW ── -->
+    <div class="shop-card reveal">
+      <div class="shop-card-img">
+        <img
+          id="img-cow"
+          src="images/highland_cow_candle_brown.webp"
+          alt="Highland Cow Candle"
+          loading="lazy"
+        >
+      </div>
+      <div class="shop-card-body">
+        <h3 class="shop-card-title">Highland Cow</h3>
+        <p class="shop-card-desc">Our iconic fluffy Highland Cow with sweeping horns, draped in hand-carved rose blooms. A statement piece for any rustic home.</p>
+
+        <div>
+          <div class="swatch-row">
+            <span class="swatch-label">Color:</span>
+            <span class="swatch-selected-name" id="name-cow">Brown</span>
+          </div>
+          <div class="swatches">
+            <span class="swatch active" data-color="brown"     data-animal="cow" title="Brown"      tabindex="0"></span>
+            <span class="swatch"        data-color="beige"     data-animal="cow" title="Beige"      tabindex="0"></span>
+            <span class="swatch"        data-color="black"     data-animal="cow" title="Black"      tabindex="0"></span>
+            <span class="swatch"        data-color="soft_white" data-animal="cow" title="Soft White" tabindex="0"></span>
+            <span class="swatch"        data-color="purple"    data-animal="cow" title="Purple"     tabindex="0"></span>
+          </div>
+        </div>
+
+        <p class="shop-card-price">$38 – $42</p>
+        <div class="shop-card-cta">
+          <a href="contact.html">Order Now &rarr;</a>
         </div>
       </div>
     </div>
-    <!-- PIG -->
-    <div class="product-card reveal reveal-delay-1" data-animal="pig">
-      <div class="product-card-img"><img src="images/pig_candle_beige.png" alt="Pig Candle — Beige" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Farmhouse Pig</h4>
-        <span class="color-label">Beige</span>
-        <div class="color-dots">
-          <span class="color-dot black" title="Black"></span>
-          <span class="color-dot purple" title="Purple"></span>
-          <span class="color-dot beige" title="Beige"></span>
-          <span class="color-dot white" title="Soft White"></span>
-          <span class="color-dot brown" title="Brown"></span>
+
+    <!-- ── 2. FARMHOUSE PIG ── -->
+    <div class="shop-card reveal reveal-delay-1">
+      <div class="shop-card-img">
+        <img
+          id="img-pig"
+          src="images/pig_candle_beige.webp"
+          alt="Farmhouse Pig Candle"
+          loading="lazy"
+        >
+      </div>
+      <div class="shop-card-body">
+        <h3 class="shop-card-title">Farmhouse Pig</h3>
+        <p class="shop-card-desc">A plump, cheerful farmhouse pig adorned with swirling rose carvings. Charming on a kitchen shelf or dining table centerpiece.</p>
+
+        <div>
+          <div class="swatch-row">
+            <span class="swatch-label">Color:</span>
+            <span class="swatch-selected-name" id="name-pig">Beige</span>
+          </div>
+          <div class="swatches">
+            <span class="swatch active" data-color="beige"     data-animal="pig" title="Beige"      tabindex="0"></span>
+            <span class="swatch"        data-color="brown"     data-animal="pig" title="Brown"      tabindex="0"></span>
+            <span class="swatch"        data-color="black"     data-animal="pig" title="Black"      tabindex="0"></span>
+            <span class="swatch"        data-color="soft_white" data-animal="pig" title="Soft White" tabindex="0"></span>
+            <span class="swatch"        data-color="purple"    data-animal="pig" title="Purple"     tabindex="0"></span>
+          </div>
+        </div>
+
+        <p class="shop-card-price">$34 – $38</p>
+        <div class="shop-card-cta">
+          <a href="contact.html">Order Now &rarr;</a>
         </div>
       </div>
     </div>
-    <div class="product-card reveal reveal-delay-2" data-animal="pig">
-      <div class="product-card-img"><img src="images/pig_candle_brown.png" alt="Pig Candle — Brown" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Farmhouse Pig</h4>
-        <span class="color-label">Brown</span>
-        <div class="color-dots">
-          <span class="color-dot black"></span>
-          <span class="color-dot purple"></span>
-          <span class="color-dot beige"></span>
-          <span class="color-dot white"></span>
-          <span class="color-dot brown"></span>
+
+    <!-- ── 3. MEADOW LAMB ── -->
+    <div class="shop-card reveal reveal-delay-2">
+      <div class="shop-card-img">
+        <img
+          id="img-lamb"
+          src="images/lamb_candle_soft_white.webp"
+          alt="Meadow Lamb Candle"
+          loading="lazy"
+        >
+      </div>
+      <div class="shop-card-body">
+        <h3 class="shop-card-title">Meadow Lamb</h3>
+        <p class="shop-card-desc">A sweet, curly-coated lamb nestled in rose carvings. Perfect for nurseries, wedding tables, and springtime décor.</p>
+
+        <div>
+          <div class="swatch-row">
+            <span class="swatch-label">Color:</span>
+            <span class="swatch-selected-name" id="name-lamb">Soft White</span>
+          </div>
+          <div class="swatches">
+            <span class="swatch active" data-color="soft_white" data-animal="lamb" title="Soft White" tabindex="0"></span>
+            <span class="swatch"        data-color="beige"      data-animal="lamb" title="Beige"      tabindex="0"></span>
+            <span class="swatch"        data-color="brown"      data-animal="lamb" title="Brown"      tabindex="0"></span>
+            <span class="swatch"        data-color="black"      data-animal="lamb" title="Black"      tabindex="0"></span>
+            <span class="swatch"        data-color="purple"     data-animal="lamb" title="Purple"     tabindex="0"></span>
+          </div>
+        </div>
+
+        <p class="shop-card-price">$34 – $38</p>
+        <div class="shop-card-cta">
+          <a href="contact.html">Order Now &rarr;</a>
         </div>
       </div>
     </div>
-    <div class="product-card reveal reveal-delay-3" data-animal="pig">
-      <div class="product-card-img"><img src="images/pig_candle_black.png" alt="Pig Candle — Black" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Farmhouse Pig</h4>
-        <span class="color-label">Black</span>
-        <div class="color-dots">
-          <span class="color-dot black"></span>
-          <span class="color-dot purple"></span>
-          <span class="color-dot beige"></span>
-          <span class="color-dot white"></span>
-          <span class="color-dot brown"></span>
+
+    <!-- ── 4. COTTAGE CHICKEN ── -->
+    <div class="shop-card reveal reveal-delay-3">
+      <div class="shop-card-img">
+        <img
+          id="img-chicken"
+          src="images/chicken_v2_beige.webp"
+          alt="Cottage Chicken Candle"
+          loading="lazy"
+        >
+      </div>
+      <div class="shop-card-body">
+        <h3 class="shop-card-title">Cottage Chicken</h3>
+        <p class="shop-card-desc">A proud cottage hen covered in delicate rose blooms. Brings warmth and whimsy to any farmhouse kitchen or living space.</p>
+
+        <div>
+          <div class="swatch-row">
+            <span class="swatch-label">Color:</span>
+            <span class="swatch-selected-name" id="name-chicken">Beige</span>
+          </div>
+          <div class="swatches">
+            <span class="swatch active" data-color="beige"     data-animal="chicken" title="Beige"      tabindex="0"></span>
+            <span class="swatch"        data-color="brown"     data-animal="chicken" title="Brown"      tabindex="0"></span>
+            <span class="swatch"        data-color="black"     data-animal="chicken" title="Black"      tabindex="0"></span>
+            <span class="swatch"        data-color="soft_white" data-animal="chicken" title="Soft White" tabindex="0"></span>
+            <span class="swatch"        data-color="purple"    data-animal="chicken" title="Purple"     tabindex="0"></span>
+          </div>
+        </div>
+
+        <p class="shop-card-price">$34 – $38</p>
+        <div class="shop-card-cta">
+          <a href="contact.html">Order Now &rarr;</a>
         </div>
       </div>
     </div>
-    <div class="product-card reveal" data-animal="pig">
-      <div class="product-card-img"><img src="images/pig_candle_soft_white.png" alt="Pig Candle — Soft White" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Farmhouse Pig</h4>
-        <span class="color-label">Soft White</span>
-        <div class="color-dots">
-          <span class="color-dot black"></span>
-          <span class="color-dot purple"></span>
-          <span class="color-dot beige"></span>
-          <span class="color-dot white"></span>
-          <span class="color-dot brown"></span>
+
+    <!-- ── 5. PASTURE HORSE ── -->
+    <div class="shop-card reveal">
+      <div class="shop-card-img">
+        <img
+          id="img-horse"
+          src="images/horse_candle_brown.webp"
+          alt="Pasture Horse Candle"
+          loading="lazy"
+        >
+      </div>
+      <div class="shop-card-body">
+        <h3 class="shop-card-title">Pasture Horse</h3>
+        <p class="shop-card-desc">A majestic pasture horse sculpted in beeswax and adorned with roses. A bold, elegant addition to any equestrian-inspired space.</p>
+
+        <div>
+          <div class="swatch-row">
+            <span class="swatch-label">Color:</span>
+            <span class="swatch-selected-name" id="name-horse">Brown</span>
+          </div>
+          <div class="swatches">
+            <span class="swatch active" data-color="brown"     data-animal="horse" title="Brown"      tabindex="0"></span>
+            <span class="swatch"        data-color="beige"     data-animal="horse" title="Beige"      tabindex="0"></span>
+            <span class="swatch"        data-color="black"     data-animal="horse" title="Black"      tabindex="0"></span>
+            <span class="swatch"        data-color="soft_white" data-animal="horse" title="Soft White" tabindex="0"></span>
+            <span class="swatch"        data-color="purple"    data-animal="horse" title="Purple"     tabindex="0"></span>
+          </div>
+        </div>
+
+        <p class="shop-card-price">$38 – $42</p>
+        <div class="shop-card-cta">
+          <a href="contact.html">Order Now &rarr;</a>
         </div>
       </div>
     </div>
-    <div class="product-card reveal reveal-delay-1" data-animal="pig">
-      <div class="product-card-img"><img src="images/pig_candle_purple.png" alt="Pig Candle — Purple" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Farmhouse Pig</h4>
-        <span class="color-label">Purple</span>
-        <div class="color-dots">
-          <span class="color-dot black"></span>
-          <span class="color-dot purple"></span>
-          <span class="color-dot beige"></span>
-          <span class="color-dot white"></span>
-          <span class="color-dot brown"></span>
-        </div>
-      </div>
-    </div>
-    <!-- SHEEP -->
-    <div class="product-card reveal reveal-delay-2" data-animal="sheep">
-      <div class="product-card-img"><img src="images/lamb_candle_black.png" alt="Lamb Candle — Black" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Meadow Lamb</h4>
-        <span class="color-label">Black</span>
-        <div class="color-dots">
-          <span class="color-dot black" title="Black"></span>
-          <span class="color-dot purple" title="Purple"></span>
-          <span class="color-dot beige" title="Beige"></span>
-          <span class="color-dot white" title="Soft White"></span>
-          <span class="color-dot brown" title="Brown"></span>
-        </div>
-      </div>
-    </div>
-    <!-- CHICKEN -->
-    <div class="product-card reveal reveal-delay-3" data-animal="chicken">
-      <div class="product-card-img"><img src="images/chicken_v2_beige_fixed.png" alt="Chicken Candle — Beige" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Cottage Chicken</h4>
-        <span class="color-label">Beige</span>
-        <div class="color-dots">
-          <span class="color-dot black" title="Black"></span>
-          <span class="color-dot purple" title="Purple"></span>
-          <span class="color-dot beige" title="Beige"></span>
-          <span class="color-dot white" title="Soft White"></span>
-          <span class="color-dot brown" title="Brown"></span>
-        </div>
-      </div>
-    </div>
-    <!-- HORSE -->
-    <div class="product-card reveal" data-animal="horse">
-      <div class="product-card-img"><img src="images/horse_candle_black.png" alt="Horse Candle — Black" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Pasture Horse</h4>
-        <span class="color-label">Black</span>
-        <div class="color-dots">
-          <span class="color-dot black" title="Black"></span>
-          <span class="color-dot purple" title="Purple"></span>
-          <span class="color-dot beige" title="Beige"></span>
-          <span class="color-dot white" title="Soft White"></span>
-          <span class="color-dot brown" title="Brown"></span>
-        </div>
-      </div>
-    </div>
-    <!-- MORE COLORS -->
-    <div class="product-card reveal reveal-delay-1" data-animal="sheep">
-      <div class="product-card-img"><img src="images/lamb_candle_purple.png" alt="Lamb Candle — Purple" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Meadow Lamb</h4>
-        <span class="color-label">Purple</span>
-        <div class="color-dots">
-          <span class="color-dot black"></span>
-          <span class="color-dot purple"></span>
-          <span class="color-dot beige"></span>
-          <span class="color-dot white"></span>
-          <span class="color-dot brown"></span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal reveal-delay-2" data-animal="horse">
-      <div class="product-card-img"><img src="images/horse_candle_purple.png" alt="Horse Candle — Purple" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Pasture Horse</h4>
-        <span class="color-label">Purple</span>
-        <div class="color-dots">
-          <span class="color-dot black"></span>
-          <span class="color-dot purple"></span>
-          <span class="color-dot beige"></span>
-          <span class="color-dot white"></span>
-          <span class="color-dot brown"></span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal reveal-delay-3" data-animal="chicken">
-      <div class="product-card-img"><img src="images/chicken_v2_black.png" alt="Chicken Candle — Black" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Cottage Chicken</h4>
-        <span class="color-label">Black</span>
-        <div class="color-dots">
-          <span class="color-dot black"></span>
-          <span class="color-dot purple"></span>
-          <span class="color-dot beige"></span>
-          <span class="color-dot white"></span>
-          <span class="color-dot brown"></span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal" data-animal="sheep">
-      <div class="product-card-img"><img src="images/lamb_candle_beige.png" alt="Lamb Candle — Beige" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Meadow Lamb</h4>
-        <span class="color-label">Beige</span>
-        <div class="color-dots">
-          <span class="color-dot black"></span>
-          <span class="color-dot purple"></span>
-          <span class="color-dot beige"></span>
-          <span class="color-dot white"></span>
-          <span class="color-dot brown"></span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal reveal-delay-1" data-animal="horse">
-      <div class="product-card-img"><img src="images/horse_candle_brown.png" alt="Horse Candle — Brown" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Pasture Horse</h4>
-        <span class="color-label">Brown</span>
-        <div class="color-dots">
-          <span class="color-dot black"></span>
-          <span class="color-dot purple"></span>
-          <span class="color-dot beige"></span>
-          <span class="color-dot white"></span>
-          <span class="color-dot brown"></span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal reveal-delay-2" data-animal="chicken">
-      <div class="product-card-img"><img src="images/chicken_v2_purple.png" alt="Chicken Candle — Purple" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Cottage Chicken</h4>
-        <span class="color-label">Purple</span>
-        <div class="color-dots">
-          <span class="color-dot black"></span>
-          <span class="color-dot purple"></span>
-          <span class="color-dot beige"></span>
-          <span class="color-dot white"></span>
-          <span class="color-dot brown"></span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal reveal-delay-3" data-animal="sheep">
-      <div class="product-card-img"><img src="images/lamb_candle_soft_white.png" alt="Lamb Candle — Soft White" loading="lazy"></div>
-      <div class="product-card-info">
-        <h4>Meadow Lamb</h4>
-        <span class="color-label">Soft White</span>
-        <div class="color-dots">
-          <span class="color-dot black"></span>
-          <span class="color-dot purple"></span>
-          <span class="color-dot beige"></span>
-          <span class="color-dot white"></span>
-          <span class="color-dot brown"></span>
-        </div>
-      </div>
-    </div>
+
+  </div><!-- /shop-grid -->
+
+  <!-- Bottom CTA -->
+  <div style="text-align:center; margin-top:5rem; padding: 3rem 2rem; background: var(--white); border-radius: 24px; max-width: 700px; margin-left: auto; margin-right: auto; box-shadow: 0 4px 24px rgba(26,16,10,0.06);">
+    <span class="eyebrow">Ready to Order?</span>
+    <h3 style="font-family:'Playfair Display',serif; font-size:1.8rem; color:var(--brown-dark); margin:0.5rem 0 1rem;">All Candles Are Made to Order</h3>
+    <p style="color:var(--text-light); font-size:1rem; line-height:1.7; margin-bottom:1.75rem;">Each candle is hand-poured fresh for you. Select your animal, choose your color, and send us a message — we'll confirm your order and ship within 5–7 business days.</p>
+    <a href="contact.html" class="btn-primary">Place Your Order &rarr;</a>
   </div>
 
-  <div style="text-align:center; margin-top:4rem;">
-    <p style="color:var(--text-light); margin-bottom:1.5rem; font-size:1.05rem;">Ready to order? All candles are available on our Etsy shop with secure checkout and fast shipping.</p>
-    <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="btn-primary">Shop on Etsy &#x2192;</a>
-  </div>
 </section>
 
+<!-- Footer -->
 <footer class="footer">
   <div class="footer-grid">
     <div class="footer-brand">
@@ -306,18 +424,78 @@
       <div class="footer-social">
         <a href="https://www.tiktok.com/@petalpasturecandleco" target="_blank" class="footer-social-link">&#x1F3A5;</a>
         <a href="https://www.instagram.com/petalpasturecandleco" target="_blank" class="footer-social-link">&#x1F4F7;</a>
-        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="footer-social-link">&#x1F6CD;&#xFE0F;</a>
+        <a href="contact.html" target="_blank" class="footer-social-link">&#x1F6CD;&#xFE0F;</a>
       </div>
     </div>
-    <div class="footer-col"><h4>Shop</h4><ul class="footer-links"><li><a href="products.html">All Candles</a></li><li><a href="university.html">University Editions</a></li></ul></div>
+    <div class="footer-col"><h4>Shop</h4><ul class="footer-links"><li><a href="products.html">All Candles</a></li><li><a href="university.html">University Editions</a></li><li><a href="wedding.html">Wedding Candles</a></li></ul></div>
     <div class="footer-col"><h4>Info</h4><ul class="footer-links"><li><a href="about.html">Our Story</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     <div class="footer-col"><h4>University</h4><ul class="footer-links"><li><a href="university-ut.html">UT Longhorns</a></li><li><a href="university-am.html">Texas A&amp;M</a></li><li><a href="university-tt.html">Texas Tech</a></li><li><a href="university-tcu.html">TCU</a></li></ul></div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2025 Petal &amp; Pasture Custom Candles</span>
-    <span>Handcrafted with &#x2665; in Texas</span>
+    <span>&copy; 2025 Petal &amp; Pasture Custom Candles. All rights reserved.</span>
+    <span>Handcrafted in Texas &#x1F90D;</span>
   </div>
 </footer>
+
 <script src="main.js"></script>
+<script>
+// ── Color swatch image swapper ──
+(function() {
+  // Image filename map per animal
+  const imageMap = {
+    cow:     { beige: 'highland_cow_candle_beige.webp',     brown: 'highland_cow_candle_brown.webp',     black: 'highland_cow_candle_black.webp',     soft_white: 'highland_cow_candle_soft_white.webp',     purple: 'highland_cow_candle_purple.webp'     },
+    pig:     { beige: 'pig_candle_beige.webp',              brown: 'pig_candle_brown.webp',              black: 'pig_candle_black.webp',              soft_white: 'pig_candle_soft_white.webp',              purple: 'pig_candle_purple.webp'              },
+    lamb:    { beige: 'lamb_candle_beige.webp',             brown: 'lamb_candle_brown.webp',             black: 'lamb_candle_black.webp',             soft_white: 'lamb_candle_soft_white.webp',             purple: 'lamb_candle_purple.webp'             },
+    chicken: { beige: 'chicken_v2_beige.webp',              brown: 'chicken_v2_brown.webp',              black: 'chicken_v2_black.webp',              soft_white: 'chicken_v2_soft_white.webp',              purple: 'chicken_v2_purple.webp'              },
+    horse:   { beige: 'horse_candle_beige.webp',            brown: 'horse_candle_brown.webp',            black: 'horse_candle_black.webp',            soft_white: 'horse_candle_soft_white.webp',            purple: 'horse_candle_purple.webp'            }
+  };
+
+  const colorNames = {
+    beige: 'Beige',
+    brown: 'Brown',
+    black: 'Black',
+    soft_white: 'Soft White',
+    purple: 'Purple'
+  };
+
+  document.querySelectorAll('.swatch').forEach(function(swatch) {
+    swatch.addEventListener('click', function() {
+      const animal = this.dataset.animal;
+      const color  = this.dataset.color;
+
+      // Update active swatch in this card
+      const card = this.closest('.shop-card');
+      card.querySelectorAll('.swatch').forEach(function(s) { s.classList.remove('active'); });
+      this.classList.add('active');
+
+      // Update color name label
+      const nameEl = card.querySelector('.swatch-selected-name');
+      if (nameEl) nameEl.textContent = colorNames[color] || color;
+
+      // Swap image with fade
+      const img = card.querySelector('img');
+      if (img && imageMap[animal] && imageMap[animal][color]) {
+        img.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+        img.style.opacity = '0';
+        img.style.transform = 'scale(0.96)';
+        setTimeout(function() {
+          img.src = 'images/' + imageMap[animal][color];
+          img.alt = animal.charAt(0).toUpperCase() + animal.slice(1) + ' Candle — ' + colorNames[color];
+          img.style.opacity = '1';
+          img.style.transform = 'scale(1)';
+        }, 200);
+      }
+    });
+
+    // Keyboard accessibility
+    swatch.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>

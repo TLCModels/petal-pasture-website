@@ -8,7 +8,7 @@
 <body>
 <x-dc>
 <helmet>
-  <title>University Editions | Petal &amp; Pasture Custom Candles</title>
+  <title>Our Story | Petal &amp; Pasture Custom Candles</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&amp;family=Zilla+Slab:wght@400;500;600;700&amp;family=DM+Serif+Display:ital@0;1&amp;family=Karla:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -33,70 +33,66 @@
     </a>
     <nav style="display: flex; align-items: center; gap: 8px 20px; font-size: 15px; font-weight: 600; flex-wrap: wrap; justify-content: flex-end">
       <a href="shop.html" style="color: var(--ink)" style-hover="color: var(--accent)">Shop</a>
-      <a href="university.html" style="color: var(--accent)">University</a>
+      <a href="university.html" style="color: var(--ink)" style-hover="color: var(--accent)">University</a>
       <a href="weddings.html" style="color: var(--ink)" style-hover="color: var(--accent)">Weddings</a>
-      <a href="our-story.html" style="color: var(--ink)" style-hover="color: var(--accent)">Our Story</a>
+      <a href="our-story.html" style="color: var(--accent)">Our Story</a>
       <a href="retail.html" style="color: var(--ink)" style-hover="color: var(--accent)">Retail</a>
       <a href="contact.html" style="color: var(--ink)" style-hover="color: var(--accent)">Contact</a>
       <a href="https://www.etsy.com/shop/PetalAndPastureCandles" style="background: var(--accent); color: var(--cream); padding: 10px 22px; border-radius: 999px" style-hover="background: #7c352f; color: var(--cream)">Shop Etsy</a>
     </nav>
   </header>
 
-  <section style="position: relative; background: var(--ink); color: var(--soft); overflow: hidden">
-    <div style="max-width: 1280px; margin: 0 auto; padding: 84px 5vw; text-align: center">
-      <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: #e0a184; font-weight: 700; margin-bottom: 14px">Texas Proud · Game Day Ready</div>
-      <h1 style="font-family: var(--display); font-size: clamp(40px, 5.5vw, 68px); font-weight: 600; margin: 0 0 18px; color: var(--cream)">University Editions</h1>
-      <p style="font-size: 18px; line-height: 1.65; color: var(--muted2); max-width: 66ch; margin: 0 auto; text-wrap: pretty">Show your Longhorn pride, Aggie spirit, Red Raider passion, or Horned Frog loyalty. Our Highland Cow is hand-poured in your team's true colors — the perfect game-day centerpiece, graduation gift, or dorm-room keepsake.</p>
-    </div>
+  <section style="max-width: 900px; margin: 0 auto; padding: 84px 5vw 48px; text-align: center">
+    <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 14px">Our Story</div>
+    <h1 style="font-family: var(--display); font-size: clamp(40px, 5.5vw, 68px); font-weight: 600; margin: 0 0 20px; line-height: 1.05">Where the Pasture Meets the Flame</h1>
+    <p style="font-size: 19px; line-height: 1.7; color: var(--muted); text-wrap: pretty">Petal &amp; Pasture began with a simple idea: what if the softest things about country life — roses in bloom and the animals of the pasture — could live together in a single candle?</p>
   </section>
 
-  <section style="max-width: 1280px; margin: 0 auto; padding: var(--section-pad) 5vw 48px">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px">
-      <sc-for list="{{ schools }}" as="s" hint-placeholder-count="4">
-        <div style="display: flex; flex-direction: column; gap: 14px; background: #fffdf8; border: 1px solid var(--border); border-radius: 18px; padding: 16px; box-shadow: 0 10px 30px rgba(58,43,33,0.06)">
-          <img src="{{ s.img }}" alt="{{ s.alt }}" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block">
-          <div style="text-align: center; padding-bottom: 6px">
-            <div style="font-family: var(--display); font-weight: 700; color: var(--ink); font-size: 22px">{{ s.name }}</div>
-            <div style="font-size: 13px; color: var(--muted); margin-top: 4px; font-weight: 600; letter-spacing: 0.04em">{{ s.tagline }}</div>
-          </div>
-        </div>
-      </sc-for>
-    </div>
-    <div style="text-align: center; margin-top: 40px">
-      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" style="display: inline-block; background: var(--accent); color: var(--cream); padding: 15px 34px; border-radius: 999px; font-weight: 700; font-size: 16px" style-hover="background: #7c352f; color: var(--cream)">Order Your Team's Candle →</a>
-    </div>
+  <section style="max-width: 1280px; margin: 0 auto; padding: 0 5vw var(--section-pad)">
+    <img src="photos/cow-scene-3.webp" alt="Highland Cow candle on a rustic wooden table with lavender" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; border-radius: 24px; display: block; box-shadow: 0 24px 60px rgba(58,43,33,0.18)">
   </section>
 
   <section style="background: var(--soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border)">
-    <div style="max-width: 1120px; margin: 0 auto; padding: var(--section-pad) 5vw; text-align: center">
-      <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 14px">How It Works</div>
-      <h2 style="font-family: var(--display); font-size: clamp(30px, 3.6vw, 46px); font-weight: 600; margin: 0 0 44px">Spirit, Sculpted in Wax</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; text-align: left">
-        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="3">
-          <div style="display: flex; flex-direction: column; gap: 12px">
-            <div style="font-family: var(--display); font-size: 40px; font-weight: 700; color: var(--accent)">{{ st.num }}</div>
-            <h3 style="font-family: var(--display); font-size: 24px; font-weight: 600; margin: 0">{{ st.title }}</h3>
-            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted); text-wrap: pretty">{{ st.body }}</p>
-          </div>
-        </sc-for>
+    <div style="max-width: 1280px; margin: 0 auto; padding: var(--section-pad) 5vw; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 4vw, 56px); align-items: center">
+      <img src="photos/cow-scene-1.webp" alt="Rose-sculpted Highland Cow candle, studio shot" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 20px; display: block; box-shadow: 0 24px 60px rgba(58,43,33,0.16)">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 14px">Sculpted by Hand</div>
+        <h2 style="font-family: var(--display); font-size: clamp(30px, 3.8vw, 48px); font-weight: 600; margin: 0 0 20px">Rose by Rose, Batch by Batch</h2>
+        <p style="font-size: 17px; line-height: 1.75; color: var(--muted); margin: 0 0 18px; text-wrap: pretty">Every cow, pig, duck, and retriever is sculpted rose by rose in our signature beeswax blend, then paired with a natural bamboo wick for a clean, slow, even burn.</p>
+        <p style="font-size: 17px; line-height: 1.75; color: var(--muted); margin: 0; text-wrap: pretty">Nothing here is mass-produced. Each animal is hand-poured and hand-finished in small batches in the heart of Texas — which means the one that arrives at your door is truly its own little work of art.</p>
       </div>
     </div>
   </section>
 
-  <section style="max-width: 1280px; margin: 0 auto; padding: var(--section-pad) 5vw; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 4vw, 56px); align-items: center">
-    <div>
-      <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 14px">Perfect For</div>
-      <h2 style="font-family: var(--display); font-size: clamp(30px, 3.6vw, 46px); font-weight: 600; margin: 0 0 20px">Every Fan on Your List</h2>
-      <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 16px; color: var(--ink)">
-        <li>🎓 Graduation &amp; acceptance gifts</li>
-        <li>🏈 Game-day &amp; tailgate centerpieces</li>
-        <li>🏠 Dorm, apartment &amp; alumni-office decor</li>
-        <li>🎁 Homecoming &amp; parents' weekend keepsakes</li>
-        <li>💍 Team-color wedding favors for the superfan couple</li>
-      </ul>
-      <a href="contact.html" style="display: inline-block; margin-top: 30px; background: var(--ink); color: var(--cream); padding: 14px 30px; border-radius: 999px; font-weight: 700" style-hover="background: var(--accent); color: var(--cream)">Request a Custom Team Color →</a>
+  <section style="max-width: 1120px; margin: 0 auto; padding: var(--section-pad) 5vw; text-align: center">
+    <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 14px">What We Stand For</div>
+    <h2 style="font-family: var(--display); font-size: clamp(30px, 3.8vw, 48px); font-weight: 600; margin: 0 0 44px">The Petal &amp; Pasture Promise</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; text-align: left">
+      <sc-for list="{{ values }}" as="v" hint-placeholder-count="3">
+        <div style="background: #fffdf8; border: 1px solid var(--border); border-radius: 18px; padding: 30px; display: flex; flex-direction: column; gap: 12px">
+          <div style="font-size: 32px">{{ v.icon }}</div>
+          <h3 style="font-family: var(--display); font-size: 24px; font-weight: 600; margin: 0">{{ v.title }}</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.65; color: var(--muted); text-wrap: pretty">{{ v.body }}</p>
+        </div>
+      </sc-for>
     </div>
-    <img src="images/uni_ut_v2.webp" alt="Burnt orange Highland Cow candle styled for game day" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 20px; display: block; box-shadow: 0 24px 60px rgba(58,43,33,0.18)">
+  </section>
+
+  <section style="background: var(--ink); color: var(--soft)">
+    <div style="max-width: 820px; margin: 0 auto; padding: var(--section-pad) 5vw; text-align: center">
+      <div style="font-family: var(--display); font-size: 56px; line-height: 1; color: var(--accent); margin-bottom: 8px">“</div>
+      <p style="font-family: var(--display); font-size: clamp(22px, 2.6vw, 32px); font-style: italic; line-height: 1.5; color: var(--cream); margin: 0 0 24px; text-wrap: pretty">We wanted to make something that felt like a hug from the country — a little piece of the pasture you could keep on your shelf and light whenever you needed it.</p>
+      <div style="font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted2)">— The Petal &amp; Pasture Family</div>
+    </div>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: var(--section-pad) 5vw; text-align: center">
+    <h2 style="font-family: var(--display); font-size: clamp(28px, 3.4vw, 44px); font-weight: 600; margin: 0 0 14px">Bring a Little Pasture Home</h2>
+    <p style="font-size: 16px; line-height: 1.6; color: var(--muted); max-width: 56ch; margin: 0 auto 28px; text-wrap: pretty">Meet the whole herd and find the one that feels like yours.</p>
+    <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap">
+      <a href="shop.html" style="background: var(--accent); color: var(--cream); padding: 15px 34px; border-radius: 999px; font-weight: 700; font-size: 16px" style-hover="background: #7c352f; color: var(--cream)">Shop the Collection →</a>
+      <a href="contact.html" style="border: 1px solid var(--border); color: var(--ink); padding: 14px 30px; border-radius: 999px; font-weight: 700; font-size: 16px" style-hover="border-color: var(--accent); color: var(--accent)">Get in Touch</a>
+    </div>
   </section>
 
   <footer style="background: var(--ink); color: var(--muted2)">
@@ -183,16 +179,10 @@ class Component extends DCLogic {
   renderVals() {
     return {
       themeStyle: this.buildTheme(),
-      schools: [
-        { img: 'images/uni_ut_v2.webp', alt: 'UT Longhorns burnt orange Highland Cow candle at the stadium', name: 'UT Longhorns', tagline: "Burnt Orange · Hook 'Em" },
-        { img: 'images/uni_am_v2.webp', alt: 'Texas A&M maroon Highland Cow candle at Kyle Field', name: 'Texas A&M', tagline: "Maroon · Gig 'Em" },
-        { img: 'images/uni_tt_v2.webp', alt: 'Texas Tech scarlet red Highland Cow candle at the stadium', name: 'Texas Tech', tagline: "Scarlet Red · Wreck 'Em" },
-        { img: 'images/uni_tcu_v2.webp', alt: 'TCU purple Highland Cow candle at the stadium', name: 'TCU Horned Frogs', tagline: 'Deep Purple · Go Frogs' }
-      ],
-      steps: [
-        { num: '01', title: 'Pick Your School', body: 'Choose from our four Texas favorites — or ask us about a custom school and we\u2019ll match your colors.' },
-        { num: '02', title: 'We Sculpt Your Colors', body: 'Your Highland Cow is hand-poured rose by rose in your team\u2019s true palette, finished with a natural bamboo wick.' },
-        { num: '03', title: 'Ready for Game Day', body: 'Add a Pasture Coaster or Barn Box gift set and it arrives ready to gift, display, or light up the tailgate.' }
+      values: [
+        { icon: '🌹', title: 'Sculpted Rose by Rose', body: 'Every petal is shaped by hand. No shortcuts, no molds cranked out by the thousand — just patient, careful craft.' },
+        { icon: '🐝', title: 'Signature Beeswax Blend', body: 'Our blend is chosen for a clean, slow, even burn and a soft natural glow, finished with a bamboo wick.' },
+        { icon: '🤠', title: 'Hand-Poured in Texas', body: 'Made in small batches in the heart of Texas, so every order supports a real maker, not a factory line.' }
       ]
     };
   }

@@ -1,497 +1,422 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Petal &amp; Pasture Custom Candles | Handcrafted Beeswax Animal Candles</title>
-<meta name="description" content="Handcrafted 100% organic beeswax candles shaped as adorable pasture animals. Highland Cow, Pig, Duck, Horse &amp; Baby Goat — each in 5 colors. Texas University editions available. Free shipping on orders over $50.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/png" href="images/logo_transparent.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
+<x-dc>
+<helmet>
+  <title>Petal &amp; Pasture Custom Candles | Handcrafted Beeswax Animal Candles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&amp;family=Zilla+Slab:wght@400;500;600;700&amp;family=DM+Serif+Display:ital@0;1&amp;family=Karla:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream:#FAF6EE; --accent:#9C4A44; --ink:#3A2B21; --soft:#F3E9DA;
+      --border:#E8DCC9; --muted:#6B584A; --muted2:#D8C5AB;
+      --display:'Cormorant Garamond',serif; --section-pad:88px;
+    }
+    html, body { margin: 0; padding: 0; background: var(--cream); }
+    body { font-family: 'Karla', sans-serif; color: var(--ink); transition: background .45s ease, color .45s ease; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--ink); }
+    ::selection { background: var(--soft); }
+    @keyframes ppFadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+    section { animation: ppFadeUp .8s ease both; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  </style>
+</helmet>
 
-<!-- NAVIGATION -->
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo">
-    <img src="images/logo_transparent.png" alt="Petal &amp; Pasture Custom Candles Logo">
-    <div class="nav-logo-text">
-      <span class="brand-name">Petal &amp; Pasture</span>
-      <span class="brand-sub">Custom Candles</span>
+<div style="min-width: 320px; background: var(--cream); transition: background .45s ease; {{ themeStyle }}">
+
+  <!-- Nav -->
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 5vw; background: var(--cream); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50">
+    <a href="#top" style="display: flex; align-items: center; gap: 12px; color: var(--ink)">
+      <img src="images/logo_transparent.png" alt="Petal &amp; Pasture Custom Candles logo" style="height: 46px; width: auto; display: block">
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 700">Petal &amp; Pasture</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: 8px 20px; font-size: 15px; font-weight: 600; flex-wrap: wrap; justify-content: flex-end">
+      <a href="shop.html" style="color: var(--ink)" style-hover="color: var(--accent)">Shop</a>
+      <a href="university.html" style="color: var(--ink)" style-hover="color: var(--accent)">University</a>
+      <a href="weddings.html" style="color: var(--ink)" style-hover="color: var(--accent)">Weddings</a>
+      <a href="our-story.html" style="color: var(--ink)" style-hover="color: var(--accent)">Our Story</a>
+      <a href="retail.html" style="color: var(--ink)" style-hover="color: var(--accent)">Retail</a>
+      <a href="contact.html" style="color: var(--ink)" style-hover="color: var(--accent)">Contact</a>
+      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" style="background: var(--accent); color: var(--cream); padding: 10px 22px; border-radius: 999px" style-hover="background: #7c352f; color: var(--cream)">Shop Etsy</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" data-screen-label="Hero" style="position: relative; min-height: 78vh; display: flex; align-items: center; overflow: hidden">
+    <img src="photos/cow-scene-3.webp" alt="Highland Cow beeswax candle on a rustic wooden table with lavender" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+    <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(30, 20, 12, 0.82) 0%, rgba(30, 20, 12, 0.55) 45%, rgba(30, 20, 12, 0.12) 80%)"></div>
+    <div style="position: relative; max-width: 1280px; margin: 0 auto; padding: clamp(48px, 9vw, 96px) 5vw; width: 100%">
+      <div style="display: inline-block; background: rgba(250, 246, 238, 0.14); border: 1px solid rgba(250, 246, 238, 0.35); color: var(--soft); padding: 8px 18px; border-radius: 999px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: 26px; backdrop-filter: blur(4px)">✨ Handcrafted in Texas · Sculpted Rose by Rose</div>
+      <h1 style="font-family: var(--display); font-size: clamp(46px, 6vw, 84px); line-height: 1.02; font-weight: 600; margin: 0 0 22px; color: var(--cream); max-width: 14ch">Where the Pasture Meets the Flame</h1>
+      <p style="font-size: 18px; line-height: 1.65; color: var(--border); margin: 0 0 36px; max-width: 52ch; text-wrap: pretty">Where blooming petals meet the barnyard — candles sculpted into adorable pasture animals, each one a work of art for your home or a gift they'll never forget.</p>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center">
+        <a href="#featured" style="background: var(--accent); color: var(--cream); padding: 16px 34px; border-radius: 999px; font-weight: 700; font-size: 16px" style-hover="background: #b25c55; color: var(--cream)">Shop the Collection →</a>
+        <a href="#featured" style="color: var(--cream); font-weight: 700; font-size: 16px; border: 1px solid rgba(250, 246, 238, 0.5); padding: 15px 30px; border-radius: 999px" style-hover="background: rgba(250, 246, 238, 0.12); color: var(--cream)">Meet the Animals</a>
+      </div>
     </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">Shop</a></li>
-    <li><a href="university.html">University</a></li>
-    <li><a href="wedding.html">Weddings</a></li>
-    <li><a href="about.html">Our Story</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="nav-cta">Shop Etsy</a></li>
-  </ul>
-  <div class="nav-hamburger" id="hamburger">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
+  </section>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobile-menu">
-  <span class="mobile-menu-close" id="mobile-close">&#x2715;</span>
-  <a href="index.html">Home</a>
-  <a href="products.html">Shop</a>
-  <a href="university.html">University</a>
-  <a href="wedding.html">Weddings</a>
-  <a href="about.html">Our Story</a>
-  <a href="contact.html">Contact</a>
-  <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank">Shop Etsy</a>
+  <!-- Marquee strip -->
+  <div style="background: var(--ink); color: var(--muted2); overflow: hidden; padding: 12px 0; white-space: nowrap">
+    <div style="display: inline-flex; gap: 48px; animation: marquee 30s linear infinite; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700">
+      <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="8">
+        <span>{{ m }}</span>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- Best sellers -->
+  <section id="featured" data-screen-label="Meet the Pasture Family" style="max-width: 1280px; margin: 0 auto; padding: var(--section-pad) 5vw 64px">
+    <div style="text-align: center; margin-bottom: 52px">
+      <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 14px">Our Best Sellers</div>
+      <h2 style="font-family: var(--display); font-size: clamp(34px, 4vw, 52px); font-weight: 600; margin: 0 0 16px">Meet the Pasture Family</h2>
+      <p style="font-size: 17px; line-height: 1.65; color: var(--muted); max-width: 62ch; margin: 0 auto; text-wrap: pretty">Every animal in our little pasture is hand-poured and sculpted rose by rose — the most adorable barnyard friends you've ever seen, ready to light up your home.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px">
+      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" style="background: #fffdf8; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; color: var(--ink); transition: box-shadow 0.2s ease, transform 0.2s ease" style-hover="box-shadow: 0 18px 44px rgba(58, 43, 33, 0.16); transform: translateY(-4px); color: var(--ink)">
+        <div style="position: relative">
+          <img src="photos/cow-scene-1.webp" alt="Highland Cow beeswax candle covered in sculpted roses" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block">
+          <span style="position: absolute; top: 14px; left: 14px; background: rgba(250, 246, 238, 0.92); color: var(--ink); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 7px 14px; border-radius: 999px">⭐ Best Seller</span>
+        </div>
+        <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 8px">
+          <h3 style="font-family: var(--display); font-size: 27px; font-weight: 600; margin: 0">Highland Cow</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted)">The fan favorite. Fluffy, fierce, and absolutely iconic — this little longhorn is the star of the show.</p>
+          <span style="font-weight: 700; font-size: 15px; color: var(--accent); margin-top: 4px">Shop Now →</span>
+        </div>
+      </a>
+      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" style="background: #fffdf8; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; color: var(--ink); transition: box-shadow 0.2s ease, transform 0.2s ease" style-hover="box-shadow: 0 18px 44px rgba(58, 43, 33, 0.16); transform: translateY(-4px); color: var(--ink)">
+        <div style="position: relative">
+          <img src="photos/pig-studio-hd.webp" alt="Dark lavender Farmhouse Pig beeswax candle covered in roses" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block">
+          <span style="position: absolute; top: 14px; left: 14px; background: rgba(250, 246, 238, 0.92); color: var(--ink); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 7px 14px; border-radius: 999px">🔥 Top Performer</span>
+        </div>
+        <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 8px">
+          <h3 style="font-family: var(--display); font-size: 27px; font-weight: 600; margin: 0">Farmhouse Pig</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted)">Snout to tail in rose-sculpted beeswax. Irresistibly cute and impossible to put down.</p>
+          <span style="font-weight: 700; font-size: 15px; color: var(--accent); margin-top: 4px">Shop Now →</span>
+        </div>
+      </a>
+      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" style="background: #fffdf8; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; color: var(--ink); transition: box-shadow 0.2s ease, transform 0.2s ease" style-hover="box-shadow: 0 18px 44px rgba(58, 43, 33, 0.16); transform: translateY(-4px); color: var(--ink)">
+        <div style="position: relative">
+          <img src="photos/duck-slate.webp" alt="Peach Pondside Duck beeswax candle covered in swirling roses" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block">
+          <span style="position: absolute; top: 14px; left: 14px; background: rgba(250, 246, 238, 0.92); color: var(--ink); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 7px 14px; border-radius: 999px">💧 Pondside Charm</span>
+        </div>
+        <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 8px">
+          <h3 style="font-family: var(--display); font-size: 27px; font-weight: 600; margin: 0">Pondside Duck</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted)">Round, rosy, and irresistibly cute. This little duck is covered head to tail in swirling roses.</p>
+          <span style="font-weight: 700; font-size: 15px; color: var(--accent); margin-top: 4px">Shop Now →</span>
+        </div>
+      </a>
+      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" style="background: #fffdf8; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; color: var(--ink); transition: box-shadow 0.2s ease, transform 0.2s ease" style-hover="box-shadow: 0 18px 44px rgba(58, 43, 33, 0.16); transform: translateY(-4px); color: var(--ink)">
+        <div style="position: relative">
+          <img src="photos/dog-greige-f.webp" alt="Lavender Golden Retriever beeswax candle covered in sculpted roses" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block">
+          <span style="position: absolute; top: 14px; left: 14px; background: rgba(250, 246, 238, 0.92); color: var(--ink); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 7px 14px; border-radius: 999px">🐾 New Arrival</span>
+        </div>
+        <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 8px">
+          <h3 style="font-family: var(--display); font-size: 27px; font-weight: 600; margin: 0">Golden Retriever</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted)">Man's best friend, blooming with roses from floppy ears to wagging tail. The newest member of the family.</p>
+          <span style="font-weight: 700; font-size: 15px; color: var(--accent); margin-top: 4px">Shop Now →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Coaster -->
+  <section data-screen-label="Pasture Coaster" style="background: var(--soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: var(--section-pad) 5vw; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 4vw, 56px); align-items: center">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 14px">Signature Accessory</div>
+        <h2 style="font-family: var(--display); font-size: clamp(34px, 4vw, 52px); font-weight: 600; margin: 0 0 20px">The Pasture Coaster</h2>
+        <p style="font-size: 17px; line-height: 1.65; color: var(--muted); margin: 0 0 24px; text-wrap: pretty">Every candle deserves a home. Choose your perfect display platform — a tiny pasture for your tiny animal, crafted to complement every color in our collection.</p>
+        <ul style="margin: 0 0 30px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: var(--ink)">
+          <li>✨ Protects surfaces while elevating your display</li>
+          <li>🎁 Available as an add-on with any candle order</li>
+        </ul>
+        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" style="display: inline-block; background: var(--ink); color: var(--cream); padding: 14px 30px; border-radius: 999px; font-weight: 700" style-hover="background: var(--accent); color: var(--cream)">Add to Your Order →</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px">
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+          <img src="images/coaster_wedding_solo.png" alt="Grass and picket fence coaster" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 16px; display: block">
+          <figcaption style="font-size: 14px; line-height: 1.5; color: var(--muted)"><strong style="color: var(--ink)">Grass &amp; Fence Coaster — $30</strong><br>Real preserved moss base with white picket fence surround</figcaption>
+        </figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+          <img src="images/coaster_wedding_with_cow.png" alt="Highland Cow candle on coaster" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 16px; display: block">
+          <figcaption style="font-size: 14px; line-height: 1.5; color: var(--muted)"><strong style="color: var(--ink)">Candle on Coaster — $50</strong><br>Your animal candle nestled in its own little pasture</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barn Box -->
+  <section data-screen-label="Barn Box" style="max-width: 1280px; margin: 0 auto; padding: var(--section-pad) 5vw; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 4vw, 56px); align-items: center">
+    <div style="position: relative">
+      <img src="images/barn_box_scene_v4.webp" alt="Petal and Pasture barn box gift set with Highland Cow candle" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 20px; display: block; box-shadow: 0 24px 60px rgba(58, 43, 33, 0.18)">
+      <span style="position: absolute; top: 16px; right: 16px; background: var(--accent); color: var(--cream); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 16px; border-radius: 999px">✦ Coming Soon ✦</span>
+    </div>
+    <div>
+      <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 14px">The Ultimate Gift</div>
+      <h2 style="font-family: var(--display); font-size: clamp(34px, 4vw, 52px); font-weight: 600; margin: 0 0 20px">The Barn Box</h2>
+      <p style="font-size: 17px; line-height: 1.65; color: var(--muted); margin: 0 0 22px; text-wrap: pretty">Give the gift that stops people in their tracks. Our signature red barn-shaped gift box opens like a real barn door to reveal your chosen candle nestled in dried wildflowers and rose petals.</p>
+      <ul style="margin: 0 0 30px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; font-size: 15px; color: var(--ink)">
+        <li>🏠 Red barn-shaped keepsake box</li>
+        <li>🌸 Dried wildflowers &amp; rose petals</li>
+        <li>🏷️ Handwritten gift tag included</li>
+        <li>🎓 University logo editions available</li>
+      </ul>
+      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" style="display: inline-block; background: var(--ink); color: var(--cream); padding: 14px 30px; border-radius: 999px; font-weight: 700" style-hover="background: var(--accent); color: var(--cream)">Join the Waitlist →</a>
+    </div>
+  </section>
+
+  <!-- University -->
+  <section id="university" data-screen-label="University Editions" style="background: var(--ink); color: var(--soft)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: var(--section-pad) 5vw">
+      <div style="text-align: center; margin-bottom: 52px">
+        <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: #e0a184; font-weight: 700; margin-bottom: 14px">Texas Proud</div>
+        <h2 style="font-family: var(--display); font-size: clamp(34px, 4vw, 52px); font-weight: 600; margin: 0 0 16px; color: var(--cream)">University Editions</h2>
+        <p style="font-size: 17px; line-height: 1.65; color: var(--muted2); max-width: 66ch; margin: 0 auto; text-wrap: pretty">Show your Longhorn pride, Aggie spirit, Red Raider passion, or Horned Frog loyalty. Our Highland Cow candles come in all four Texas university colors — perfect for game day, graduation gifts, or dorm decor.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px">
+        <div style="display: flex; flex-direction: column; gap: 12px; background: rgba(250, 246, 238, 0.06); border: 1px solid rgba(216, 197, 171, 0.25); border-radius: 16px; padding: 16px">
+          <img src="images/uni_ut_v2.webp" alt="UT Longhorns burnt orange Highland Cow candle at the stadium" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; display: block">
+          <div style="text-align: center">
+            <div style="font-weight: 700; color: var(--cream); font-size: 15px">UT Longhorns</div>
+            <div style="font-size: 13px; color: var(--muted2); margin-top: 2px">Burnt Orange · Hook 'Em</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; background: rgba(250, 246, 238, 0.06); border: 1px solid rgba(216, 197, 171, 0.25); border-radius: 16px; padding: 16px">
+          <img src="images/uni_am_v2.webp" alt="Texas A&amp;M maroon Highland Cow candle at Kyle Field" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; display: block">
+          <div style="text-align: center">
+            <div style="font-weight: 700; color: var(--cream); font-size: 15px">Texas A&amp;M</div>
+            <div style="font-size: 13px; color: var(--muted2); margin-top: 2px">Maroon · Gig 'Em</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; background: rgba(250, 246, 238, 0.06); border: 1px solid rgba(216, 197, 171, 0.25); border-radius: 16px; padding: 16px">
+          <img src="images/uni_tt_v2.webp" alt="Texas Tech scarlet red Highland Cow candle at the stadium" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; display: block">
+          <div style="text-align: center">
+            <div style="font-weight: 700; color: var(--cream); font-size: 15px">Texas Tech</div>
+            <div style="font-size: 13px; color: var(--muted2); margin-top: 2px">Scarlet Red · Wreck 'Em</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; background: rgba(250, 246, 238, 0.06); border: 1px solid rgba(216, 197, 171, 0.25); border-radius: 16px; padding: 16px">
+          <img src="images/uni_tcu_v2.webp" alt="TCU purple Highland Cow candle at the stadium" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; display: block">
+          <div style="text-align: center">
+            <div style="font-weight: 700; color: var(--cream); font-size: 15px">TCU Horned Frogs</div>
+            <div style="font-size: 13px; color: var(--muted2); margin-top: 2px">Deep Purple · Go Frogs</div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 40px">
+        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" style="display: inline-block; background: var(--accent); color: var(--cream); padding: 14px 30px; border-radius: 999px; font-weight: 700" style-hover="background: #b25c55; color: var(--cream)">View All University Editions →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weddings -->
+  <section id="weddings" data-screen-label="Weddings" style="max-width: 1280px; margin: 0 auto; padding: var(--section-pad) 5vw">
+    <div style="text-align: center; margin-bottom: 48px">
+      <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 14px">✦ Custom Wedding Candles ✦</div>
+      <h2 style="font-family: var(--display); font-size: clamp(34px, 4vw, 52px); font-weight: 600; margin: 0 0 16px">Make Every Seat <em>Unforgettable</em></h2>
+      <p style="font-size: 17px; line-height: 1.65; color: var(--muted); max-width: 70ch; margin: 0 auto; text-wrap: pretty">Fully customizable for your wedding — choose your animal, your color, your scent, and your coaster. Hand-poured in small batches right here in Texas, making every place setting a one-of-a-kind keepsake your guests will take home and treasure.</p>
+      <div style="display: flex; justify-content: center; gap: 26px; flex-wrap: wrap; margin-top: 22px; font-size: 15px; font-weight: 700; color: var(--ink)">
+        <span>✔ Choose Your Animal</span><span>✔ Choose Your Color</span><span>✔ Choose Your Scent</span><span>✔ Choose Your Coaster</span>
+      </div>
+    </div>
+    <img src="images/wedding_hero_wide.webp" alt="Southern barn wedding reception with Petal and Pasture candles at every place setting" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; border-radius: 20px; display: block; box-shadow: 0 24px 60px rgba(58, 43, 33, 0.18)">
+    <blockquote style="font-family: var(--display); font-size: clamp(20px, 2.2vw, 27px); font-style: italic; line-height: 1.5; text-align: center; max-width: 62ch; margin: 44px auto; color: var(--ink)">“Each guest's seat featured a Petal &amp; Pasture Highland Cow candle on the handmade coaster — it was the most talked-about detail of the entire reception.”</blockquote>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; margin-bottom: 44px">
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px; text-align: center">
+        <img src="photos/cow-scene-9.webp" alt="Highland Cow candle styled on a shelf" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 16px; display: block">
+        <figcaption style="font-size: 15px"><strong>The Highland Cow</strong><br><span style="color: var(--muted); font-size: 14px">The Star of the Pasture</span></figcaption>
+      </figure>
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px; text-align: center">
+        <img src="photos/pig-dark-linen-wide.webp" alt="Dark lavender Farmhouse Pig candle on a rustic linen cloth" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 16px; display: block">
+        <figcaption style="font-size: 15px"><strong>The Farmhouse Pig</strong><br><span style="color: var(--muted); font-size: 14px">Snout-to-Tail in Roses</span></figcaption>
+      </figure>
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px; text-align: center">
+        <img src="photos/duck-scene-7.webp" alt="Peach Pondside Duck candle on a bathroom counter" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 16px; display: block">
+        <figcaption style="font-size: 15px"><strong>The Pondside Duck</strong><br><span style="color: var(--muted); font-size: 14px">Round, Rosy &amp; Irresistible</span></figcaption>
+      </figure>
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px; text-align: center">
+        <img src="photos/dog-shelf-final.webp" alt="Beige Golden Retriever candle on a bookshelf mantel" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 16px; display: block">
+        <figcaption style="font-size: 15px"><strong>The Golden Retriever</strong><br><span style="color: var(--muted); font-size: 14px">Man's Best Friend in Bloom</span></figcaption>
+      </figure>
+    </div>
+    <div style="text-align: center; background: var(--soft); border: 1px solid var(--border); border-radius: 20px; padding: 48px 5vw">
+      <h3 style="font-family: var(--display); font-size: clamp(26px, 3vw, 38px); font-weight: 600; margin: 0 0 14px">Let's Create Something <em>Beautiful Together</em></h3>
+      <p style="font-size: 16px; line-height: 1.6; color: var(--muted); max-width: 58ch; margin: 0 auto 26px; text-wrap: pretty">Custom wedding orders require lead time. Reach out today to check availability for your date and start designing your perfect candle favors.</p>
+      <a href="contact.html" style="display: inline-block; background: var(--accent); color: var(--cream); padding: 14px 30px; border-radius: 999px; font-weight: 700" style-hover="background: #7c352f; color: var(--cream)">✉ Request a Custom Quote</a>
+    </div>
+  </section>
+
+  <!-- Craft -->
+  <section id="craft" data-screen-label="Our Craft" style="background: var(--soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: var(--section-pad) 5vw; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 4vw, 56px); align-items: center">
+      <img src="photos/cow-scene-1.webp" alt="Rose-sculpted Highland Cow candle, studio shot" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 20px; display: block; box-shadow: 0 24px 60px rgba(58, 43, 33, 0.16)">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 14px">Our Craft</div>
+        <h2 style="font-family: var(--display); font-size: clamp(34px, 4vw, 52px); font-weight: 600; margin: 0 0 20px">From Our Pasture to Your Home</h2>
+        <p style="font-size: 17px; line-height: 1.7; color: var(--muted); margin: 0 0 18px; text-wrap: pretty">Petal &amp; Pasture began with a simple idea: what if the softest things about country life — roses in bloom and the animals of the pasture — could live together in a single candle?</p>
+        <p style="font-size: 17px; line-height: 1.7; color: var(--muted); margin: 0 0 30px; text-wrap: pretty">Every cow, pig, and duck is sculpted rose by rose in our signature beeswax blend, paired with a natural bamboo wick for a clean, slow, even burn. Each animal is hand-poured and hand-finished in small batches right here in Texas.</p>
+        <div style="display: flex; gap: 40px; flex-wrap: wrap; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink)">
+          <div>Sculpted<br>Rose by Rose</div>
+          <div>Natural<br>Bamboo Wicks</div>
+          <div>Hand-Poured<br>in Texas</div>
+        </div>
+        <a href="our-story.html" style="display: inline-block; margin-top: 30px; font-weight: 700; border-bottom: 2px solid var(--muted2); padding-bottom: 2px">Our Full Story →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section data-screen-label="Testimonials" style="max-width: 1280px; margin: 0 auto; padding: var(--section-pad) 5vw">
+    <div style="text-align: center; margin-bottom: 48px">
+      <div style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 14px">Happy Customers</div>
+      <h2 style="font-family: var(--display); font-size: clamp(34px, 4vw, 52px); font-weight: 600; margin: 0">What the Pasture is Saying</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 26px">
+      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+        <figure style="background: #fffdf8; border: 1px solid var(--border); border-radius: 18px; padding: 30px; margin: 0; display: flex; flex-direction: column; gap: 16px">
+          <div style="color: #c58a3d; letter-spacing: 0.2em; font-size: 15px">★★★★★</div>
+          <blockquote style="margin: 0; font-size: 15px; line-height: 1.65; color: var(--ink)">{{ r.quote }}</blockquote>
+          <figcaption style="font-size: 14px; font-weight: 700; color: var(--muted)">{{ r.name }} <span style="font-weight: 400">· {{ r.city }}</span></figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--ink); color: var(--muted2)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 56px 5vw 40px; display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap">
+      <div style="max-width: 340px; display: flex; flex-direction: column; gap: 14px">
+        <img src="images/logo_transparent.png" alt="Petal and Pasture Custom Candles" style="height: 60px; width: auto; align-self: flex-start">
+        <p style="margin: 0; font-size: 14px; line-height: 1.6">Where petals meet the pasture. Each animal is a work of art, hand-poured in small batches in the heart of Texas with love and care.</p>
+        <div style="display: flex; gap: 14px; font-size: 20px">
+          <a href="https://www.tiktok.com/@petalpasturecandleco">🎥</a>
+          <a href="https://www.instagram.com/petalpasturecandleco">📷</a>
+          <a href="https://www.etsy.com/shop/PetalAndPastureCandles">🛍️</a>
+        </div>
+      </div>
+      <div style="display: flex; gap: 32px 64px; flex-wrap: wrap; font-size: 14px">
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div style="font-weight: 700; color: var(--cream); text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px">Shop</div>
+          <a href="shop.html" style="color: var(--muted2)" style-hover="color: var(--cream)">All Candles</a>
+          <a href="shop.html" style="color: var(--muted2)" style-hover="color: var(--cream)">Highland Cow</a>
+          <a href="shop.html" style="color: var(--muted2)" style-hover="color: var(--cream)">Farmhouse Pig</a>
+          <a href="shop.html" style="color: var(--muted2)" style-hover="color: var(--cream)">Pondside Duck</a>
+          <a href="shop.html" style="color: var(--muted2)" style-hover="color: var(--cream)">Golden Retriever</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div style="font-weight: 700; color: var(--cream); text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px">University</div>
+          <a href="university.html" style="color: var(--muted2)" style-hover="color: var(--cream)">UT Longhorns</a>
+          <a href="university.html" style="color: var(--muted2)" style-hover="color: var(--cream)">Texas A&amp;M</a>
+          <a href="university.html" style="color: var(--muted2)" style-hover="color: var(--cream)">Texas Tech</a>
+          <a href="university.html" style="color: var(--muted2)" style-hover="color: var(--cream)">TCU Horned Frogs</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div style="font-weight: 700; color: var(--cream); text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px">Info</div>
+          <a href="our-story.html" style="color: var(--muted2)" style-hover="color: var(--cream)">Our Story</a>
+          <a href="retail.html" style="color: var(--muted2)" style-hover="color: var(--cream)">Retail &amp; Wholesale</a>
+          <a href="contact.html" style="color: var(--muted2)" style-hover="color: var(--cream)">Contact Us</a>
+          <a href="https://www.etsy.com/shop/PetalAndPastureCandles" style="color: var(--muted2)" style-hover="color: var(--cream)">Etsy Shop</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(216, 197, 171, 0.25); text-align: center; padding: 18px 5vw; font-size: 13px">© 2026 Petal &amp; Pasture Custom Candles. All rights reserved. Handcrafted with ♥ in Texas</div>
+  </footer>
+
 </div>
-
-<!-- HERO SLIDESHOW -->
-<section class="hero" id="home">
-  <div class="hero-slideshow">
-    <div class="hero-slide">
-      <img src="images/hero_cow_fence.webp" alt="Highland Cow beeswax candle at Texas golden hour">
-    </div>
-    <div class="hero-slide">
-      <img src="images/hero_pig_barn_v2.webp" alt="Pig beeswax candle in rustic barn with rose petals">
-    </div>
-    <div class="hero-slide">
-      <img src="images/hero_horse_new.png" alt="Horse beeswax candle sculpted in roses">
-    </div>
-    <div class="hero-slide">
-      <img src="images/hero_goat.png" alt="Baby Goat beeswax candle sculpted in roses">
-    </div>
-    <div class="hero-slide">
-      <img src="images/hero_duck.png" alt="Duck beeswax candle sculpted in roses">
-    </div>
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <span class="hero-eyebrow">&#x2728; Handcrafted in Texas &bull; 100% Organic Beeswax</span>
-    <h1 class="hero-title">Where the Pasture<br>Meets the Flame</h1>
-    <p class="hero-subtitle">Triple-filtered organic beeswax candles sculpted into adorable pasture animals — each one a work of art for your home or a gift they'll never forget.</p>
-    <div class="hero-actions">
-      <a href="products.html" class="btn-primary">Shop the Collection &#x2192;</a>
-      <a href="#featured" class="btn-glass">Meet the Animals</a>
-    </div>
-  </div>
-  <div class="hero-dots">
-    <div class="hero-dot"></div>
-    <div class="hero-dot"></div>
-    <div class="hero-dot"></div>
-    <div class="hero-dot"></div>
-    <div class="hero-dot"></div>
-  </div>
-  <div class="hero-scroll">
-    <span>Scroll</span>
-    <div class="hero-scroll-line"></div>
-  </div>
-</section>
-
-<!-- SCENT TICKER BANNER -->
-<div class="scent-banner">
-  <div class="scent-ticker-wrap">
-    <div class="scent-ticker">
-      <span class="scent-item"><span class="scent-dot"></span>Highland Cow</span>
-      <span class="scent-item"><span class="scent-dot"></span>Farmhouse Pig</span>
-      <span class="scent-item"><span class="scent-dot"></span>Baby Goat</span>
-      <span class="scent-item"><span class="scent-dot"></span>Pondside Duck</span>
-      <span class="scent-item"><span class="scent-dot"></span>Pasture Horse</span>
-      <span class="scent-item"><span class="scent-dot"></span>100% Organic Beeswax</span>
-      <span class="scent-item"><span class="scent-dot"></span>Bamboo Wicks</span>
-      <span class="scent-item"><span class="scent-dot"></span>Triple Filtered</span>
-      <span class="scent-item"><span class="scent-dot"></span>Texas Made</span>
-      <span class="scent-item"><span class="scent-dot"></span>5 Colors Available</span>
-      <span class="scent-item"><span class="scent-dot"></span>University Editions</span>
-      <span class="scent-item"><span class="scent-dot"></span>Gift Ready</span>
-    </div>
-  </div>
-</div>
-
-<!-- FEATURED STAR PRODUCTS -->
-<section class="section star-products" id="featured">
-  <div class="section-header reveal">
-    <span class="eyebrow">Our Best Sellers</span>
-    <h2>Meet the Pasture Family</h2>
-    <div class="divider"></div>
-    <p>Each candle is hand-poured from 100% organic triple-filtered beeswax with a natural bamboo wick — sculpted into the most adorable pasture animals you've ever seen.</p>
-  </div>
-  <div class="star-grid">
-    <a href="products.html?animal=highland-cow" class="star-card reveal">
-      <img src="images/hero_cow_fence.webp" alt="Highland Cow Candle — Best Seller" loading="lazy">
-      <div class="star-card-overlay">
-        <span class="star-card-badge">&#x2B50; Best Seller</span>
-        <h3>Highland Cow</h3>
-        <p>The fan favorite. Fluffy, fierce, and absolutely iconic — this little longhorn is the star of the show.</p>
-        <span class="star-card-link">Shop Now &#x2192;</span>
-      </div>
-    </a>
-    <a href="products.html?animal=pig" class="star-card reveal reveal-delay-1">
-      <img src="images/hero_pig_barn_v2.webp" alt="Pig Candle — Top Performer" loading="lazy">
-      <div class="star-card-overlay">
-        <span class="star-card-badge">&#x1F525; Top Performer</span>
-        <h3>Farmhouse Pig</h3>
-        <p>Snout to tail in rose-sculpted beeswax. Irresistibly cute and impossible to put down.</p>
-        <span class="star-card-link">Shop Now &#x2192;</span>
-      </div>
-    </a>
-    <a href="products.html?animal=goat" class="star-card reveal reveal-delay-2">
-      <img src="images/hero_goat.png" alt="Baby Goat Candle sculpted in roses" loading="lazy">
-      <div class="star-card-overlay">
-        <span class="star-card-badge">&#x1F33F; Fan Favorite</span>
-        <h3>Baby Goat</h3>
-        <p>Soft, sweet, and wrapped in swirling roses. Perfect for the farmhouse aesthetic lover.</p>
-        <span class="star-card-link">Shop Now &#x2192;</span>
-      </div>
-    </a>
-  </div>
-  <div class="star-grid" style="margin-top:2rem;">
-    <a href="products.html?animal=duck" class="star-card reveal">
-      <img src="images/hero_duck.png" alt="Duck Candle sculpted in roses" loading="lazy">
-      <div class="star-card-overlay">
-        <span class="star-card-badge">&#x1F4A7; Pondside Charm</span>
-        <h3>Pondside Duck</h3>
-        <p>Round, rosy, and irresistibly cute. This little duck is covered head to tail in swirling roses.</p>
-        <span class="star-card-link">Shop Now &#x2192;</span>
-      </div>
-    </a>
-    <a href="products.html?animal=horse" class="star-card reveal reveal-delay-1">
-      <img src="images/horse_candle_beige.png" alt="Horse Candle sculpted in roses" loading="lazy">
-      <div class="star-card-overlay">
-        <span class="star-card-badge">&#x1F304; Dramatic Beauty</span>
-        <h3>Pasture Horse</h3>
-        <p>Bold, dramatic, and breathtaking. This rose-covered horse candle is pure Texas elegance.</p>
-        <span class="star-card-link">Shop Now &#x2192;</span>
-      </div>
-    </a>
-    <a href="university.html" class="star-card reveal reveal-delay-2">
-      <img src="images/uni_am_v2.webp" alt="University Highland Cow Candles" loading="lazy">
-      <div class="star-card-overlay">
-        <span class="star-card-badge">&#x1F3C8; Texas Universities</span>
-        <h3>University Editions</h3>
-        <p>Show your school spirit with our Highland Cow in UT, A&amp;M, Texas Tech, and TCU colors.</p>
-        <span class="star-card-link">Explore &#x2192;</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- COASTER FEATURE -->
-<section style="background:#1a100a; color:#fff; padding:6rem 4vw;">
-  <div style="max-width:1300px; margin:0 auto;">
-
-    <!-- Header centered -->
-    <div style="text-align:center; margin-bottom:4rem;">
-      <span style="font-family:'Lato',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#f0c060; display:block; margin-bottom:0.75rem;">Signature Accessory</span>
-      <h2 style="font-family:'Playfair Display',Georgia,serif; font-size:clamp(2rem,3.5vw,2.8rem); color:#fff; margin-bottom:1.25rem; line-height:1.2;">The Pasture Coaster</h2>
-      <p style="color:rgba(255,255,255,0.75); font-size:1.05rem; line-height:1.8; max-width:680px; margin:0 auto 1.5rem;">Every candle deserves a home. Choose your perfect display platform — a tiny pasture for your tiny animal. Both options are crafted to complement every color in our collection.</p>
-      <div style="display:flex; justify-content:center; gap:2.5rem; flex-wrap:wrap; margin-bottom:2rem;">
-        <span style="color:rgba(255,255,255,0.85); font-size:0.95rem;">&#x2728; Protects surfaces while elevating your display</span>
-        <span style="color:rgba(255,255,255,0.85); font-size:0.95rem;">&#x1F381; Available as an add-on with any candle order</span>
-      </div>
-      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" style="display:inline-flex; align-items:center; gap:0.5rem; background:#c8860a; color:#fff; padding:1rem 2.2rem; border-radius:50px; font-size:0.9rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none;">Add to Your Order &#x2192;</a>
-    </div>
-
-    <!-- Two large images side by side -->
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem;">
-
-      <!-- Hay Coaster -->
-      <div style="display:flex; flex-direction:column; gap:1.5rem;">
-        <div style="border-radius:24px; overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,0.6);">
-          <img src="images/coaster_wedding_solo.png" alt="Grass and picket fence coaster on wedding table" style="width:100%; height:600px; object-fit:cover; object-position:center; display:block;">
-        </div>
-        <div style="text-align:center;">
-          <h3 style="font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; color:#fff; margin-bottom:0.5rem;">Grass &amp; Fence Coaster</h3>
-          <p style="font-size:0.95rem; color:rgba(255,255,255,0.7); margin-bottom:0.8rem;">Real preserved moss base with white picket fence surround</p>
-          <span style="display:inline-block; background:#c8860a; color:#fff; padding:0.5rem 1.5rem; border-radius:50px; font-size:1.2rem; font-weight:700;">$30</span>
-        </div>
-      </div>
-
-      <!-- Grass w/ Fence Coaster -->
-      <div style="display:flex; flex-direction:column; gap:1.5rem;">
-        <div style="border-radius:24px; overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,0.6);">
-          <img src="images/coaster_wedding_with_cow.png" alt="Beige Highland Cow candle on coaster at wedding table" style="width:100%; height:600px; object-fit:cover; object-position:center; display:block;">
-        </div>
-        <div style="text-align:center;">
-          <h3 style="font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; color:#fff; margin-bottom:0.5rem;">Candle on Coaster</h3>
-          <p style="font-size:0.95rem; color:rgba(255,255,255,0.7); margin-bottom:0.8rem;">Your animal candle nestled in its own little pasture</p>
-          <span style="display:inline-block; background:#c8860a; color:#fff; padding:0.5rem 1.5rem; border-radius:50px; font-size:1.2rem; font-weight:700;">$50</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- BARN BOX GIFT -->
-<section class="section barn-box-section" id="gift">
-  <div class="barn-box-inner">
-    <div class="barn-box-image reveal" style="position:relative;">
-      <img src="images/barn_box_scene_v4.webp" alt="Petal and Pasture barn box gift set with Highland Cow candle" loading="lazy">
-      <span class="barn-box-badge">Premium Gift</span>
-      <div style="position:absolute; inset:0; background:rgba(20,12,5,0.72); display:flex; flex-direction:column; align-items:center; justify-content:center; border-radius:inherit;">
-        <p style="font-family:'Lato',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.3em; text-transform:uppercase; color:#D4A853; margin:0 0 10px;">&#x2726; Coming Soon &#x2726;</p>
-        <p style="font-family:'Playfair Display',serif; font-size:clamp(1.4rem,3vw,2rem); font-weight:400; color:#faf7f2; margin:0 0 8px; text-align:center; line-height:1.2;">Available Soon</p>
-        <p style="font-family:'Cormorant Garamond',serif; font-size:1rem; font-style:italic; color:rgba(250,247,242,0.75); margin:0; text-align:center;">Join the waitlist below</p>
-      </div>
-    </div>
-    <div class="barn-box-text reveal reveal-delay-1">
-      <span class="eyebrow">The Ultimate Gift</span>
-      <h2>The Barn Box</h2>
-      <p>Give the gift that stops people in their tracks. Our signature red barn-shaped gift box opens like a real barn door to reveal your chosen candle nestled in dried wildflowers and rose petals.</p>
-      <p>Perfect for birthdays, housewarmings, holidays, and anyone who loves the farmhouse life. University editions include school colors on the barn roof panels.</p>
-      <div class="barn-box-perks">
-        <div class="barn-box-perk">
-          <div class="barn-box-perk-icon">&#x1F3E0;</div>
-          <span>Red barn-shaped keepsake box</span>
-        </div>
-        <div class="barn-box-perk">
-          <div class="barn-box-perk-icon">&#x1F338;</div>
-          <span>Dried wildflowers &amp; rose petals</span>
-        </div>
-        <div class="barn-box-perk">
-          <div class="barn-box-perk-icon">&#x1F3F7;&#xFE0F;</div>
-          <span>Handwritten gift tag included</span>
-        </div>
-        <div class="barn-box-perk">
-          <div class="barn-box-perk-icon">&#x1F393;</div>
-          <span>University logo editions available</span>
-        </div>
-      </div>
-      <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="btn-primary">Order a Barn Box &#x2192;</a>
-    </div>
-  </div>
-</section>
-
-<!-- UNIVERSITY SECTION -->
-<section class="section university-section" id="university">
-  <div class="university-inner">
-    <div class="section-header reveal" style="text-align:left; margin:0 0 0 0;">
-      <span class="eyebrow" style="color:var(--gold-light)">Texas Proud</span>
-      <h2 style="color:var(--white)">University Editions</h2>
-      <div class="divider" style="margin:1.5rem 0;"></div>
-      <p style="color:rgba(255,255,255,0.75)">Show your Longhorn pride, Aggie spirit, Red Raider passion, or Horned Frog loyalty. Our Highland Cow candles come in all four Texas university colors — perfect for game day, graduation gifts, or dorm decor.</p>
-    </div>
-    <div class="university-grid">
-      <a href="university-ut.html" class="uni-card reveal">
-        <img src="images/uni_ut_v2.webp" alt="UT Longhorns Burnt Orange Highland Cow Candle" loading="lazy">
-        <div class="uni-card-overlay">
-          <div class="uni-card-color" style="background:#BF5700;"></div>
-          <h3>UT Longhorns</h3>
-          <p>Burnt Orange &bull; Hook 'Em</p>
-        </div>
-      </a>
-      <a href="university-am.html" class="uni-card reveal reveal-delay-1">
-        <img src="images/uni_am_v2.webp" alt="Texas A&M Aggies Maroon Highland Cow Candle" loading="lazy">
-        <div class="uni-card-overlay">
-          <div class="uni-card-color" style="background:#500000;"></div>
-          <h3>Texas A&amp;M</h3>
-          <p>Maroon &bull; Gig 'Em</p>
-        </div>
-      </a>
-      <a href="university-tt.html" class="uni-card reveal reveal-delay-2">
-        <img src="images/uni_tt_v2.webp" alt="Texas Tech Red Raiders Scarlet Highland Cow Candle" loading="lazy">
-        <div class="uni-card-overlay">
-          <div class="uni-card-color" style="background:#CC0000;"></div>
-          <h3>Texas Tech</h3>
-          <p>Scarlet &bull; Wreck 'Em</p>
-        </div>
-      </a>
-      <a href="university-tcu.html" class="uni-card reveal reveal-delay-3">
-        <img src="images/uni_tcu_v2.webp" alt="TCU Horned Frogs Purple Highland Cow Candle" loading="lazy">
-        <div class="uni-card-overlay">
-          <div class="uni-card-color" style="background:#4D1979;"></div>
-          <h3>TCU Horned Frogs</h3>
-          <p>Purple &bull; Go Frogs</p>
-        </div>
-      </a>
-    </div>
-    <div style="text-align:center; margin-top:3rem;">
-      <a href="university.html" class="btn-glass">View All University Editions &#x2192;</a>
-    </div>
-  </div>
-</section>
-
-<!-- WEDDING SECTION -->
-<section class="section reveal" id="weddings" style="background:#faf7f2; padding:80px 24px;">
-  <div style="max-width:1100px; margin:0 auto;">
-    <div class="section-header reveal" style="text-align:center; margin-bottom:52px;">
-      <span class="eyebrow">&#x2726; Custom Wedding Candles &#x2726;</span>
-      <h2>Make Every Seat <em style="font-style:italic; color:#8B5E3C;">Unforgettable</em></h2>
-      <div class="divider"></div>
-      <p style="font-size:1.1rem; max-width:680px; margin:0 auto 20px;">Our handcrafted beeswax animal candles are fully customizable for your wedding — choose your animal, your color, your scent, and your coaster. Each candle is hand-poured in small batches right here in Texas, making every place setting a one-of-a-kind keepsake your guests will take home and treasure.</p>
-      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:8px;">
-        <span style="background:#2c1a0e; color:#D4A853; font-family:'Lato',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; padding:8px 18px; border-radius:20px;">&#x2714; Choose Your Animal</span>
-        <span style="background:#2c1a0e; color:#D4A853; font-family:'Lato',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; padding:8px 18px; border-radius:20px;">&#x2714; Choose Your Color</span>
-        <span style="background:#2c1a0e; color:#D4A853; font-family:'Lato',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; padding:8px 18px; border-radius:20px;">&#x2714; Choose Your Scent</span>
-        <span style="background:#2c1a0e; color:#D4A853; font-family:'Lato',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; padding:8px 18px; border-radius:20px;">&#x2714; Choose Your Coaster</span>
-      </div>
-    </div>
-    <div class="reveal" style="position:relative; border-radius:20px; overflow:hidden; margin-bottom:48px; box-shadow:0 12px 48px rgba(44,26,14,0.15);">
-      <img src="images/wedding_hero_wide.webp" alt="Southern barn wedding reception with Petal and Pasture Highland Cow candles at every place setting" loading="lazy" style="width:100%; height:clamp(280px,45vw,520px); object-fit:cover; object-position:center bottom; display:block;">
-      <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(20,12,5,0.72) 0%, transparent 55%); display:flex; align-items:flex-end; padding:36px 40px;">
-        <p style="font-family:'Playfair Display',serif; font-size:clamp(0.95rem,2vw,1.2rem); font-style:italic; color:#fff; max-width:600px; line-height:1.65; margin:0;">&ldquo;Each guest&rsquo;s seat featured a Petal &amp; Pasture Highland Cow candle on the handmade coaster &mdash; it was the most talked-about detail of the entire reception.&rdquo;</p>
-      </div>
-    </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; margin-bottom:48px;">
-      <div class="reveal" style="border-radius:16px; overflow:hidden; box-shadow:0 6px 24px rgba(44,26,14,0.1); position:relative;">
-        <img src="images/coaster_wedding_with_cow.png" alt="Beige Highland Cow candle on the final coaster at wedding place setting" loading="lazy" style="width:100%; aspect-ratio:3/4; object-fit:cover; display:block;">
-        <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent, rgba(20,12,5,0.78)); padding:24px 20px 18px; color:#fff;">
-          <p style="font-family:'Lato',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#D4A853; margin:0 0 4px;">The Highland Cow</p>
-          <p style="font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:400; margin:0;">The Star of the Pasture</p>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-1" style="border-radius:16px; overflow:hidden; box-shadow:0 6px 24px rgba(44,26,14,0.1); position:relative;">
-        <img src="images/coaster_wedding_with_cow.png" alt="White Farmhouse Pig candle on the final coaster at wedding place setting" loading="lazy" style="width:100%; aspect-ratio:3/4; object-fit:cover; display:block;">
-        <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent, rgba(20,12,5,0.78)); padding:24px 20px 18px; color:#fff;">
-          <p style="font-family:'Lato',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#D4A853; margin:0 0 4px;">The Farmhouse Pig</p>
-          <p style="font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:400; margin:0;">Snout-to-Tail in Roses</p>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-2" style="border-radius:16px; overflow:hidden; box-shadow:0 6px 24px rgba(44,26,14,0.1); position:relative;">
-        <img src="images/goat_candle_beige.png" alt="Baby Goat candle at wedding place setting" loading="lazy" style="width:100%; aspect-ratio:3/4; object-fit:cover; display:block;">
-        <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent, rgba(20,12,5,0.78)); padding:24px 20px 18px; color:#fff;">
-          <p style="font-family:'Lato',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#D4A853; margin:0 0 4px;">The Baby Goat</p>
-          <p style="font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:400; margin:0;">Soft, Sweet &amp; Wrapped in Roses</p>
-        </div>
-      </div>
-    </div>
-    <div style="text-align:center; background:#2c1a0e; border-radius:20px; padding:48px 32px; margin-top:8px;">
-      <p style="font-family:'Lato',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#D4A853; margin:0 0 12px;">&#x2726; Ready to Plan Your Custom Order? &#x2726;</p>
-      <h3 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:400; color:#faf7f2; margin:0 0 16px; line-height:1.25;">Let&rsquo;s Create Something <em style="font-style:italic; color:#D4A853;">Beautiful Together</em></h3>
-      <p style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:rgba(250,247,242,0.8); max-width:520px; margin:0 auto 32px; line-height:1.7;">Custom wedding orders require lead time. Reach out today to check availability for your date and start designing your perfect candle favors.</p>
-      <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center;">
-        <a href="contact.html" style="display:inline-flex; align-items:center; gap:8px; background:#D4A853; color:#1a0f05; font-family:'Lato',sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; text-decoration:none; padding:16px 36px; border-radius:50px; transition:background 0.3s;">&#x2709; Request a Custom Quote</a>
-        <a href="wedding.html" style="display:inline-flex; align-items:center; gap:8px; background:transparent; color:#faf7f2; border:2px solid rgba(250,247,242,0.5); font-family:'Lato',sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; text-decoration:none; padding:14px 34px; border-radius:50px;">View All Wedding Candles &#x2192;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ARTISAN STORY -->
-<section class="section artisan-section" id="story">
-  <div class="artisan-inner">
-    <div class="artisan-image reveal">
-      <img src="images/artisan_story.webp" alt="Handcrafted rose-covered floral Highland Cow candle on rustic farmhouse table" loading="lazy">
-    </div>
-    <div class="artisan-text reveal reveal-delay-1">
-      <span class="eyebrow">Our Craft</span>
-      <h2>From the Hive to Your Home</h2>
-      <p>Every Petal &amp; Pasture candle begins with 100% organic triple-filtered beeswax — the purest, cleanest wax available. No paraffin. No synthetic fragrances. No shortcuts.</p>
-      <p>We pair our beeswax with natural bamboo wicks for a clean, slow, even burn that fills your home with the warm, honey-sweet scent of pure beeswax. Each animal is hand-poured and hand-finished in small batches right here in Texas.</p>
-      <div class="artisan-stats">
-        <div class="artisan-stat">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Organic Beeswax</span>
-        </div>
-        <div class="artisan-stat">
-          <span class="stat-number">3x</span>
-          <span class="stat-label">Triple Filtered</span>
-        </div>
-        <div class="artisan-stat">
-          <span class="stat-number">5</span>
-          <span class="stat-label">Animals &amp; Colors</span>
-        </div>
-      </div>
-      <a href="about.html" class="btn-primary">Our Full Story &#x2192;</a>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section testimonials-section">
-  <div class="section-header reveal">
-    <span class="eyebrow">Happy Customers</span>
-    <h2>What the Pasture is Saying</h2>
-    <div class="divider"></div>
-  </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card reveal">
-      <div class="testimonial-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-      <p class="testimonial-text">"I bought the Highland Cow for my daughter's birthday and she absolutely lost her mind over it. The detail is incredible — it looks like a tiny sculpture. The beeswax scent is so warm and natural."</p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar">S</div>
-        <div>
-          <div class="testimonial-name">Sarah M.</div>
-          <div class="testimonial-location">Austin, TX</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card reveal reveal-delay-1">
-      <div class="testimonial-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-      <p class="testimonial-text">"Got the burnt orange UT cow for my husband before the Texas-OU game. He literally said 'this is the best gift I've ever received.' Ordering the maroon A&amp;M one for my brother next."</p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar">J</div>
-        <div>
-          <div class="testimonial-name">Jessica R.</div>
-          <div class="testimonial-location">Houston, TX</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card reveal reveal-delay-2">
-      <div class="testimonial-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-      <p class="testimonial-text">"The barn box gift set is EVERYTHING. I ordered it for my mom's housewarming and she cried happy tears. The packaging alone is worth the price. Will be ordering every holiday from now on."</p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar">K</div>
-        <div>
-          <div class="testimonial-name">Katie L.</div>
-          <div class="testimonial-location">Dallas, TX</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="images/logo_transparent.png" alt="Petal and Pasture Custom Candles">
-      <p>Handcrafted 100% organic beeswax candles from the heart of Texas. Each animal is a work of art, hand-poured in small batches with love and care.</p>
-      <div class="footer-social">
-        <a href="https://www.tiktok.com/@petalpasturecandleco" target="_blank" class="footer-social-link" aria-label="TikTok">&#x1F3A5;</a>
-        <a href="https://www.instagram.com/petalpasturecandleco" target="_blank" class="footer-social-link" aria-label="Instagram">&#x1F4F7;</a>
-        <a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank" class="footer-social-link" aria-label="Etsy">&#x1F6CD;&#xFE0F;</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Shop</h4>
-      <ul class="footer-links">
-        <li><a href="products.html">All Candles</a></li>
-        <li><a href="products.html?animal=highland-cow">Highland Cow</a></li>
-        <li><a href="products.html?animal=pig">Farmhouse Pig</a></li>
-        <li><a href="products.html?animal=goat">Baby Goat</a></li>
-        <li><a href="products.html?animal=duck">Pondside Duck</a></li>
-        <li><a href="products.html?animal=horse">Pasture Horse</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>University</h4>
-      <ul class="footer-links">
-        <li><a href="university-ut.html">UT Longhorns</a></li>
-        <li><a href="university-am.html">Texas A&amp;M</a></li>
-        <li><a href="university-tt.html">Texas Tech</a></li>
-        <li><a href="university-tcu.html">TCU Horned Frogs</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Info</h4>
-      <ul class="footer-links">
-        <li><a href="about.html">Our Story</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="https://www.etsy.com/shop/PetalAndPastureCandles" target="_blank">Etsy Shop</a></li>
-        <li><a href="contact.html?subject=Custom+Event+Order+Inquiry">Custom Orders</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; 2025 Petal &amp; Pasture Custom Candles. All rights reserved.</span>
-    <span>Handcrafted with &#x2665; in Texas</span>
-  </div>
-</footer>
-
-<script src="main.js"></script>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;},&quot;paletteMood&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Warm Pasture&quot;,&quot;Blush Garden&quot;,&quot;Sage Meadow&quot;,&quot;Twilight Barn&quot;],&quot;default&quot;:&quot;Warm Pasture&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;typeStyle&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Editorial&quot;,&quot;Rustic&quot;,&quot;Modern&quot;],&quot;default&quot;:&quot;Rustic&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Airy&quot;,&quot;Balanced&quot;,&quot;Cozy&quot;],&quot;default&quot;:&quot;Cozy&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;parallax&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Scroll effects&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Scroll effects&quot;},&quot;imageDrift&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Scroll effects&quot;}}">
+class Component extends DCLogic {
+  themes = {
+    'Warm Pasture': {cream:'#faf6ee',accent:'#9c4a44',ink:'#3a2b21',soft:'#f3e9da',border:'#e8dcc9',muted:'#6b584a',muted2:'#d8c5ab'},
+    'Blush Garden': {cream:'#fbf2f1',accent:'#b5556a',ink:'#402530',soft:'#f7e6e7',border:'#eed7d8',muted:'#825860',muted2:'#dcc3c8'},
+    'Sage Meadow':  {cream:'#f3f5ec',accent:'#6d7d47',ink:'#2f3524',soft:'#e8eedd',border:'#d9e0c9',muted:'#5f6b49',muted2:'#cdd6be'},
+    'Twilight Barn':{cream:'#f1edf0',accent:'#8a5a86',ink:'#29222f',soft:'#e8dfe7',border:'#d9cdd8',muted:'#6a5b69',muted2:'#cfc2ce'}
+  };
+  displays = { 'Editorial':"'Cormorant Garamond',serif", 'Rustic':"'Zilla Slab',serif", 'Modern':"'DM Serif Display',serif" };
+  densities = { 'Airy':'118px', 'Balanced':'88px', 'Cozy':'58px' };
+  buildTheme() {
+    const t = this.themes[this.props.paletteMood] || this.themes['Warm Pasture'];
+    let css = Object.entries(t).map(([k,v]) => '--'+k+':'+v).join(';');
+    css += ';--display:' + (this.displays[this.props.typeStyle] || this.displays['Editorial']);
+    css += ';--section-pad:' + (this.densities[this.props.density] || '88px');
+    return css + ';';
+  }
+  componentDidMount() {
+    let tries = 0;
+    const boot = () => {
+      if(document.querySelectorAll('section').length >= 3 || tries++ > 150){ this.initFx(); }
+      else { setTimeout(boot, 100); }
+    };
+    boot();
+  }
+  componentWillUnmount() { if(this._int) clearInterval(this._int); }
+  componentDidUpdate() {
+    if(this._reveal){ this._reveal.forEach(el=>{ el.style.animation = this.props.scrollReveal === false ? 'none' : ''; }); }
+  }
+  initFx() {
+    if(this._fxInit) return; this._fxInit = true;
+    this._para = []; this._drift = [];
+    this._reveal = Array.from(document.querySelectorAll('section'));
+    const doc = (this._reveal[0] && this._reveal[0].ownerDocument) || document;
+    Array.from(doc.querySelectorAll('img')).forEach(img=>{
+      const cs = getComputedStyle(img);
+      if(cs.position === 'absolute'){ this._para.push(img); }
+      else if(cs.objectFit === 'cover' && img.getBoundingClientRect().width >= 180){ this._drift.push(img); }
+    });
+    if(this.props.scrollReveal === false){ this._reveal.forEach(el=>{ el.style.animation = 'none'; }); }
+    this._onScroll = ()=>{
+      const vh = doc.documentElement.clientHeight || 800;
+      this._para.forEach(img=>{
+        if(this.props.parallax){ const t = img.getBoundingClientRect().top; img.style.transform = 'translateY(' + (t * -0.14).toFixed(1) + 'px) scale(1.16)'; }
+        else { img.style.transform = ''; }
+      });
+      this._drift.forEach(img=>{
+        if(this.props.imageDrift){ const r = img.getBoundingClientRect(); const d = Math.min(Math.abs((r.top + r.height/2 - vh/2)/vh), 1); img.style.transform = 'scale(' + (1.04 - d*0.04).toFixed(3) + ')'; }
+        else { img.style.transform = ''; }
+      });
+    };
+    this._onScroll();
+    this._int = setInterval(this._onScroll, 40);
+  }
+  renderVals() {
+    return {
+      themeStyle: this.buildTheme(),
+      marquee: [
+        "Highland Cow", "Farmhouse Pig", "Pondside Duck", "Golden Retriever",
+        "Sculpted Rose by Rose", "Bamboo Wicks", "Small Batch",
+        "Texas Made", "University Editions", "Gift Ready",
+        "Highland Cow", "Farmhouse Pig", "Pondside Duck", "Golden Retriever",
+        "Sculpted Rose by Rose", "Bamboo Wicks", "Small Batch",
+        "Texas Made", "University Editions", "Gift Ready"
+      ],
+      reviews: [
+        {
+          quote: "\"I bought the Highland Cow for my daughter's birthday and she absolutely lost her mind over it. The detail is incredible — it looks like a tiny sculpture. The scent is so warm and natural.\"",
+          name: "Sarah M.",
+          city: "Austin, TX"
+        },
+        {
+          quote: "\"Got the burnt orange UT cow for my husband before the Texas-OU game. He literally said 'this is the best gift I've ever received.' Ordering the maroon A&M one for my brother next.\"",
+          name: "Jessica R.",
+          city: "Houston, TX"
+        },
+        {
+          quote: "\"The barn box gift set is EVERYTHING. I ordered it for my mom's housewarming and she cried happy tears. The packaging alone is worth the price. Will be ordering every holiday from now on.\"",
+          name: "Katie L.",
+          city: "Dallas, TX"
+        }
+      ]
+    };
+  }
+}
+</script>
 </body>
 </html>

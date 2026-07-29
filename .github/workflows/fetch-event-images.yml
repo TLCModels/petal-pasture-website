@@ -1,0 +1,74 @@
+name: Fetch and convert event images
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - claude/tlc-models-event-images-j31eur
+    paths:
+      - out/urls.tsv
+      - .github/workflows/fetch-event-images.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Download raw renders
+        run: |
+          mkdir -p out/raw out/web
+          fail=0
+          while IFS=$'\t' read -r name url; do
+            [ -z "$name" ] && continue
+            echo "fetching $name"
+            curl -sSf --retry 3 --retry-delay 2 -o "out/raw/${name}.png" "$url" || { echo "FAILED: $name"; fail=1; }
+          done < out/urls.tsv
+          exit $fail
+
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: Convert to web spec
+        run: |
+          while IFS=$'\t' read -r name url; do
+            [ -z "$name" ] && continue
+            python3 convert_to_web.py "out/raw/${name}.png" "out/web/${name}.webp"
+          done < out/urls.tsv
+
+      - name: Verify web images
+        run: |
+          python3 - <<'EOF'
+          import os, sys
+          from PIL import Image
+          bad = []
+          names = [l.split('\t')[0] for l in open('out/urls.tsv') if l.strip()]
+          for n in names:
+              p = f'out/web/{n}.webp'
+              try:
+                  im = Image.open(p); im.load()
+                  size = os.path.getsize(p)
+                  if im.size != (1920, 1080):
+                      bad.append(f'{p}: wrong dimensions {im.size}')
+                  if size > 500 * 1024:
+                      bad.append(f'{p}: too large {size}')
+              except Exception as e:
+                  bad.append(f'{p}: {e}')
+          if bad:
+              print('\n'.join(bad)); sys.exit(1)
+          print(f'all {len(names)} images verified: 1920x1080, <=500KB')
+          EOF
+
+      - name: Commit web images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add out/web
+          git diff --cached --quiet && { echo "nothing to commit"; exit 0; }
+          git commit -m "Add converted event landing-page images (WebP 1920x1080)"
+          git push

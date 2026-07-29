@@ -1,0 +1,372 @@
+{
+  "brand": "TLC Models",
+  "spec": {
+    "model": "soul_2",
+    "aspect_ratio": "16:9",
+    "count": 1,
+    "output": "WebP 1920x1080 under 500kb"
+  },
+  "negative_clause": "No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no existing franchise characters, no real artworks.",
+  "topics": [
+    {
+      "topic": "New York events",
+      "slug": "new-york-events",
+      "shots": [
+        {
+          "filename": "new-york-events-01.webp",
+          "prompt": "Ultra realistic editorial photograph of an upscale rooftop cocktail party at dusk overlooking the Manhattan skyline, elegant guests in evening wear mid-conversation, warm string lights, shallow depth of field, 35mm lens, cinematic color grade. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "new-york-events-02.webp",
+          "prompt": "Ultra realistic photograph of a black-tie gala dinner inside a grand New York ballroom, crystal chandeliers, round tables with candlelight and white florals, guests toasting, warm golden tones, wide cinematic composition. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "new-york-events-03.webp",
+          "prompt": "Ultra realistic night photograph outside a Manhattan event venue, red carpet leading to glowing doors, velvet ropes, silhouetted photographers with flashes, wet street reflections, moody blue-and-amber palette. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "new-york-events-04.webp",
+          "prompt": "Ultra realistic photograph of an art gallery opening in a SoHo loft, exposed brick and cast-iron columns, stylish guests holding champagne while viewing large original abstract canvases, soft track lighting, candid documentary feel. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no real artworks."
+        },
+        {
+          "filename": "new-york-events-05.webp",
+          "prompt": "Ultra realistic photograph of a sleek corporate launch event in a glass atrium in Midtown Manhattan, dramatic violet and white uplighting, minimalist stage with an LED wall glowing in a smooth abstract gradient, mingling professional crowd. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "new-york-events-06.webp",
+          "prompt": "Ultra realistic golden-hour photograph of an outdoor event in Central Park, white marquee tents and string lights among the trees, guests in summer attire, Manhattan towers rising behind the tree line, warm backlit haze. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        }
+      ]
+    },
+    {
+      "topic": "Los Angeles events",
+      "slug": "los-angeles-events",
+      "shots": [
+        {
+          "filename": "los-angeles-events-01.webp",
+          "prompt": "Ultra realistic photograph of a rooftop pool party at sunset in downtown Los Angeles, palm trees silhouetted against an orange sky, stylish crowd lounging by the water, skyline towers behind, cinematic warm grade. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "los-angeles-events-02.webp",
+          "prompt": "Ultra realistic blue-hour photograph of a Hollywood Hills mansion party, infinity pool edge glowing, guests with cocktails, the endless grid of Los Angeles city lights spreading below, shallow depth of field. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "los-angeles-events-03.webp",
+          "prompt": "Ultra realistic night photograph of a glamorous outdoor premiere-style event on a palm-lined Los Angeles boulevard, twin searchlights sweeping the sky, elegant crowd arriving, blank illuminated backdrop, cinematic contrast. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "los-angeles-events-04.webp",
+          "prompt": "Ultra realistic photograph of a creative industry event inside a converted warehouse in the LA Arts District, exposed trusses, pink and teal neon ambient lighting, fashionable guests mingling around minimalist installations, candid editorial style. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "los-angeles-events-05.webp",
+          "prompt": "Ultra realistic photograph of an evening beachside event in Malibu, low lounge seating around fire pits, lanterns glowing, guests in relaxed chic attire, Pacific Ocean sunset with soft waves, warm cinematic tones. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "los-angeles-events-06.webp",
+          "prompt": "Ultra realistic daytime photograph of an exclusive garden party at a Los Angeles villa, pastel table settings, a plain lush flower wall, champagne tower catching sunlight, stylish guests laughing candidly, bright airy grade. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        }
+      ]
+    },
+    {
+      "topic": "Las Vegas events",
+      "slug": "las-vegas-events",
+      "shots": [
+        {
+          "filename": "las-vegas-events-01.webp",
+          "prompt": "Ultra realistic night photograph of a vibrant Las Vegas boulevard rendered entirely in soft bokeh, glowing neon colors blurred beyond legibility, silhouetted crowd in the foreground, energetic atmosphere, cinematic anamorphic look. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "las-vegas-events-02.webp",
+          "prompt": "Ultra realistic photograph of a luxury cocktail lounge interior in Las Vegas, warm gold tones, grand chandelier, plush velvet seating, waitstaff carrying trays of cocktails to elegantly dressed guests, rich cinematic lighting. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "las-vegas-events-03.webp",
+          "prompt": "Ultra realistic photograph inside a packed Las Vegas nightclub, golden confetti falling through laser beams, DJ silhouetted behind the booth, hands raised in the crowd, dramatic haze and strobing light, high-energy composition. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "las-vegas-events-04.webp",
+          "prompt": "Ultra realistic daytime photograph of a Las Vegas rooftop pool party, white cabanas and daybeds, turquoise water, stylish crowd with cocktails, desert mountains hazy in the distance, bright sun-drenched editorial style. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "las-vegas-events-05.webp",
+          "prompt": "Ultra realistic photograph of a private high-rise suite party in Las Vegas at night, floor-to-ceiling windows overlooking a glowing city of blurred lights, guests in cocktail attire around a marble bar, moody luxurious grade. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "las-vegas-events-06.webp",
+          "prompt": "Ultra realistic photograph of a large-scale convention evening reception in Las Vegas, dramatic magenta and blue stage lighting over a vast hall, crowd seen from behind facing a glowing abstract LED stage, haze and depth. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        }
+      ]
+    },
+    {
+      "topic": "Miami events",
+      "slug": "miami-events",
+      "shots": [
+        {
+          "filename": "miami-events-01.webp",
+          "prompt": "Ultra realistic golden-hour photograph of a pastel Art Deco street in Miami Beach, palm trees casting long shadows, stylish pedestrians, a classic convertible parked with no visible badging, warm tropical color palette. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "miami-events-02.webp",
+          "prompt": "Ultra realistic photograph of a sunset yacht party on Biscayne Bay, guests in resort chic on the aft deck, champagne glasses catching golden light, Miami skyline glowing across the water, cinematic composition. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "miami-events-03.webp",
+          "prompt": "Ultra realistic night photograph of a tropical villa pool party in Miami, lush palms uplit in pink and teal, guests dancing at the water's edge, floating candles on the pool, humid glowing atmosphere. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "miami-events-04.webp",
+          "prompt": "Ultra realistic daytime photograph of an exclusive Miami beach club, rows of white daybeds and umbrellas on golden sand, turquoise ocean, stylish crowd socializing, bright airy editorial grade. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "miami-events-05.webp",
+          "prompt": "Ultra realistic photograph of a rooftop night event in downtown Miami, skyline towers glowing behind, tropical cocktails on a marble bar, neon accent lighting in coral and aqua, fashionable guests mingling, cinematic depth. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "miami-events-06.webp",
+          "prompt": "Ultra realistic photograph of an outdoor creative block party in a Miami arts neighborhood, walls painted with original bold abstract geometric murals in tropical colors, stylish crowd and food stalls with blank awnings, late afternoon light. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no real artworks."
+        }
+      ]
+    },
+    {
+      "topic": "US Open",
+      "slug": "us-open",
+      "shots": [
+        {
+          "filename": "us-open-01.webp",
+          "prompt": "Ultra realistic photograph of a grand slam style tennis night session in New York, elevated view of a blue hard court inside a packed stadium under floodlights, unbranded dark walls, electric summer atmosphere. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "us-open-02.webp",
+          "prompt": "Ultra realistic golden-hour photograph of a tennis player silhouetted mid-serve on a blue hard court, plain athletic wear with no visible branding, ball frozen above the racquet, dramatic backlight and long shadows. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "us-open-03.webp",
+          "prompt": "Ultra realistic macro photograph of a bright yellow tennis ball resting on a blue hard court by the white line, late afternoon sun raking across the acrylic surface texture, shallow depth of field. No logos, no brand marks, no readable text or signage anywhere in frame."
+        },
+        {
+          "filename": "us-open-04.webp",
+          "prompt": "Ultra realistic photograph of tennis spectators seen from behind, sun hats and summer outfits, watching a distant point on a blue court, heat shimmer and bright New York summer light, candid documentary framing. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "us-open-05.webp",
+          "prompt": "Ultra realistic dusk photograph of a tennis tournament grounds plaza in New York, fountains glowing, crowds strolling between courts under string lights, stadium silhouette against a violet sky, unbranded surfaces. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "us-open-06.webp",
+          "prompt": "Ultra realistic photograph from courtside at a night tennis match, player tossing the ball to serve under intense floodlights, crowd rendered as warm bokeh behind, plain kit with no branding, crisp sports-photography detail. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        }
+      ]
+    },
+    {
+      "topic": "New York Comic Con",
+      "slug": "ny-comic-con",
+      "shots": [
+        {
+          "filename": "ny-comic-con-01.webp",
+          "prompt": "Ultra realistic photograph inside a vast glass-roofed New York convention hall during a pop culture festival, huge colorful crowd in imaginative original costumes, banners rendered as blank colorful shapes, bright bustling energy. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no existing franchise characters."
+        },
+        {
+          "filename": "ny-comic-con-02.webp",
+          "prompt": "Ultra realistic portrait-style photograph of a cosplayer in an entirely original armored fantasy costume with teal and bronze plating, dramatic rim lighting inside a convention hall, crowd blurred behind, cinematic depth. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no existing franchise characters."
+        },
+        {
+          "filename": "ny-comic-con-03.webp",
+          "prompt": "Ultra realistic photograph of an artists market aisle at a pop culture convention, illustrators at booths with colorful prints rendered as abstract unreadable shapes, browsing crowd, warm tungsten hall lighting, candid feel. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no existing franchise characters, no real artworks."
+        },
+        {
+          "filename": "ny-comic-con-04.webp",
+          "prompt": "Ultra realistic candid photograph of a group of friends laughing together in original sci-fi costumes with glowing accents, convention hall backdrop softly blurred, joyful energetic moment, editorial documentary style. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no existing franchise characters."
+        },
+        {
+          "filename": "ny-comic-con-05.webp",
+          "prompt": "Ultra realistic close-up photograph of handmade original costume props on a workbench, sculpted foam armor pieces, painted helmet with fictional design, airbrush and tools, moody workshop lighting, rich texture detail. No logos, no brand marks, no readable text or signage anywhere in frame, no existing franchise characters."
+        },
+        {
+          "filename": "ny-comic-con-06.webp",
+          "prompt": "Ultra realistic evening photograph outside a glass-and-steel convention center on a Manhattan avenue, attendees in original colorful costumes arriving through warm light spilling from the entrance, city dusk tones. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no existing franchise characters."
+        }
+      ]
+    },
+    {
+      "topic": "New York Fashion Week",
+      "slug": "ny-fashion-week",
+      "shots": [
+        {
+          "filename": "ny-fashion-week-01.webp",
+          "prompt": "Ultra realistic photograph of a high fashion runway show in New York, a model walking toward camera in an avant-garde monochrome outfit, glowing white runway strip, front row silhouettes in darkness, editorial precision. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "ny-fashion-week-02.webp",
+          "prompt": "Ultra realistic backstage photograph at a fashion show, makeup artists prepping models at mirrors ringed with warm bulbs, garment racks and motion blur of assistants, energetic candid reportage style. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "ny-fashion-week-03.webp",
+          "prompt": "Ultra realistic street style photograph outside a fashion week venue in SoHo New York, impeccably dressed attendees crossing a cobblestone street, photographers crouching for shots, cast-iron facades, crisp autumn light. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "ny-fashion-week-04.webp",
+          "prompt": "Ultra realistic detail photograph of a fashion show front row, elegantly crossed legs and sculptural unbranded designer heels, blank white invitation cards resting on seats, runway glow in the background, shallow focus. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "ny-fashion-week-05.webp",
+          "prompt": "Ultra realistic photograph of a runway finale walk, a line of models in a cohesive original collection striding together through soft haze and falling light petals, audience rising, dramatic wide composition. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "ny-fashion-week-06.webp",
+          "prompt": "Ultra realistic photograph inside a New York atelier before fashion week, a tailor pinning a flowing gown on a dress form, racks of garments in plastic, large windows with soft daylight, quiet craftsmanship mood. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        }
+      ]
+    },
+    {
+      "topic": "Ultra Music Festival",
+      "slug": "ultra-music-festival",
+      "shots": [
+        {
+          "filename": "ultra-music-festival-01.webp",
+          "prompt": "Ultra realistic photograph of a massive electronic music festival main stage at night in Miami, towering LED walls displaying pure abstract color visuals, pyrotechnic bursts, enormous crowd with hands raised, epic wide shot. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "ultra-music-festival-02.webp",
+          "prompt": "Ultra realistic golden-hour photograph of a waterfront music festival crowd in Miami, palm trees and downtown skyline behind the stage field, plain colorful flags waving above dancers, warm hazy sunlight. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "ultra-music-festival-03.webp",
+          "prompt": "Ultra realistic photograph of a DJ silhouetted behind the decks at a night festival, backlit by a fan of green lasers cutting through haze, crowd silhouettes below, high-contrast dramatic composition. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "ultra-music-festival-04.webp",
+          "prompt": "Ultra realistic photograph of a confetti explosion over a night festival crowd, thousands of colorful pieces suspended mid-air in beams of white light, euphoric faces blurred in motion below, immersive energy. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "ultra-music-festival-05.webp",
+          "prompt": "Ultra realistic dusk photograph of a bayfront festival grounds in Miami, a glowing ferris wheel and multiple stages reflected in the water, streams of attendees crossing the lawn, violet and orange sky. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "ultra-music-festival-06.webp",
+          "prompt": "Ultra realistic close-up photograph of festival dancers at night, glitter on skin catching strobe light, plain LED wristbands glowing, motion blur and bokeh from the stage behind, intimate energetic framing. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        }
+      ]
+    },
+    {
+      "topic": "Art Basel Miami Beach",
+      "slug": "art-basel-miami",
+      "shots": [
+        {
+          "filename": "art-basel-miami-01.webp",
+          "prompt": "Ultra realistic photograph of a prestigious contemporary art fair interior in Miami Beach, bright white booth aisles hung with large original abstract canvases, elegant collectors strolling, clean gallery lighting. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no real artworks."
+        },
+        {
+          "filename": "art-basel-miami-02.webp",
+          "prompt": "Ultra realistic photograph of a monumental original geometric sculpture in polished chrome inside an art fair hall, visitors dwarfed beneath it, reflections warping the white space, minimalist composition. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no real artworks."
+        },
+        {
+          "filename": "art-basel-miami-03.webp",
+          "prompt": "Ultra realistic photograph of a champagne reception inside a gallery booth at a Miami art fair, stylish international crowd in designer attire discussing a large original color-field painting, warm candid energy. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no real artworks."
+        },
+        {
+          "filename": "art-basel-miami-04.webp",
+          "prompt": "Ultra realistic sunset photograph of an outdoor art installation on the Miami Beach shoreline, a large original translucent pavilion sculpture glowing amber, silhouetted visitors walking the sand around it. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no real artworks."
+        },
+        {
+          "filename": "art-basel-miami-05.webp",
+          "prompt": "Ultra realistic photograph of a lone visitor silhouetted before a massive original abstract painting of saturated color blocks, white museum wall, dramatic scale contrast, contemplative minimal mood. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no real artworks."
+        },
+        {
+          "filename": "art-basel-miami-06.webp",
+          "prompt": "Ultra realistic night photograph of an art week party in a Miami Beach courtyard, original abstract video projections washing over white walls and palm trees, fashionable guests with cocktails, humid neon glow. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no real artworks."
+        }
+      ]
+    },
+    {
+      "topic": "LA Comic Con",
+      "slug": "la-comic-con",
+      "shots": [
+        {
+          "filename": "la-comic-con-01.webp",
+          "prompt": "Ultra realistic photograph of a sunlit convention center floor in Los Angeles during a pop culture festival, colorful booths with blank vibrant banners, crowd in imaginative original costumes, bright California daylight streaming in. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no existing franchise characters."
+        },
+        {
+          "filename": "la-comic-con-02.webp",
+          "prompt": "Ultra realistic photograph of two cosplayers in original heroic costumes of their own invented design, bold complementary colors and capes, posing back to back with dramatic rim light, convention crowd bokeh behind. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no existing franchise characters."
+        },
+        {
+          "filename": "la-comic-con-03.webp",
+          "prompt": "Ultra realistic photograph of a convention panel stage bathed in purple wash light, silhouetted speakers at a long table, packed audience raising hands for questions, haze in the light beams, blank stage backdrop. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no existing franchise characters."
+        },
+        {
+          "filename": "la-comic-con-04.webp",
+          "prompt": "Ultra realistic photograph of a convention photo area built around an original retro-futuristic spaceship cockpit set piece, attendees in original costumes taking turns posing, playful colorful lighting. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no existing franchise characters."
+        },
+        {
+          "filename": "la-comic-con-05.webp",
+          "prompt": "Ultra realistic candid photograph of a family at a pop culture convention, a child in a handmade original robot costume laughing with parents in coordinating original outfits, warm joyful documentary style. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no existing franchise characters."
+        },
+        {
+          "filename": "la-comic-con-06.webp",
+          "prompt": "Ultra realistic golden-hour photograph outside a palm-lined Los Angeles convention center, attendees in original colorful costumes streaming toward the glass entrance, long warm shadows, festive atmosphere. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people, no existing franchise characters."
+        }
+      ]
+    },
+    {
+      "topic": "Grammy Awards weekend",
+      "slug": "grammy-weekend",
+      "shots": [
+        {
+          "filename": "grammy-weekend-01.webp",
+          "prompt": "Ultra realistic photograph of a glamorous music awards red carpet seen from behind the arrivals, flowing gowns and sharp tuxedos, a wall of camera flashes, plain deep-red backdrop with no markings, cinematic glamour. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "grammy-weekend-02.webp",
+          "prompt": "Ultra realistic photograph inside a grand theater during a music awards show, golden light beams over a sweeping stage, orchestra silhouettes, packed elegant audience in warm darkness, epic wide composition. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "grammy-weekend-03.webp",
+          "prompt": "Ultra realistic photograph of an exclusive awards weekend after-party in Los Angeles, black and gold decor, a champagne coupe tower being poured, musicians and guests in evening wear mingling, rich moody glamour. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "grammy-weekend-04.webp",
+          "prompt": "Ultra realistic photograph of a vocalist silhouetted at a vintage ribbon microphone under a single warm spotlight on a dark stage, haze curling through the beam, intimate dramatic music moment. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "grammy-weekend-05.webp",
+          "prompt": "Ultra realistic night photograph of black limousines arriving at a grand theater entrance in Los Angeles, velvet ropes and warm marquee glow rendered as pure light with no lettering, photographers' flashes, anticipation in the air. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "grammy-weekend-06.webp",
+          "prompt": "Ultra realistic photograph of a rooftop celebration during an awards weekend in Los Angeles, guests in evening wear toasting with champagne, downtown skyline glittering behind, warm bokeh and elegant night grade. No logos, no brand marks, no readable text or signage anywhere in frame, no recognizable real people."
+        }
+      ]
+    },
+    {
+      "topic": "LA Auto Show",
+      "slug": "la-auto-show",
+      "shots": [
+        {
+          "filename": "la-auto-show-01.webp",
+          "prompt": "Ultra realistic photograph of a vast auto exhibition hall in Los Angeles, sleek original concept cars with completely smooth unbadged bodywork on rotating platforms, dramatic white spotlights, polished reflective floor. No logos, no brand marks, no badges, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "la-auto-show-02.webp",
+          "prompt": "Ultra realistic close-up photograph of a futuristic original concept car front end, seamless grille-less fascia with a thin light bar, absolutely smooth unbadged surfaces, studio-style show lighting reflecting across the paint. No logos, no brand marks, no badges, no readable text or signage anywhere in frame."
+        },
+        {
+          "filename": "la-auto-show-03.webp",
+          "prompt": "Ultra realistic photograph of show attendees gathered around a glowing electric original concept vehicle with ambient light strips, its silhouette unlike any production car, reflections on the dark glossy floor, expo atmosphere. No logos, no brand marks, no badges, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "la-auto-show-04.webp",
+          "prompt": "Ultra realistic photograph of an automotive designer silhouetted beside a full-size clay model of an original car design, studio work lights raking across the sculpted surface, tape lines and tools nearby, creative process mood. No logos, no brand marks, no badges, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "la-auto-show-05.webp",
+          "prompt": "Ultra realistic wide photograph of an auto show hall at golden evening light through high windows, dozens of unbadged original vehicles on glowing white display stands, visitors wandering between them, blank illuminated panels overhead. No logos, no brand marks, no badges, no readable text or signage anywhere in frame, no recognizable real people."
+        },
+        {
+          "filename": "la-auto-show-06.webp",
+          "prompt": "Ultra realistic photograph of a futuristic original concept car interior, minimalist wraparound dashboard with blank glowing display surfaces showing only soft gradients, sculpted seats in pale leather, ambient blue accent light. No logos, no brand marks, no badges, no readable text, no user interface text anywhere in frame."
+        }
+      ]
+    }
+  ]
+}

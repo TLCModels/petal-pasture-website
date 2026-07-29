@@ -1,75 +1,71 @@
-# Brand-safety gate log — TLC Models event image library
+# Brand-safety gate log — TLC Models event image library (v2, with TLC models)
 
-Run date: 2026-07-29. Model: Higgsfield soul_2, 16:9 @ 2K, converted to WebP 1920x1080 <=500KB.
+Run date: 2026-07-29. Model: Higgsfield soul_2 with trained TLC Soul identities,
+16:9 @ 2K, converted to WebP 1920x1080 <=500KB. Every shot features one TLC model
+(13-Soul roster: Kira, Luna, Nova, Nia, Camille, Aisha, Zara, Valentina, Sophia,
+Natasha, Layla*, Astrid, South Asian) as the working talent for the event category.
+(*Layla was rostered but her assigned shots rotated to other models in the final mix.)
 
-Gate criteria: no logos or brand marks, no readable text or signage, no recognizable
-real people, no existing franchise characters, no real artworks, no car marque badging.
-Each failing shot was retried once with ", absolutely no text, signage, or logos
-anywhere in frame" appended. Shots that failed both rounds are quarantined in
-`out/flagged/` and listed below — they are NOT part of the shippable library in `out/web/`.
+Gate criteria: no logos or brand marks, no readable text or signage, no other
+recognizable people, no franchise characters, no real artworks, no car badging.
+Each failing shot was retried once with strengthened anti-text/anti-badge language.
+Shots that failed both rounds are quarantined in `out/flagged/` — NOT shipped.
 
-## Shippable (out/web/) — 38 images
+## Shippable (out/web/) — 45 images
 
-new-york-events: 01, 02, 04
-los-angeles-events: 01, 02, 03, 05
-las-vegas-events: 01, 03, 04, 05
-miami-events: 02, 03, 04, 05
-ny-comic-con: 01, 02, 03, 04
-ny-fashion-week: 01, 05, 06
-ultra-music-festival: 03, 04
-art-basel-miami: 01, 02, 03, 04, 05, 06 (complete topic)
-la-comic-con: 02, 03, 05
-grammy-weekend: 02, 04, 06
-la-auto-show: 01, 05
-
-## Failed twice — quarantined (out/flagged/) — 34 images
-
-Severity HARD = real brand mark, franchise trade dress, or clearly readable text.
-Severity SOFT = small or illegible gibberish lettering; may be acceptable at web size
-or fixable with light retouching.
-
-| File | Severity | Reason (round-2 render) |
+| Topic | Shipped | Shots |
 |---|---|---|
-| new-york-events-03 | HARD | Venue marquee reads "MANYANTAT VUEAT" |
-| new-york-events-05 | SOFT | Faint caption text lines on LED gradient walls |
-| new-york-events-06 | SOFT | Small dark lettering on white marquee tents |
-| los-angeles-events-04 | SOFT | Faint dimensional letters on gallery wall + printed tote |
-| los-angeles-events-06 | HARD | Large white text rendered across the sky |
-| las-vegas-events-02 | HARD | Lounge signage "HALS COIIG VENII" + mirrored table text |
-| las-vegas-events-06 | HARD | Stage screen literally reads "LAS VEGAS 20818" |
-| miami-events-01 | HARD | Awning text, red circular sign, lettered pink door |
-| miami-events-06 | SOFT | Small stamp-style emblem and tiny text lines on mural wall |
-| us-open-01 | HARD | Sponsor-style wordmarks on stadium walls |
-| us-open-02 | HARD | Nike swooshes on shoes/socks, brand mark on shorts |
-| us-open-03 | HARD | Ball printed with logo + "raaritaokes" |
-| us-open-04 | SOFT | Hat band lettering "ROHO" |
-| us-open-05 | HARD | Court-wall text "DROR S YORK" + banner text |
-| us-open-06 | HARD | "BNA…ACA" backdrop, Nike swoosh on shirt, W-style racquet stencil |
-| ny-comic-con-05 | HARD | Helmet reads as Mandalorian-style franchise trade dress |
-| ny-comic-con-06 | HARD | Building lettering "COCAIHAINAT ANGR" |
-| ny-fashion-week-02 | HARD | Mirror-frame lettering "ANGLSK EAP…" |
-| ny-fashion-week-03 | HARD | Multiple readable street signs |
-| ny-fashion-week-04 | HARD | Handwritten script on invitation card (prompt asked blank) |
-| ultra-music-festival-01 | SOFT | Tiny "M" marks on truss towers + faint caption on screen |
-| ultra-music-festival-02 | SOFT | Flag with crown emblem + faint lettering |
-| ultra-music-festival-05 | HARD | Neon sign text on background buildings/screens |
-| ultra-music-festival-06 | HARD | Large "LOM" sign letters + circular logo glyph |
-| la-comic-con-01 | HARD | Banners densely covered in readable text |
-| la-comic-con-04 | HARD | T-shirt text + lettered panels on set piece |
-| la-comic-con-06 | HARD | Facade lettering "LOS ALES S IINCAL CONVVEANTON…" |
-| grammy-weekend-01 | HARD | Backdrop reads "MUSIC AWARDS / OSLN AWAROS" |
-| grammy-weekend-03 | SOFT | Champagne bottle label text |
-| grammy-weekend-05 | HARD | Theater marquee full of readable text |
-| la-auto-show-02 | HARD | Hood badge text "ORggnaAL" + license-style plate "2MLS772" |
-| la-auto-show-03 | HARD | Script marks on hood/door of concept car |
-| la-auto-show-04 | HARD | Trident-style badges (Maserati-like) on clay model fascia |
-| la-auto-show-06 | HARD | Dashboard covered in UI text, "91" roundel, "Engage" label |
+| new-york-events | 4/6 | 01, 02, 04, 06 |
+| los-angeles-events | 3/6 | 01, 02, 05 |
+| las-vegas-events | 5/6 | 01, 02, 04, 05, 06 |
+| miami-events | 5/6 | 02, 03, 04, 05, 06 |
+| us-open | 2/6 | 04, 05 |
+| ny-comic-con | 3/6 | 02, 04, 05 |
+| ny-fashion-week | 5/6 | 01, 02, 04, 05, 06 |
+| ultra-music-festival | 5/6 | 01, 03, 04, 05, 06 |
+| art-basel-miami | 6/6 | complete |
+| la-comic-con | 2/6 | 02, 03 |
+| grammy-weekend | 3/6 | 02, 04, 06 |
+| la-auto-show | 2/6 | 04, 06 |
+
+## Failed twice — quarantined (out/flagged/) — 27 images
+
+| File | Reason (round-2 render) |
+|---|---|
+| new-york-events-03 | Venue sign "PARYLGFEAN" + window monograms |
+| new-york-events-05 | LED wall covered in pseudo-copy ("AlintBod MAwwaster…") |
+| los-angeles-events-03 | Giant "LOSO" road lettering + parking signs |
+| los-angeles-events-04 | Posters with dense readable text on pillars |
+| los-angeles-events-06 | Champagne bottle label persists |
+| las-vegas-events-03 | Stage screen reads "LAS VEAS LGAY" |
+| miami-events-01 | Balcony banner text + wall graffiti lettering |
+| us-open-01 | Polo chest text "DUEL TRIK" + "New York" court walls |
+| us-open-02 | Bird emblem on tank + skirt text + racquet mark |
+| us-open-03 | "New York" walls, sponsor board, Nike swoosh on hat band |
+| us-open-06 | Wall wordmarks ("Eloode", "ES Raoern") + kit emblem |
+| ny-comic-con-01 | Text-covered hanging banners + booth counter lettering |
+| ny-comic-con-03 | Rendered as a diptych + "NEW YORK" screens |
+| ny-comic-con-06 | Canopy lettering "Ehegntete Kneo" |
+| ny-fashion-week-03 | Mercedes three-pointed star on car + street signage |
+| ultra-music-festival-02 | Flag literally reads "MIAMI" + tent emblems |
+| la-comic-con-01 | Banner walls of readable text |
+| la-comic-con-04 | Interface text on cockpit panels + jacket lettering |
+| la-comic-con-05 | Letter patches ("AA", "B") + lanyard badges with text |
+| la-comic-con-06 | Building sign "LOS.ANEIS CONTVITIONA CENTENTER" |
+| grammy-weekend-01 | Gold wall lettering "LOCIO …ARDS" |
+| grammy-weekend-03 | "AWAKLBS AWARD" backdrop text + bottle labels |
+| grammy-weekend-05 | Marquee crammed with readable text |
+| la-auto-show-01 | Nose badge + license-style plate "LAND…" |
+| la-auto-show-02 | Circular hood roundel badge |
+| la-auto-show-03 | Nose badge glyph + hand-held ID card + lanyard |
+| la-auto-show-05 | Plinth text "PIAMSOMA" + background grille badge + exit sign |
 
 ## Notes
 
-- soul_2 strongly gravitates toward inventing signage/wordmarks in event scenes;
-  the appended no-text clause helped in 10/44 retries.
-- Topics needing people/venue signage (US Open, comic cons, awards) fail most;
-  abstract/nature/crowd scenes pass easily. Art Basel is the only complete topic.
-- SOFT failures may be recoverable by regenerating with different seeds, cropping,
-  or object-removal retouch rather than full regeneration.
+- soul_2 compulsively invents signage in "venue" contexts (award backdrops,
+  marquees, convention banners, stadium walls, car badges); anti-text clauses
+  recover roughly half the failures per round. Topics staged as model-first
+  close/medium shots pass at a far higher rate than venue-first wide shots.
+- Recovery rates: v2 round 1 passed 33/72; round 2 recovered 12 of 39 retries.
+- Recommended for the 27 gaps: regenerate with tighter framing on the model
+  (venue as pure bokeh), or generative-erase retouching of the offending marks.

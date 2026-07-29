@@ -2,6 +2,12 @@ name: Fetch and convert event images
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - claude/tlc-models-event-images-j31eur
+    paths:
+      - out/urls.tsv
+      - .github/workflows/fetch-event-images.yml
 
 permissions:
   contents: write
